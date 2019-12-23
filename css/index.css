@@ -52,7 +52,7 @@ nav {
 
 .logo h4 {
     min-height: 2vh;
-    font-size: 35px;
+    font-size: 30px;
     visibility: visible;
     /*font-family: 'Nova Slim', cursive;*/
     /*font-family: 'Pacifico', cursive;*/
@@ -68,8 +68,7 @@ nav {
 .logo h5 {
     display: none;
     min-height: 2vh;
-    font-size: 50;
-    font-weight: bold;
+    font-size: 45px;
     /*font-family: 'Nova Slim', cursive;*/
     font-family: 'Nova Square', cursive;
 }
@@ -82,7 +81,7 @@ nav {
 
 .nav-links li {
     list-style: none;
-    min-height: 3vh;
+    min-height: 3.5vh;
     display: inline-flex;
     transition: all 0.3s ease;
 }
