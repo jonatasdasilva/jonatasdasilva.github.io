@@ -37,39 +37,27 @@ nav {
     display: flex;
     min-height: 9vh;
     align-items: center;
-    /*background-color: #ba7453;*/
     background-color: #37003C;
     justify-content: space-around;
 }
 
 .logo {
+    font-size: 16px;
     color: #00ff87;
-    /*color: #03F183;
-    text-transform: lowercase;*/
     letter-spacing: 2px;
-    font-size: 18px;
 }
 
 .logo h4 {
     min-height: 2vh;
-    font-size: 30px;
+    font-size: 25px;
     visibility: visible;
-    /*font-family: 'Nova Slim', cursive;*/
-    /*font-family: 'Pacifico', cursive;*/
     font-family: 'Nova Square', cursive;
 }
-
-
-/*
-.logo img {
-    display: none;
-}*/
 
 .logo h5 {
     display: none;
     min-height: 2vh;
-    font-size: 45px;
-    /*font-family: 'Nova Slim', cursive;*/
+    font-size: 40px;
     font-family: 'Nova Square', cursive;
 }
 
@@ -88,7 +76,7 @@ nav {
 
 .nav-links a {
     color: rgb(255, 255, 255);
-    font-size: 16px;
+    font-size: 15px;
     letter-spacing: 2px;
     text-decoration: none;
     vertical-align: middle;
@@ -126,7 +114,7 @@ article {
 
 article h2 {
     width: 500px;
-    font-size: 18px;
+    font-size: 16px;
     padding: 1px;
     color: #ffffff;
     min-height: 3vh;
