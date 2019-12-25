@@ -13,13 +13,10 @@
 </head>
 
 <body>
-    <nav>
-        <div class="logo">
-            <h4>Jônatas da Silva</h4>
-            <h5>JS</h5>
-            <!-- <img src="extras/logo/logo.png" alt="Jônatas da Silva" height="40px" width="40px"> -->
-        </div>
-        <ul class="nav-links">
+    <nav class="sombra">
+        <h2 class="empresa"><a href="https://jonatasdasilva.github.io/jonatasdasilva.io/">Jônatas</a></h2>
+        <h4 class="objetivo">Desenvolvedor</h4>
+        <ul class="navegar">
             <li><a href="#">Página Inicial</a></li>
             <li><a href="#">Experiências</a></li>
             <li><a href="#">Habilidades</a></li>
@@ -28,26 +25,35 @@
             <li><a href="#">Contato</a></li>
         </ul>
         <div class="burger">
-            <div class="line1"></div>
-            <div class="line2"></div>
-            <div class="line3"></div>
+            <div class="line1 ln1"></div>
+            <div class="line2 ln2"></div>
+            <div class="line3 ln3"></div>
         </div>
     </nav>
     <script src="js/menu.js"></script>
-    <div class="divisor" id="line-top"></div>
     <article>
-        <h2>Sobre Mim</h2>
-        <div id="base" class="divisor"></div>
-        <div class="about">
-            <img src="extras/perfil/jonatas.jpg" alt="foto de Jônatas da Silva" width="203px" height="203px" class="perfil">
-            <div class="text">
-                Estudante de Ciência da Computação na Universidade Federal da Bahia, interessado em: engenharia de software, sistemas distribuídos, desenvolvimento, banco de dados e web. Atualmente é estagiário no PoP-BA da RNP, atuando na geração de regras de segurança
-                anti spoofing. Buscando entender e aprender sobre redes de computadores e o comportamento de redes corporativas.
+        <section class="sobre">
+            <div class="perfil">
+                <img src="extras/perfil/jonatas.jpg" alt="foto de Jônatas da Silva" width="500px" height="500px">
             </div>
-        </div>
+            <div class="biografia">
+                <h1 class="nome">Jônatas da Silva</h1>
+                <h2 class="areas">Analista e desenvolvedor.</h2>
+                <p class="me">Estudante de Ciência da Computação, interessado em: Engenharia de Software, Processamento de Dados, Analise de Requisitos, Desenvolvimento, Banco de Dados e Analise de Sistemas. Atualmente é bolsista na COSIC/UFBA atuando na are de redes,
+                    com objetivo de aplicar regras de segurança em equipamentos de redes para impedir ataques de "spoofing". Já esteve atuando como Analista de T.I na CRI/UFBA, onde realizava configurações, analise da aplicação, tratativa de incidentes
+                    e estudos para melhorias do ambiente.
+                </p>
+            </div>
+        </section>
+        <div class="experiencias"></div>
+        <div class="habilidades"></div>
+        <div class="interesses"></div>
+        <div class="projetos"></div>
+        <div class="contato"></div>
     </article>
     <aside></aside>
     <footer></footer>
+
 </body>
 
 </html>
