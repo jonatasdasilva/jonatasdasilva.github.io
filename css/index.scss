@@ -293,7 +293,7 @@ input:checked[type="checkbox"]::before {
     }
 }
 
-@media screen and (max-width: 426px) {
+@media screen and (max-width: 400px) {
     body {
         overflow-y: scroll;
     }
