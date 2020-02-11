@@ -253,7 +253,7 @@ input:checked[type="checkbox"]::before {
 @media screen and (max-width: 900px) {
   body {
     display: block;
-    overflow: scroll;
+    overflow-y: scroll;
   }
   .burger {
     display: block;
@@ -296,7 +296,7 @@ input:checked[type="checkbox"]::before {
 @media screen and (max-width: 520px) {
   body {
     display: block;
-    overflow: scroll;
+    overflow-y: scroll;
   }
   .navegar-menu {
     top: 50px;
@@ -531,7 +531,7 @@ html.transition *::after {
 @media screen and (max-width: 320px) {
   body {
     display: block;
-    overflow: scroll;
+    overflow-y: scroll;
   }
   .b-title h1 {
     font-size: 30px;
@@ -622,5 +622,97 @@ input[type="submit"] {
   justify-items: center;
   background-color: var(--bg);
   font-family: 'Nova Square', cursive;
+}
+
+@media screen and (max-width: 426px) {
+  body {
+    display: block;
+    overflow-y: scroll;
+  }
+  .navegar-menu {
+    top: 50px;
+    right: 0px;
+    width: 100%;
+    height: 95vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: absolute;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+    -ms-flex-line-pack: distribute;
+        align-content: space-around;
+    background-color: var(--top);
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-transition: -webkit-transform 0.5s ease-in;
+    transition: -webkit-transform 0.5s ease-in;
+    transition: transform 0.5s ease-in;
+    transition: transform 0.5s ease-in, -webkit-transform 0.5s ease-in;
+  }
+  .navegar-menu li {
+    opacity: 0;
+  }
+  .menu-p1, .menu-p2 {
+    display: none;
+  }
+  nav h2 {
+    font-size: 20px;
+  }
+  .b-title h1 {
+    font-size: 32px;
+  }
+  .b-title h2 {
+    font-size: 13px;
+  }
+  .b-inform p {
+    font-size: 11px;
+  }
+  .contato img {
+    display: block;
+    width: 50%;
+  }
+  .c-form {
+    margin: 5px;
+    padding: 1px;
+  }
+  .c-form span {
+    width: 100%;
+    font-size: 20px;
+    margin-bottom: 2px;
+    font-family: 'Azedo Bold', cursive;
+  }
+  input[name="nome"], input[name="cidade"], input[name="assunto"] {
+    height: 15px;
+    padding: 5px;
+    font-size: 8px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    border-radius: 2px;
+  }
+  textarea[name="mensagem"] {
+    padding: 5px;
+    height: 30px;
+    font-size: 8px;
+    margin-top: 2px;
+    border-radius: 2px;
+    margin-bottom: 2px;
+    color: var(--t-color2);
+    background-color: var(--shadow);
+  }
+  input[type="submit"] {
+    width: 50%;
+    height: 20px;
+    border: none;
+    font-size: 9px;
+    margin-top: 5px;
+  }
 }
 /*# sourceMappingURL=index.css.map */
