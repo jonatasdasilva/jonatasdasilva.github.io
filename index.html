@@ -1,59 +1,95 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-
-<!-- Fonte: https://www.youtube.com/watch?v=gXkqy0b4M5g -->
-
+<html lang="pt-br" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Jônatas da Silva - Analista e Desenvolvedor</title>
     <link rel="stylesheet" href="css/index.css">
-    <title>Jônatas da Silva</title>
-    <script src="js/index.js"></script>
 </head>
-
 <body>
     <nav class="sombra">
-        <h2 class="empresa"><a href="https://jonatasdasilva.github.io/jonatasdasilva.io/">Jônatas</a></h2>
-        <h4 class="objetivo">Desenvolvedor</h4>
-        <ul class="navegar">
-            <li><a href="index.html">Página Inicial</a></li>
-            <li><a href="#">Experiências</a></li>
-            <li><a href="#">Habilidades</a></li>
-            <li><a href="#">Interesses</a></li>
-            <li><a href="#">Projetos</a></li>
-            <li><a href="#">Contato</a></li>
-        </ul>
         <div class="burger">
             <div class="line1 ln1"></div>
             <div class="line2 ln2"></div>
             <div class="line3 ln3"></div>
+            <p class="p-top">menu</p>
+        </div>
+        <ul class="menu-p1">
+            <li><a href="#">Página Inicial</a></li>
+            <li><a href="#">Experiências</a></li>
+            <li><a href="#">Habilidades</a></li>
+        </ul>
+        <h2>Jonatas da Silva</h2>
+        <ul class="menu-p2">
+            <li><a href="#">Interesses</a></li>
+            <li><a href="#">Formação</a></li>
+            <li><a href="#">Contato</a></li>
+        </ul>
+        <ul class="navegar-menu">
+            <li><a href="#">Página Inicial</a></li>
+            <li><a href="#">Experiências</a></li>
+            <li><a href="#">Habilidades</a></li>
+            <li><a href="#">Interesses</a></li>
+            <li><a href="#">Formação</a></li>
+            <li><a href="#">Contato</a></li>
+        </ul>
+        <div class="tema">
+            <input type="checkbox" name="contraste">
+            <p class="p-top">contraste</p>
+            <!--<script>
+                var checkbox = document.querySelector('input[name=contraste]');
+
+                checkbox.addEventListener('chage', function() {
+                    if (this.checkbox) {
+                        trans();
+                        document.documentElement.setAttribute('data-theme', 'light');
+                    } else {
+                        trans();
+                        document.documentElement.setAttribute('data-theme', 'dark');
+                    }
+                });
+
+                var trans = () => {
+                    document.documentElement.classList.add('transition');
+                    window.setTimeout(() => {
+                        document.documentElement.classList.remove('transition');
+                    }, 1000);
+                }
+            </script>-->
         </div>
     </nav>
-    <script src="js/menu.js"></script>
     <article>
+        <section class="separador"></section>
         <section class="sobre">
-            <div class="perfil">
-                <img src="extras/perfil/jonatas.jpg" alt="foto de Jônatas da Silva" width="500px" height="500px">
-            </div>
-            <div class="biografia">
-                <h1 class="nome">Jônatas da Silva</h1>
-                <h2 class="areas">Analista e desenvolvedor.</h2>
-                <p class="me">Estudante de Ciência da Computação, interessado em: Engenharia de Software, Processamento de Dados, Analise de Requisitos, Desenvolvimento, Banco de Dados e Analise de Sistemas. Atualmente é bolsista na COSIC/UFBA atuando na área de redes,
-                    com objetivo de aplicar regras de segurança em equipamentos de redes para impedir ataques de "spoofing". Já esteve atuando como Analista de T.I na CRI/UFBA, onde realizava configurações, tratativa de incidentes, estudos para melhorias
-                    do ambiente e rotinas de Backup com Tivoli.
-                </p>
+            <div>
+                <div class="b-title">
+                    <h1>Jonatas da Silva</h1>
+                    <h2>Analista e Desenvolvedor</h2>
+                </div>
+                <img src="img/perfil6.png" alt="foto de Jônatas da Silva" class="perfil">
+                <div class="b-inform">
+                    <p>Estudante de Ciência da Computação, interessado em: engenharia de software, processamento de dados, analise de requisitos, desenvolvimento, banco de dados e analise de sistemas. Atualmente é bolsista na Coordenação de Segurança da Informação e Comunicaçãao da UFBA, atuando na área de redes, com objetivo de aplicar regras de segurança em equipamentos de redes para impedir ataques de "spoofing". Já esteve atuando como Analista de T.I. na Cordenação de Redes e Infraestrutura da UFBA, onde realizava configurações, tratativa de incidentes, estudos para melhorias do ambiente, rotinas de Backup com Tivoli, monitoramento e admistração de servidor de arquivos.</p>
+                </div>
             </div>
         </section>
-        <div class="experiencias"></div>
-        <div class="habilidades"></div>
-        <div class="interesses"></div>
-        <div class="projetos"></div>
-        <div class="contato"></div>
+        <section class="contato">
+            <img src="img/perfil2.png"  class="foto">
+            <form class="c-form" action="php/contato.php">
+                <span class="c-title">Contato</span>
+                <label for="nome">Nome</label>
+                <input type="text" id="nome" name="nome" placeholder="Seu nome...">
+                <label for="cidade"></label>
+                <input type="text" name="cidade" placeholder="Sua cidade...">
+                <label for="assunto"></label>
+                <input type="text" name="assunto" placeholder="Assunto">
+                <label for="mensagem"></label>
+                <textarea id="mensagem" name="mensagem" placeholder="Mensagem..."></textarea>
+            </form>
+        </section>
     </article>
-    <aside></aside>
     <footer></footer>
-
+    <script src="js/menu.js"></script>
+    <script src="js/index.js"></script>
 </body>
-
 </html>

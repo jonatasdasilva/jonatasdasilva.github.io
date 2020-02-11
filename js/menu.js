@@ -1,8 +1,8 @@
 const navSlide = () => {
     // Elementos
-    const nav = document.querySelector('.navegar');
-    const burger = document.querySelector('.burger');
-    const links = document.querySelectorAll('.navegar li');
+    const nav = document.querySelector('.navegar-menu'); //ul do documento
+    const burger = document.querySelector('.burger'); //botão burger
+    const links = document.querySelectorAll('.navegar-menu li'); //coleta todas as lis para aplicar animação, pode ser removido
 
     burger.addEventListener('click', () => {
         // Toggle Nav
