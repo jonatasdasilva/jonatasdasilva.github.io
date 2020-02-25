@@ -26,11 +26,15 @@ html[data-theme="dark"] {
   --sw: rgb(25, 25, 29);
   --c1: rgb(253, 149, 31);
   --c2: rgb(255, 255, 255);
-  --c3: rgb(83, 83, 83);
+  --c3: rgb(168, 168, 179);
   --c4: rgb(44, 181, 199);
-  --c5: rgb(4, 20, 194);
+  --c5: rgb(93,96,197);
   --c6: rgb(66, 255, 176);
   --c7: rgb(13, 199, 143);
+  --c8: rgb(199, 46, 63);
+  --c9: rgb(21, 32, 38);
+  --c10: rgb(66, 182, 124);
+  --c11: rgb(2,195,116);
 }
 
 html[data-theme="light"] {
@@ -41,9 +45,10 @@ html[data-theme="light"] {
   --c2: rgb(5, 5, 5);
   --c3: rgb(21, 21, 26);
   --c4: rgb(0, 112, 172);
-  --c5: rgb(26, 35, 126);
+  --c5: rgb(93,96,197);
   --c6: rgb(19, 170, 82);
   --c7: rgb(17, 97, 73);
+  --c8: rgb(199, 46, 63);
   /* opção de cores :
         --c7: rgb(26, 35, 126); [azul]
     */
@@ -208,8 +213,8 @@ nav ul li {
   margin-left: 5px;
   margin-bottom: 6px;
   /*transition: all 1.5s ease 0.4s;*/
-  -webkit-transition-delay: 0.2s;
-          transition-delay: 0.2s;
+  -webkit-transition-delay: 0.05s;
+          transition-delay: 0.05s;
   -webkit-transition-duration: 0.8s;
           transition-duration: 0.8s;
   text-align: center;
@@ -484,17 +489,31 @@ input:checked[type="checkbox"]::before {
           justify-content: space-evenly;
 }
 
+.sobre-perfil {
+  display: block;
+  -ms-flex-line-pack: end;
+      align-content: flex-end;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
 .sobre-perfil img {
-  width: 400px;
-  height: 400px;
+  width: 520px;
+  height: 520px;
 }
 
 .sobre-perfil div {
   height: 2px;
-  width: 95%;
+  width: 100%;
+  -ms-flex-item-align: end;
+      -ms-grid-row-align: end;
+      align-self: end;
   margin-top: -4px;
-  margin-left: 23px;
   border-radius: 30px;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
   background: var(--c4);
 }
 
@@ -531,62 +550,16 @@ input:checked[type="checkbox"]::before {
   font-family: 'Dosis', sans-serif;
 }
 
-@media screen and (max-width: 1849px) {
-  .sobre-info h2 {
-    margin-top: 5px;
-    margin-bottom: 30px;
-  }
-}
-
-@media screen and (max-width: 1813px) {
-  .sobre-info h2 {
-    margin-top: 5px;
-    margin-bottom: 40px;
-  }
-  .sobre {
-    margin-left: 280px;
-    margin-right: 280px;
-  }
-}
-
-@media screen and (max-width: 1777px) {
-  .sobre {
-    margin-left: 250px;
-    margin-right: 250px;
-  }
-}
-
-@media screen and (max-width: 1711px) {
-  .sobre {
-    margin-left: 200px;
-    margin-right: 200px;
-  }
-}
-
-@media screen and (max-width: 1605px) {
-  .sobre {
-    margin-left: 150px;
-    margin-right: 150px;
-  }
-}
-
-@media screen and (max-width: 1513px) {
+@media screen and (max-width: 1376px) {
   .sobre {
     margin-left: 100px;
     margin-right: 100px;
   }
-}
-
-@media screen and (max-width: 1411px) {
-  .sobre {
-    margin-left: 50px;
-    margin-right: 50px;
-  }
-}
-
-@media screen and (max-width: 1305px) {
   .sobre-info h2 {
-    margin-bottom: 60px;
+    margin-bottom: 120px;
+  }
+  .sobre-info h1 {
+    margin-bottom: 30px;
   }
   .sobre {
     margin-left: 20px;
@@ -594,154 +567,205 @@ input:checked[type="checkbox"]::before {
   }
 }
 
+/*
+@media screen and (max-width: 1849px) {
+    .sobre-info h2 {
+        margin-top: 5px;
+        margin-bottom: 30px;
+    }
+}
+
+@media screen and (max-width: 1813px) {
+    .sobre-info h2 {
+        margin-top: 5px;
+        margin-bottom: 40px;
+    }
+    .sobre {
+        margin-left: 280px;
+        margin-right: 280px;
+    }
+}
+
+@media screen and (max-width: 1777px) {
+    .sobre {
+        margin-left: 250px;
+        margin-right: 250px;
+    }
+}
+
+@media screen and (max-width: 1711px) {
+    .sobre {
+        margin-left: 200px;
+        margin-right: 200px;
+    }
+}
+
+@media screen and (max-width: 1605px) {
+    .sobre {
+        margin-left: 150px;
+        margin-right: 150px;
+    }
+}
+
+@media screen and (max-width: 1513px) {
+    .sobre {
+        margin-left: 100px;
+        margin-right: 100px;
+    }
+}
+
+@media screen and (max-width: 1411px) {
+    .sobre {
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+}
+
 @media screen and (max-width: 1225px) {
-  .sobre-info h2 {
-    margin-bottom: 40px;
-  }
-  .sobre {
-    margin-left: 0;
-    margin-right: 0;
-  }
-  .sobre-perfil div {
-    margin-left: 20px;
-  }
-  .sobre-info p {
-    margin-right: 15px;
-  }
-  .sobre-info h1 {
-    font-size: 70px;
-  }
+    .sobre-info h2 {
+        margin-bottom: 40px;
+    }
+    .sobre {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .sobre-perfil div {
+        margin-left: 20px;
+    }
+    .sobre-info p {
+        margin-right: 15px;
+    }
+    .sobre-info h1 {
+        font-size: 70px;
+    }
 }
 
 @media screen and (max-width: 1103px) {
-  .sobre-info h2 {
-    margin-bottom: 20px;
-  }
-  .sobre-info p {
-    font-size: 19px;
-  }
+    .sobre-info h2 {
+        margin-bottom: 20px;
+    }
+    .sobre-info p {
+        font-size: 19px;
+    }
 }
 
 @media screen and (max-width: 989px) {
-  .sobre-info h1 {
-    font-size: 65px;
-  }
-  .sobre-info h2 {
-    margin-top: 5px;
-    margin-bottom: 28px;
-  }
-  .sobre-perfil div {
-    margin-left: 20px;
-  }
-  .sobre-info p {
-    font-size: 18px;
-    margin-right: 15px;
-  }
+    .sobre-info h1 {
+        font-size: 65px;
+    }
+    .sobre-info h2 {
+        margin-top: 5px;
+        margin-bottom: 28px;
+    }
+    .sobre-perfil div {
+        margin-left: 20px;
+    }
+    .sobre-info p {
+        font-size: 18px;
+        margin-right: 15px;
+    }
 }
 
 @media screen and (max-width: 947px) {
-  .sobre-info h1 {
-    font-size: 55px;
-  }
-  .sobre-info h2 {
-    margin-top: 5px;
-    margin-bottom: 28px;
-  }
-  .sobre-perfil div {
-    margin-left: 20px;
-  }
-  .sobre-info p {
-    font-size: 17px;
-    margin-right: 15px;
-  }
+    .sobre-info h1 {
+        font-size: 55px;
+    }
+    .sobre-info h2 {
+        margin-top: 5px;
+        margin-bottom: 28px;
+    }
+    .sobre-perfil div {
+        width: 94%;
+        margin-left: 20px;
+    }
+    .sobre-info p {
+        font-size: 17px;
+        margin-right: 15px;
+    }
 }
 
 @media screen and (max-width: 947px) {
-  .sobre-info h1 {
-    font-size: 50px;
-  }
-  .sobre-info h2 {
-    font-size: 16px;
-    margin-top: 5px;
-    margin-bottom: 20px;
-  }
-  .sobre-perfil div {
-    margin-left: 20px;
-  }
-  .sobre-info p {
-    font-size: 17px;
-    margin-right: 15px;
-  }
+    .sobre-info h1 {
+        font-size: 50px;
+    }
+    .sobre-info h2 {
+        font-size: 16px;
+        margin-top: 5px;
+        margin-bottom: 20px;
+    }
+    .sobre-perfil div {
+        width: 94%;
+        margin-left: 20px;
+    }
+    .sobre-info p {
+        font-size: 17px;
+        margin-right: 15px;
+    }
 }
 
 @media screen and (max-width: 830px) {
-  .sobre {
-    display: block;
-  }
-  .sobre-perfil {
-    width: 100%;
-  }
-  .sobre-info {
-    width: 100%;
-  }
-  .sobre-perfil img {
-    width: 100%;
-    height: 80%;
-  }
-  .sobre-info h1 {
-    margin-top: 15px;
-    font-size: 65px;
-  }
-  .sobre-info h2 {
-    font-size: 20px;
-    margin-top: 5px;
-    margin-bottom: 20px;
-  }
-  .sobre-perfil div {
-    margin-left: 50px;
-  }
-  .sobre-info p {
-    font-size: 17px;
-    margin-right: 15px;
-  }
+    .sobre {
+        display: block;
+    }
+    .sobre-perfil {
+        width: 100%;
+    }
+    .sobre-info {
+        width: 100%;
+    }
+    .sobre-perfil img {
+        width: 90%;
+        height: 70%;
+    }
+    .sobre-info h1 {
+        margin-top: 15px;
+        font-size: 65px;
+    }
+    .sobre-info h2 {
+        font-size: 20px;
+        margin-top: 5px;
+        margin-bottom: 20px;
+    }
+    .sobre-perfil div {
+        width: 94%;
+        margin-left: 50px;
+    }
+    .sobre-info p {
+        font-size: 17px;
+        margin-right: 15px;
+    }
 }
 
 @media screen and (max-width: 830px) {
-  .sobre-perfil div {
-    width: 98%;
-  }
-  .sobre-info h1 {
-    margin-top: 15px;
-    font-size: 55px;
-  }
+    .sobre-info h1 {
+        margin-top: 15px;
+        font-size: 55px;
+    }
 }
 
 @media screen and (max-width: 586px) {
-  .sobre-perfil div {
-    width: 95%;
-  }
+    .sobre-perfil div {
+        width: 95%;
+    }
 }
 
 @media screen and (max-width: 490px) {
-  .sobre-perfil div {
-    -ms-grid-column-align: center;
+    .sobre-perfil div {
         justify-self: center;
-    width: 100%;
-  }
+        width: 100%;
+    }
 }
 
 @media screen and (max-width: 439px) {
-  .sobre-info h1 {
-    font-size: 50px;
-  }
-  .sobre-perfil div {
-    -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
+    .sobre-info h1 {
+        font-size: 50px;
+    }
+    .sobre-perfil div {
         align-self: center;
-    width: 87%;
-  }
+        width: 87%;
+    }
 }
-
+*/
 @media screen and (max-width: 400px) {
   .sobre-info h1 {
     font-size: 40px;

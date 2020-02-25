@@ -30,11 +30,15 @@ html[data-theme="dark"] {
     --sw: rgb(25, 25, 29);
     --c1: rgb(253, 149, 31);
     --c2: rgb(255, 255, 255);
-    --c3: rgb(83, 83, 83);
+    --c3: rgb(168, 168, 179);
     --c4: rgb(44, 181, 199);
-    --c5: rgb(4, 20, 194);
+    --c5: rgb(93,96,197);
     --c6: rgb(66, 255, 176);
     --c7: rgb(13, 199, 143);
+    --c8: rgb(199, 46, 63);
+    --c9: rgb(21, 32, 38);
+    --c10: rgb(66, 182, 124);
+    --c11: rgb(2,195,116);
 }
 
 html[data-theme="light"] {
@@ -45,9 +49,10 @@ html[data-theme="light"] {
     --c2: rgb(5, 5, 5);
     --c3: rgb(21, 21, 26);
     --c4: rgb(0, 112, 172);
-    --c5: rgb(26, 35, 126);
+    --c5: rgb(93,96,197);
     --c6: rgb(19, 170, 82);
     --c7: rgb(17, 97, 73);
+    --c8: rgb(199, 46, 63);
     /* opção de cores :
         --c7: rgb(26, 35, 126); [azul]
     */
@@ -188,7 +193,7 @@ nav ul li {
     margin-left: 5px;
     margin-bottom: 6px;
     /*transition: all 1.5s ease 0.4s;*/
-    transition-delay: 0.2s;
+    transition-delay: 0.05s;
     transition-duration: 0.8s;
     text-align: center;
     align-content: center;
@@ -407,17 +412,24 @@ input:checked[type="checkbox"]::before {
     justify-content: space-evenly;
 }
 
+.sobre-perfil {
+    display: block;
+    align-content: flex-end;
+    justify-content: flex-end;
+}
+
 .sobre-perfil img {
-    width: 400px;
-    height: 400px;
+    width: 520px;
+    height: 520px;
 }
 
 .sobre-perfil div {
     height: 2px;
-    width: 95%;
+    width: 100%;
+    align-self: end;
     margin-top: -4px;
-    margin-left: 23px;
     border-radius: 30px;
+    justify-content: end;
     background: var(--c4);
 }
 
@@ -454,6 +466,24 @@ input:checked[type="checkbox"]::before {
     font-family: 'Dosis', sans-serif;
 }
 
+@media screen and (max-width: 1376px) {
+    .sobre {
+        margin-left: 100px;
+        margin-right: 100px;
+    }
+    .sobre-info h2 {
+        margin-bottom: 120px;
+    }
+    .sobre-info h1 {
+        margin-bottom: 30px;
+    }
+    .sobre {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+}
+
+/*
 @media screen and (max-width: 1849px) {
     .sobre-info h2 {
         margin-top: 5px;
@@ -504,16 +534,6 @@ input:checked[type="checkbox"]::before {
     .sobre {
         margin-left: 50px;
         margin-right: 50px;
-    }
-}
-
-@media screen and (max-width: 1305px) {
-    .sobre-info h2 {
-        margin-bottom: 60px;
-    }
-    .sobre {
-        margin-left: 20px;
-        margin-right: 20px;
     }
 }
 
@@ -571,6 +591,7 @@ input:checked[type="checkbox"]::before {
         margin-bottom: 28px;
     }
     .sobre-perfil div {
+        width: 94%;
         margin-left: 20px;
     }
     .sobre-info p {
@@ -589,6 +610,7 @@ input:checked[type="checkbox"]::before {
         margin-bottom: 20px;
     }
     .sobre-perfil div {
+        width: 94%;
         margin-left: 20px;
     }
     .sobre-info p {
@@ -608,8 +630,8 @@ input:checked[type="checkbox"]::before {
         width: 100%;
     }
     .sobre-perfil img {
-        width: 100%;
-        height: 80%;
+        width: 90%;
+        height: 70%;
     }
     .sobre-info h1 {
         margin-top: 15px;
@@ -621,6 +643,7 @@ input:checked[type="checkbox"]::before {
         margin-bottom: 20px;
     }
     .sobre-perfil div {
+        width: 94%;
         margin-left: 50px;
     }
     .sobre-info p {
@@ -630,9 +653,6 @@ input:checked[type="checkbox"]::before {
 }
 
 @media screen and (max-width: 830px) {
-    .sobre-perfil div {
-        width: 98%;
-    }
     .sobre-info h1 {
         margin-top: 15px;
         font-size: 55px;
@@ -661,6 +681,7 @@ input:checked[type="checkbox"]::before {
         width: 87%;
     }
 }
+*/
 
 @media screen and (max-width: 400px) {
     .sobre-info h1 {
