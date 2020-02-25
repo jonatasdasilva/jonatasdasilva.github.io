@@ -1,0 +1,357 @@
+/* Fonts Externas */
+
+@import url('https://fonts.googleapis.com/css?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Bubblegum+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lilita+One&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Exo+2&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Nova+Square&display=swap');
+
+/* Fonts Locais */
+
+@font-face {
+    font-family: 'Azedo Light';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Azedo Light'), url('../fonts/azedo/Azedo-Light.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Azedo Bold';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Azedo Bold'), url('../fonts/azedo/Azedo-Bold.woff') format('woff');
+}
+
+html[data-theme="dark"] {
+    --bg: #000;
+    --top: #222222;
+    --shadow: #333333;
+    --color1: #43ffb1;
+    --t-color0: #ffffff;
+    --t-color1: #5ef8b8;
+    --t-color2: #b7efff;
+}
+
+html[data-theme="light"] {
+    --bg: #ffffff;
+    --top: #ebebeb;
+    --shadow: #dadada;
+    --color1: #186049;
+    --t-color0: #333333;
+    --t-color1: #000000;
+    --t-color2: #01663c;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    background: var(--bg);
+    color: var(--t-color1);
+    font-family: 'Poppins', sans-serif;
+}
+
+nav {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    position: fixed;
+    align-items: center;
+    background: var(--top);
+    align-content: space-around;
+    justify-content: space-around;
+}
+
+.sombra {
+    box-shadow: 0px 1px 4px 0px var(--shadow);
+    -moz-box-shadow: 0px 1px 4px 0px var(--shadow);
+    -webkit-box-shadow: 0px 1px 4px 0px var(--shadow);
+}
+
+
+/* Butão menu */
+
+.burger {
+    display: none;
+    cursor: pointer;
+    text-align: center;
+}
+
+.p-top {
+    font-size: 9px;
+    font-weight: bold;
+    color: var(--color1);
+    transition: all 0.1s ease;
+    font-family: 'Poppins', sans-serif;
+}
+
+.ln1 {
+    width: 16.7px;
+    height: 2px;
+    margin: 5px;
+    background: var(--t-color0);
+    transition: all 1s ease-in-out;
+}
+
+.burger:hover .ln1 {
+    background: var(--color1);
+}
+
+.ln2 {
+    height: 2px;
+    margin: 5px;
+    width: 8.35px;
+    background: var(--t-color0);
+    transition: all 1s ease-in-out;
+}
+
+.burger:hover .ln2 {
+    background: var(--color1);
+}
+
+.ln3 {
+    width: 25px;
+    height: 2px;
+    margin: 5px;
+    background: var(--t-color0);
+    transition: all 1s ease-in-out;
+}
+
+.burger:hover .ln3 {
+    background: var(--color1);
+    transition: all 1s ease-in-out;
+}
+
+.burger:hover .ln1 {
+    width: 25px;
+    transition: all 1s ease-in-out;
+}
+
+.burger:hover .ln2 {
+    width: 25px;
+    transition: all 1s ease-in-out;
+}
+
+nav ul {
+    width: 35%;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav ul li {
+    padding: 1px;
+    list-style: none;
+    transition: all 1s ease-in-out;
+    border-bottom: 1px solid var(--top);
+}
+
+nav ul li:hover {
+    border-bottom: 1px solid var(--color1);
+}
+
+nav ul li a {
+    font-size: 12px;
+    font-weight: normal;
+    text-decoration: none;
+    color: var(--t-color0);
+    transition: 1s all ease;
+    /*font-family: 'Poppins', sans-serif;*/
+    font-family: 'Nova Square', cursive;
+}
+
+nav ul li:hover a {
+    color: var(--color1);
+}
+
+nav h2 {
+    width: 26%;
+    cursor: pointer;
+    font-size: 30px;
+    text-align: center;
+    font-weight: lighter;
+    color: var(--color1);
+    transition: 1.5s all ease;
+    /*font-family: 'Pacifico', cursive;
+    font-family: 'Bubblegum Sans', cursive;
+    font-family: 'Exo 2', sans-serif;*/
+    font-family: 'Azedo Bold';
+}
+
+nav h2:hover {
+    color: var(--t-color2);
+    text-shadow: unset 0 0 2px var(--t-color1);
+}
+
+.tema {
+    display: block;
+    text-align: center;
+}
+
+input[type="checkbox"] {
+    width: 40px;
+    height: 10px;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+    border-radius: 40px;
+    background: var(--t-color0);
+    transition: .8s all ease 0.3s;
+    -webkit-appearance: none;
+}
+
+input:checked[type="checkbox"] {
+    background: var(--color1);
+}
+
+input[type="checkbox"]::before {
+    top: -5px;
+    content: '';
+    width: 20px;
+    left: -0.7px;
+    height: 20px;
+    border-radius: 20px;
+    position: absolute;
+    background: var(--bg);
+    transition: 0.5s all ease;
+    box-shadow: inset 0 0 2px var(--top);
+}
+
+input:checked[type="checkbox"]::before {
+    left: 21px;
+    background: var(--t-color0);
+}
+
+.navegar-menu {
+    display: none;
+}
+
+@media screen and (max-width: 900px) {
+    body {
+        display: block;
+        overflow: hidden;
+    }
+    .burger {
+        display: block;
+    }
+    .navegar-menu {
+        top: 71px;
+        right: 0px;
+        width: 100%;
+        height: 100px;
+        display: flex;
+        position: absolute;
+        align-items: center;
+        transform: translateX(100%);
+        align-content: space-around;
+        background-color: var(--top);
+        justify-content: space-around;
+        transition: transform 0.5s ease-in;
+    }
+    .navegar-menu li {
+        opacity: 0;
+    }
+    .menu-p1,
+    .menu-p2 {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    body {
+        display: block;
+        overflow: hidden;
+    }
+    .navegar-menu {
+        top: 71px;
+        right: 0px;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        position: absolute;
+        align-items: center;
+        flex-direction: column;
+        transform: translateX(100%);
+        align-content: space-around;
+        background-color: var(--top);
+        justify-content: space-around;
+        transition: transform 0.5s ease-in;
+    }
+    .navegar-menu li {
+        opacity: 0;
+    }
+    .menu-p1,
+    .menu-p2 {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    nav h2 {
+        font-size: 20px;
+    }
+}
+
+@keyframes navegarFade {
+    from {
+        opacity: 0;
+        transform: translateX(50%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-2px, 8px);
+}
+
+.toggle .line2 {
+    opacity: 0;
+}
+
+.toggle .ln1 {
+    width: 25px;
+}
+
+.toggle .line3 {
+    transform: rotate(45deg) translate(-2px, -8px);
+}
+
+.toggle .p-top {
+    text-align: end;
+}
+
+.toggle .navegar-menu {
+    opacity: 1;
+    display: flex;
+}
+
+.nav-active {
+    transform: translateX(0%);
+}
+
+html.transition,
+html.transition *,
+html.transition *::before,
+html.transition *::after {
+    transition: all 100ms !important;
+    transition-delay: 0 !important;
+}
+
+.separador {
+    height: 80px;
+}
+
+.sobre {
+    z-index: 0;
+    color: var(--t-color2);
+    font-family: 'Poppins', sans-serif;
+}
