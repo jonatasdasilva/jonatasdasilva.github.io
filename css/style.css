@@ -6,28 +6,35 @@
 @import url("https://fonts.googleapis.com/css?family=Caveat|Dosis&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Sacramento&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Odibee+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Bad+Script&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Kelly+Slab&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Sunshiney&display=swap");
 /* Modo de uso
     - font-family: 'Odibee Sans', cursive;
     - font-family: 'Dosis', sans-serif;
     - font-family: 'Poppins', sans-serif;
+    - font-family: 'Kelly Slab', sans-serif;
     - font-family: 'Caveat', cursive; # Escrita de pessoa
     - font-family: 'Sacramento', cursive; # também de escrita
+    - font-family: 'Bad Script', cursive;
+    - font-family: 'Sunshiney', cursive;
+    - font-family: 'Kelly Slab', sans-serif;
 */
 /*
 --var1: rgb(253, 149, 31);
 --var2: rgb(255, 255, 255);
 --var3: rgb(23, 23, 26);
 --var4: rgb(26, 26, 31);
---var5: rgb(168, 168, 179);
+--var5: rgb(168, 168, 179);S
 */
 html[data-theme="dark"] {
-  --bg: rgb(23, 23, 26);
-  --tp: rgb(26, 26, 31);
-  --sw: rgb(25, 25, 29);
-  --c1: rgb(253, 149, 31);
+  --bg: rgb(26, 26, 31);
+  --tp: rgb(23, 23, 26);
+  --sw: rgb(22, 22, 25);
+  --c1: rgb(252, 177, 108);
   --c2: rgb(255, 255, 255);
   --c3: rgb(168, 168, 179);
-  --c4: rgb(44, 181, 199);
+  --c4: rgb(44, 200, 221);
   --c5: rgb(93,96,197);
   --c6: rgb(66, 255, 176);
   --c7: rgb(13, 199, 143);
@@ -35,6 +42,7 @@ html[data-theme="dark"] {
   --c9: rgb(21, 32, 38);
   --c10: rgb(66, 182, 124);
   --c11: rgb(2,195,116);
+  --c12: rgb(6, 31, 47);
 }
 
 html[data-theme="light"] {
@@ -44,12 +52,12 @@ html[data-theme="light"] {
   --c1: rgb(238, 130, 6);
   --c2: rgb(5, 5, 5);
   --c3: rgb(21, 21, 26);
-  --c4: rgb(0, 112, 172);
+  --c4: rgb(0, 181, 199);
   --c5: rgb(93,96,197);
   --c6: rgb(19, 170, 82);
   --c7: rgb(17, 97, 73);
   --c8: rgb(199, 46, 63);
-  /* opção de cores :
+  /* opção de cores
         --c7: rgb(26, 35, 126); [azul]
     */
 }
@@ -238,17 +246,19 @@ nav ul li:hover .marcador {
 }
 
 nav ul li a {
-  font-size: 18px;
+  font-size: 20px;
   color: var(--c2);
-  font-weight: normal;
+  font-weight: lighter;
   text-decoration: none;
   -webkit-transition: 0.5s all ease;
   transition: 0.5s all ease;
-  font-family: 'Caveat', cursive;
+  /*font-family: 'Bad Script', cursive;*/
+  font-family: 'Sunshiney', cursive;
 }
 
 nav ul li:hover a {
   color: var(--c1);
+  text-shadow: 4px 3px 2px var(--bg);
 }
 
 nav h2 {
@@ -269,6 +279,7 @@ nav h2 {
 
 nav h2:hover {
   color: var(--c1);
+  text-shadow: 4px 3px 2px var(--bg);
 }
 
 .tema {
@@ -284,13 +295,17 @@ input[type="checkbox"] {
   position: relative;
   border-radius: 40px;
   background: var(--c4);
-  -webkit-transition: 0.8s all ease 0.3s;
-  transition: 0.8s all ease 0.3s;
+  -webkit-transition: 0.8s all ease;
+  transition: 0.8s all ease;
   -webkit-appearance: none;
 }
 
 .tema:hover #p-tema {
   color: var(--c1);
+}
+
+.tema:hover input[type="checkbox"] {
+  background: var(--c1);
 }
 
 input:checked[type="checkbox"] {
@@ -306,8 +321,14 @@ input[type="checkbox"]::before {
   border-radius: 20px;
   position: absolute;
   background: var(--c1);
-  -webkit-transition: 0.5s all ease;
-  transition: 0.5s all ease;
+  -webkit-transition: 0.4s all ease;
+  transition: 0.4s all ease;
+  -webkit-box-shadow: 0px 1px 1px 0.3px var(--sw);
+          box-shadow: 0px 1px 1px 0.3px var(--sw);
+}
+
+.tema:hover input[type="checkbox"]::before {
+  background: var(--c4);
 }
 
 input:checked[type="checkbox"]::before {
@@ -477,6 +498,8 @@ input:checked[type="checkbox"]::before {
 
 /* Sobre mim */
 .sobre {
+  margin: 0;
+  padding: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -490,6 +513,8 @@ input:checked[type="checkbox"]::before {
 }
 
 .sobre-perfil {
+  margin: 0;
+  padding: 0;
   display: block;
   -ms-flex-line-pack: end;
       align-content: flex-end;
@@ -503,21 +528,9 @@ input:checked[type="checkbox"]::before {
   height: 520px;
 }
 
-.sobre-perfil div {
-  height: 2px;
-  width: 100%;
-  -ms-flex-item-align: end;
-      -ms-grid-row-align: end;
-      align-self: end;
-  margin-top: -4px;
-  border-radius: 30px;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: end;
-  background: var(--c4);
-}
-
 .sobre-info {
+  padding: 0;
+  margin: 0;
   display: block;
   width: 70%;
   margin-left: 30px;
@@ -538,7 +551,7 @@ input:checked[type="checkbox"]::before {
   letter-spacing: 0.2em;
   margin-bottom: 50px;
   margin-left: 50px;
-  font-family: 'Caveat', cursive;
+  font-family: 'Bad Script', cursive;
 }
 
 .sobre-info p {
@@ -556,7 +569,7 @@ input:checked[type="checkbox"]::before {
     margin-right: 100px;
   }
   .sobre-info h2 {
-    margin-bottom: 120px;
+    margin-bottom: 30px;
   }
   .sobre-info h1 {
     margin-bottom: 30px;
@@ -567,205 +580,49 @@ input:checked[type="checkbox"]::before {
   }
 }
 
-/*
-@media screen and (max-width: 1849px) {
-    .sobre-info h2 {
-        margin-top: 5px;
-        margin-bottom: 30px;
-    }
+@media screen and (max-width: 800px) {
+  .sobre {
+    display: block;
+    margin: 0;
+    padding: 0;
+  }
+  .sobre-perfil {
+    -ms-flex-line-pack: end;
+        align-content: flex-end;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: end;
+  }
+  .sobre-perfil img {
+    width: 100%;
+    height: 500px;
+    border-bottom: 2px solid var(--c6);
+  }
+  .sobre-perfil div {
+    -ms-grid-column-align: end;
+        justify-self: end;
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+  }
+  .sobre-info h1 {
+    width: 100%;
+    font-size: 50px;
+    margin-top: 30px;
+  }
+  .sobre-info {
+    margin-left: 70px;
+    margin-right: 0;
+  }
+  .sobre-info h2 {
+    font-size: 16px;
+    width: 100%;
+  }
+  .sobre-info p {
+    font-size: 16px;
+    text-align: justify;
+  }
 }
 
-@media screen and (max-width: 1813px) {
-    .sobre-info h2 {
-        margin-top: 5px;
-        margin-bottom: 40px;
-    }
-    .sobre {
-        margin-left: 280px;
-        margin-right: 280px;
-    }
-}
-
-@media screen and (max-width: 1777px) {
-    .sobre {
-        margin-left: 250px;
-        margin-right: 250px;
-    }
-}
-
-@media screen and (max-width: 1711px) {
-    .sobre {
-        margin-left: 200px;
-        margin-right: 200px;
-    }
-}
-
-@media screen and (max-width: 1605px) {
-    .sobre {
-        margin-left: 150px;
-        margin-right: 150px;
-    }
-}
-
-@media screen and (max-width: 1513px) {
-    .sobre {
-        margin-left: 100px;
-        margin-right: 100px;
-    }
-}
-
-@media screen and (max-width: 1411px) {
-    .sobre {
-        margin-left: 50px;
-        margin-right: 50px;
-    }
-}
-
-@media screen and (max-width: 1225px) {
-    .sobre-info h2 {
-        margin-bottom: 40px;
-    }
-    .sobre {
-        margin-left: 0;
-        margin-right: 0;
-    }
-    .sobre-perfil div {
-        margin-left: 20px;
-    }
-    .sobre-info p {
-        margin-right: 15px;
-    }
-    .sobre-info h1 {
-        font-size: 70px;
-    }
-}
-
-@media screen and (max-width: 1103px) {
-    .sobre-info h2 {
-        margin-bottom: 20px;
-    }
-    .sobre-info p {
-        font-size: 19px;
-    }
-}
-
-@media screen and (max-width: 989px) {
-    .sobre-info h1 {
-        font-size: 65px;
-    }
-    .sobre-info h2 {
-        margin-top: 5px;
-        margin-bottom: 28px;
-    }
-    .sobre-perfil div {
-        margin-left: 20px;
-    }
-    .sobre-info p {
-        font-size: 18px;
-        margin-right: 15px;
-    }
-}
-
-@media screen and (max-width: 947px) {
-    .sobre-info h1 {
-        font-size: 55px;
-    }
-    .sobre-info h2 {
-        margin-top: 5px;
-        margin-bottom: 28px;
-    }
-    .sobre-perfil div {
-        width: 94%;
-        margin-left: 20px;
-    }
-    .sobre-info p {
-        font-size: 17px;
-        margin-right: 15px;
-    }
-}
-
-@media screen and (max-width: 947px) {
-    .sobre-info h1 {
-        font-size: 50px;
-    }
-    .sobre-info h2 {
-        font-size: 16px;
-        margin-top: 5px;
-        margin-bottom: 20px;
-    }
-    .sobre-perfil div {
-        width: 94%;
-        margin-left: 20px;
-    }
-    .sobre-info p {
-        font-size: 17px;
-        margin-right: 15px;
-    }
-}
-
-@media screen and (max-width: 830px) {
-    .sobre {
-        display: block;
-    }
-    .sobre-perfil {
-        width: 100%;
-    }
-    .sobre-info {
-        width: 100%;
-    }
-    .sobre-perfil img {
-        width: 90%;
-        height: 70%;
-    }
-    .sobre-info h1 {
-        margin-top: 15px;
-        font-size: 65px;
-    }
-    .sobre-info h2 {
-        font-size: 20px;
-        margin-top: 5px;
-        margin-bottom: 20px;
-    }
-    .sobre-perfil div {
-        width: 94%;
-        margin-left: 50px;
-    }
-    .sobre-info p {
-        font-size: 17px;
-        margin-right: 15px;
-    }
-}
-
-@media screen and (max-width: 830px) {
-    .sobre-info h1 {
-        margin-top: 15px;
-        font-size: 55px;
-    }
-}
-
-@media screen and (max-width: 586px) {
-    .sobre-perfil div {
-        width: 95%;
-    }
-}
-
-@media screen and (max-width: 490px) {
-    .sobre-perfil div {
-        justify-self: center;
-        width: 100%;
-    }
-}
-
-@media screen and (max-width: 439px) {
-    .sobre-info h1 {
-        font-size: 50px;
-    }
-    .sobre-perfil div {
-        align-self: center;
-        width: 87%;
-    }
-}
-*/
 @media screen and (max-width: 400px) {
   .sobre-info h1 {
     font-size: 40px;
@@ -773,12 +630,6 @@ input:checked[type="checkbox"]::before {
   .sobre-info p {
     font-size: 16px;
     font-weight: normal;
-  }
-  .sobre-perfil div {
-    -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
-        align-self: center;
-    width: 90%;
   }
 }
 
@@ -793,15 +644,43 @@ input:checked[type="checkbox"]::before {
   .sobre-info h2 {
     font-size: 17px;
   }
-  .sobre-perfil div {
-    width: 90%;
-    -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
-        align-self: center;
-  }
 }
 
 /* Experiências */
+.experiencias {
+  width: 100%;
+  height: 500px;
+  background-color: var(--c6);
+}
+
+.buttons {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 20%;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  background: var(--tp);
+}
+
+.button a {
+  color: white;
+  text-decoration: none;
+}
+
 /* Rodapé */
 .rodape {
   width: 100%;
