@@ -1,92 +1,129 @@
 <!DOCTYPE html>
 <html lang="pt-br" data-theme="dark">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Jônatas da Silva - Analista e Desenvolvedor</title>
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
     <nav class="sombra">
         <div class="burger">
             <div class="line1 ln1"></div>
             <div class="line2 ln2"></div>
             <div class="line3 ln3"></div>
-            <p class="p-top">menu</p>
+            <p class="p-top" id="p-menu">menu</p>
         </div>
         <ul class="menu-p1">
-            <li><a href="#">Página Inicial</a></li>
-            <li><a href="#">Experiências</a></li>
-            <li><a href="#">Habilidades</a></li>
+            <li>
+                <a href="index.html">Página Inicial</a>
+                <div class="marcador"></div>
+            </li>
+            <li>
+                <a href="#experiencias">Experiências</a>
+                <div class="marcador"></div>
+            </li>
+            <li>
+                <a href="#habilidades">Habilidades</a>
+                <div class="marcador"></div>
+            </li>
         </ul>
-        <h2>Jonatas da Silva</h2>
+        <h2>Jônatas da Silva</h2>
         <ul class="menu-p2">
-            <li><a href="#">Interesses</a></li>
-            <li><a href="#">Formação</a></li>
-            <li><a href="#">Contato</a></li>
+            <li>
+                <a href="#interesses">Interesses</a>
+                <div class="marcador"></div>
+            </li>
+            <li>
+                <a href="#formacao">Formação</a>
+                <div class="marcador"></div>
+            </li>
+            <li>
+                <a href="#contato">Contato</a>
+                <div class="marcador"></div>
+            </li>
         </ul>
         <ul class="navegar-menu">
-            <li><a href="#">Página Inicial</a></li>
-            <li><a href="#">Experiências</a></li>
-            <li><a href="#">Habilidades</a></li>
-            <li><a href="#">Interesses</a></li>
-            <li><a href="#">Formação</a></li>
-            <li><a href="#">Contato</a></li>
+            <li>
+                <a href="#sobre">Página Inicial</a>
+                <div class="marcador"></div>
+            </li>
+            <li>
+                <a href="#experiencias">Experiências</a>
+                <div class="marcador"></div>
+            </li>
+            <li>
+                <a href="#habilidades">Habilidades</a>
+                <div class="marcador"></div>
+            </li>
+            <li>
+                <a href="#interesses">Interesses</a>
+                <div class="marcador"></div>
+            </li>
+            <li>
+                <a href="#formacao">Formação</a>
+                <div class="marcador"></div>
+            </li>
+            <li>
+
+                <a href="#contato">Contato</a>
+                <div class="marcador"></div>
+            </li>
         </ul>
         <div class="tema">
             <input type="checkbox" name="contraste">
-            <p class="p-top">contraste</p>
-            <!--<script>
-                var checkbox = document.querySelector('input[name=contraste]');
-
-                checkbox.addEventListener('chage', function() {
-                    if (this.checkbox) {
-                        trans();
-                        document.documentElement.setAttribute('data-theme', 'light');
-                    } else {
-                        trans();
-                        document.documentElement.setAttribute('data-theme', 'dark');
-                    }
-                });
-
-                var trans = () => {
-                    document.documentElement.classList.add('transition');
-                    window.setTimeout(() => {
-                        document.documentElement.classList.remove('transition');
-                    }, 1000);
-                }
-            </script>-->
+            <p class="p-top" id="p-tema">contraste</p>
         </div>
     </nav>
     <article>
-        <section class="separador"></section>
-        <section class="sobre">
-            <div>
-                <div class="b-title">
-                    <h1>Jonatas da Silva</h1>
-                    <h2>Analista e Desenvolvedor</h2>
-                </div>
-                <img src="img/perfil6.png" alt="foto de Jônatas da Silva" class="perfil">
-                <div class="b-inform">
-                    <p>Estudante de Ciência da Computação, interessado em: engenharia de software, processamento de dados, analise de requisitos, desenvolvimento, banco de dados e analise de sistemas. Atualmente é bolsista na Coordenação de Segurança da Informação e Comunicaçãao da UFBA, atuando na área de redes, com objetivo de aplicar regras de segurança em equipamentos de redes para impedir ataques de "spoofing". Já esteve atuando como Analista de T.I. na Cordenação de Redes e Infraestrutura da UFBA, onde realizava configurações, tratativa de incidentes, estudos para melhorias do ambiente, rotinas de Backup com Tivoli, monitoramento e admistração de servidor de arquivos.</p>
-                </div>
+        <div class="separador"></div>
+        <section class="sobre" id="sobre">
+            <div class="sobre-perfil">
+                <img src="img/perfil2.png" alt="">
+            </div>
+            <div class="sobre-info">
+                <h1>Jônatas da Silva</h1>
+                <h2>Analista e Desenvolvedor</h2>
+                <p>Estudante de Ciência da Computação, interessado em: engenharia de software, mineração de dados, análise de requisitos, desenvolvimento, banco de dados e análise de sistemas. Atualmente é bolsista na Coordenação de Segurança da Informação
+                    e Comunicação da UFBA, atuando na área de redes, com objetivo de aplicar regras de segurança em equipamentos de redes para impedir ataques de "spoofing". Já esteve atuando como Analista de T.I. na Cordenação de Redes e Infraestrutura
+                    da UFBA, onde realizava configurações, tratativa de incidentes, estudos para melhorias do ambiente e rotinas de Backup com Tivoli, atuando também em monitoramento de ativos de redes e servidos e administração de servidor de arquivos.</p>
             </div>
         </section>
-        <section class="contato">
-            <img src="img/perfil2.png"  class="foto">
-            <form class="c-form" action="php/contato.php">
-                <span class="c-title">Contato</span>
-                <input type="text" id="nome" name="nome" placeholder="   Seu nome...">
-                <input type="text" name="cidade" placeholder="   Sua cidade...">
-                <input type="text" name="assunto" placeholder="   Assunto">
-                <textarea id="mensagem" name="mensagem" placeholder="  Mensagem..."></textarea>
-                <input type="submit" value="Enviar">
-            </form>
+        <section class="experiencias" id="experiencias">
+            <h2>Experiências</h2>
+            <div class="time-line"></div>
+        </section>
+        <section class="habilidades" id="habilidades">
+            <h2>Habilidades</h2>
+        </section>
+        <section class="interesses" id="interesses">
+            <h2>Interesses</h2>
+        </section>
+        <section class="formacao" id="formacao">
+            <h2>Formação</h2>
+        </section>
+        <section class="contato" id="contato">
+            <h2>Contato</h2>
+            <p>Se precisar tirar alguma dúvida.</p>
+            <div>
+                <img src="img/perfil6.png" alt="">
+                <form action="">
+                    <input type="email" placeholder="joaozinho@provedor.com">
+                    <input type="text" placeholder="Assunto de contato">
+                    <textarea name="mensagem" id="mensagem" placeholder="Digite sua mensagem..."></textarea>
+                    <div>
+                        <a href="" id="limpar">limpar</a>
+                        <a href="" id="enviar">enviar</a>
+                    </div>
+                </form>
+            </div>
         </section>
     </article>
-    <footer></footer>
-    <script src="js/menu.js"></script>
+    <footer class="rodape">2020 Jônatas da Silva. Todos os direitos reservados<sup>&#174</sup>.</footer>
     <script src="js/index.js"></script>
 </body>
+
 </html>

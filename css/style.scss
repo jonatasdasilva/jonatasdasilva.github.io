@@ -1,0 +1,895 @@
+/* Fonts Externas */
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,400&family=Sacramento&display=swap');
+
+/* Fonts Locais */
+
+@font-face {
+    font-family: 'Lato';
+    src: local("Lato"), url(../fonts/Lato-Thin.ttf) format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: local("Lato"), url(../fonts/Lato-Light.ttf) format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: local("Lato"), url(../fonts/Lato-Regular.ttf) format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: local("Lato"), url(../fonts/Lato-Bold.ttf) format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: local("Lato"), url(../fonts/Lato-Black.ttf) format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: local("Poppins"), url(../fonts/Poppins-Thin.ttf) format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: local("Poppins"), url(../fonts/Poppins-ExtraLight.ttf) format('truetype');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: local("Poppins"), url(../fonts/Poppins-Light.ttf) format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: local("Poppins"), url(../fonts/Poppins-Regular.ttf) format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: local("Poppins"), url(../fonts/Poppins-Medium.ttf) format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: local("Poppins"), url(../fonts/Poppins-SemiBold.ttf) format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: local("Poppins"), url(../fonts/Poppins-Bold.ttf) format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: local("Poppins"), url(../fonts/Poppins-ExtraBold.ttf) format('truetype');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: local("Poppins"), url(../fonts/Poppins-Black.ttf) format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Sacramento';
+    src: local("Sacramento"), url(../fonts/Sacramento-Regular.ttf) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: local("Roboto"), url(../fonts/Roboto-Thin.ttf) format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: local("Roboto"), url(../fonts/Roboto-Light.ttf) format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: local("Roboto"), url(../fonts/Roboto-Regular.ttf) format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: local("Roboto"), url(../fonts/Roboto-Medium.ttf) format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: local("Roboto"), url(../fonts/Roboto-Bold.ttf) format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: local("Roboto"), url(../fonts/Roboto-Black.ttf) format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+
+/* Modos de uso das fontes 
+    - font-family: 'Lato', sans-serif;
+    - font-family: 'Poppins', sans-serif;
+    - font-family: 'Sacramento', cursive;
+    - font-family: 'Roboto', sans-serif;
+*/
+
+
+/* Temas de Layout */
+
+html[data-theme="dark"] {
+    --c1: #48ebca;
+    --c2: #404a49;
+    --c3: #f5f4f6;
+    --c4: #d63e3e;
+    --c5: #323238;
+    --c6: #745fb5;
+    --c7: #54595e;
+    --c8: #3cf188;
+    --c9: #616668;
+    --c10: #242429;
+    --c11: #ff6600;
+    --c12: #61dafb;
+}
+
+html[data-theme="light"] {
+    --c1: #04e6b8;
+    --c2: #dde3e5;
+    --c3: #323538;
+    --c4: #d63e3e; //erro
+    --c5: #f0f0f0;
+    --c6: #745fb5;
+    --c7: #54595e;
+    --c8: #13aa52; //sucesso
+    --c9: #616668;
+    --c10: #a7a7a7;
+    --c11: #ff6600;
+    --c12: #61dafb;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    -moz-osx-font-smoothing: grayscale !important;
+    text-rendering: optimizelegibility !important;
+    -webkit-font-smoothing: antialiased !important;
+}
+
+body {
+    background: var(--c2);
+    color: var(--c3);
+    font-family: 'Poppins', sans-serif;
+}
+
+nav {
+    width: 100%;
+    height: 80px;
+    margin: auto;
+    display: flex;
+    position: fixed;
+    align-items: center;
+    background: var(--c5);
+    align-content: space-around;
+    justify-content: space-around;
+}
+
+.sombra {
+    box-shadow: 0px 2px 7px 0px var(--c10);
+    -moz-box-shadow: 0px 2px 7px 0px var(--c10);
+    -webkit-box-shadow: 0px 2px 7px 0px var(--c10);
+}
+
+
+/* Butão menu */
+
+.burger,
+.navegar-menu {
+    display: none;
+}
+
+.burger {
+    cursor: pointer;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+
+.p-top {
+    font-size: 10px;
+    margin-top: 5px;
+    color: var(--c3);
+    font-weight: 500;
+    text-align: center;
+    letter-spacing: 0.05em;
+    transition: all 0.5s ease 0.1s;
+    font-family: 'Poppins', cursive;
+}
+
+.ln1 {
+    width: 20px;
+    height: 2px;
+    margin: 5px;
+    background: var(--c3);
+    transition: all 1s ease-in-out;
+}
+
+.burger:hover .ln1 {
+    background: var(--c1);
+}
+
+.ln2 {
+    height: 2px;
+    margin: 5px;
+    width: 20px;
+    background: var(--c3);
+    transition: all 1s ease-in-out;
+}
+
+.burger:hover .ln2 {
+    background: var(--c1);
+}
+
+.ln3 {
+    width: 20px;
+    height: 2px;
+    margin: 5px;
+    background: var(--c3);
+    transition: all 1s ease-in-out;
+}
+
+.burger:hover .ln3 {
+    background: var(--c1);
+    transition: all 1s ease-in-out;
+}
+
+.burger:hover .ln1 {
+    width: 20px;
+    transition: all 1s ease-in-out;
+}
+
+.burger:hover .ln2 {
+    width: 20px;
+    transition: all 1s ease-in-out;
+}
+
+nav ul {
+    width: 35%;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav ul li {
+    display: flexbox;
+    list-style: none;
+    text-align: center;
+    align-content: center;
+    vertical-align: middle;
+    justify-content: center;
+    transition: all 0.5s ease-in-out;
+}
+
+.marcador {
+    width: 5px;
+    height: 2px;
+    margin-top: 5px;
+    text-align: center;
+    border-radius: 10px;
+    align-content: center;
+    vertical-align: middle;
+    transition-delay: 0.05s;
+    justify-content: center;
+    transition-duration: 0.8s;
+    background-color: var(--c1);
+    transition-timing-function: linear;
+    transition-property: width, background-color;
+}
+
+nav ul li:hover .marcador {
+    width: 70%;
+}
+
+nav ul li a {
+    font-size: 15px;
+    color: var(--c3);
+    font-weight: 400;
+    text-decoration: none;
+    transition: 0.5s all ease;
+    font-family: 'Poppins', sans-serif;
+}
+
+nav ul li:hover a {
+    color: var(--c1);
+    text-shadow: 4px 3px 2px var(--c5);
+}
+
+#selected {
+    color: var(--c1);
+}
+
+#marcador {
+    width: 70%;
+}
+
+nav h2 {
+    width: 30%;
+    font-size: 45px;
+    color: var(--c1);
+    text-align: center;
+    transition: 1s all ease;
+    font-family: 'Sacramento', cursive;
+}
+
+nav h2:hover {
+    text-shadow: 4px 3px 2px var(--c5);
+}
+
+.tema {
+    display: block;
+    text-align: center;
+}
+
+input[type="checkbox"] {
+    width: 30px;
+    height: 15px;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+    border-radius: 40px;
+    background: var(--c2);
+    transition: 0.8s all ease;
+    -webkit-appearance: none;
+}
+
+.tema:hover input[type="checkbox"] {
+    background: var(--c1);
+}
+
+input:checked[type="checkbox"] {
+    background: var(--c7);
+}
+
+input[type="checkbox"]::before {
+    top: 2.4px;
+    content: '';
+    width: 10px;
+    left: 3px;
+    height: 11px;
+    border-radius: 20px;
+    position: absolute;
+    background: var(--c1);
+    transition: 0.4s all ease;
+    box-shadow: 0px 1px 1px 0.3px var(--c7);
+}
+
+.tema:hover input[type="checkbox"]::before {
+    background: var(--c5);
+}
+
+input:checked[type="checkbox"]::before {
+    left: 17px;
+    background: var(--c1);
+}
+
+@media screen and (max-width: 1052px) {
+    body {
+        display: block;
+        overflow: scroll;
+    }
+    .burger {
+        display: block;
+    }
+    .navegar-menu {
+        top: 71px;
+        right: 0px;
+        width: 100%;
+        height: 100px;
+        display: flex;
+        position: absolute;
+        align-items: center;
+        transform: translateX(100%);
+        align-content: space-around;
+        background-color: var(--c5);
+        justify-content: space-around;
+        transition: transform 0.5s ease-in;
+    }
+    .navegar-menu li {
+        opacity: 0;
+    }
+    .menu-p1,
+    .menu-p2 {
+        display: none;
+    }
+    nav h2 {
+        width: 40%;
+        font-size: 35px;
+    }
+}
+
+@media screen and (max-width: 675px) {
+    body {
+        display: block;
+        overflow: scroll;
+    }
+    .navegar-menu {
+        top: 70px;
+        right: 0px;
+        width: 100%;
+        display: flex;
+        position: absolute;
+        align-items: center;
+        flex-direction: column;
+        height: calc(100vh - 70px);
+        transform: translateX(100%);
+        align-content: space-around;
+        background-color: var(--c5);
+        justify-content: space-around;
+        transition: transform 0.5s ease-in;
+    }
+    .navegar-menu li {
+        opacity: 0;
+    }
+    .menu-p1,
+    .menu-p2 {
+        display: none;
+    }
+    nav h2 {
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width: 470px) {
+    nav h2 {
+        width: 40%;
+        font-size: 26px;
+    }
+}
+
+@media screen and (max-width: 355px) {
+    nav h2 {
+        width: 40%;
+        font-size: 20px;
+    }
+}
+
+@keyframes navegarFade {
+    from {
+        opacity: 0;
+        transform: translateX(50%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 5px);
+}
+
+.toggle .line2 {
+    opacity: 0;
+}
+
+.toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -5px);
+}
+
+.toggle .navegar-menu {
+    opacity: 1;
+    display: flex;
+}
+
+.nav-active {
+    transform: translateX(0%);
+}
+
+.separador {
+    height: 85px;
+    background: transparent;
+}
+
+
+/* Sobre mim */
+
+.sobre {
+    display: flex;
+    padding-left: 100px;
+    padding-right: 100px;
+    box-sizing: border-box;
+    align-content: space-around;
+    justify-content: space-evenly;
+}
+
+.sobre-perfil {
+    margin: 0;
+    padding: 0;
+    width: 25%;
+    display: block;
+    align-content: flex-end;
+    justify-content: flex-end;
+}
+
+.sobre-perfil img {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.sobre-info {
+    margin: 0;
+    padding: 0;
+    width: 70%;
+    display: block;
+    margin-left: 30px;
+}
+
+.sobre-info h1 {
+    width: 90%;
+    font-size: 100px;
+    color: var(--c1);
+    text-align: center;
+    font-family: 'Sacramento', cursive;
+}
+
+.sobre-info h2 {
+    font-size: 20px;
+    color: var(--c6);
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 30px;
+    letter-spacing: 0.2em;
+    font-family: 'Lato', sans-serif;
+}
+
+.sobre-info p {
+    font-size: 18px;
+    color: var(--c3);
+    font-weight: 200;
+    text-align: justify;
+    letter-spacing: 0.05em;
+    font-family: 'Poppins', sans-serif;
+}
+
+@media screen and (max-width: 1810px) {
+    .sobre {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+    .sobre-info p {
+        font-size: 16px;
+    }
+    .sobre-info h1 {
+        font-size: 80px;
+    }
+}
+
+@media screen and (max-width: 1666px) {
+    .sobre-info h1 {
+        width: 100%;
+        font-size: 70px;
+    }
+    .sobre-info h2 {
+        font-size: 16px;
+    }
+    .sobre {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+}
+
+@media screen and (max-width: 1461px) {
+    .sobre {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}
+
+@media screen and (max-width: 1376px) {
+    .sobre {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .sobre-info h1 {
+        width: 100%;
+        font-size: 60px;
+    }
+}
+
+@media screen and (max-width: 1230px) {
+    .sobre-info p {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 1069px) {
+    .sobre-info p {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 987px) {
+    .sobre-info h1 {
+        font-size: 45px;
+    }
+    .sobre-info h2 {
+        font-size: 13px;
+    }
+}
+
+@media screen and (max-width: 896px) {
+    .sobre-info h1 {
+        font-size: 40px;
+    }
+    .sobre-info h2 {
+        font-size: 11px;
+    }
+    .sobre-info p {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 858px) {
+    .sobre-info p {
+        font-size: 11px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .sobre {
+        margin: 0;
+        padding: 0;
+        display: block;
+    }
+    .sobre-perfil {
+        width: 100%;
+    }
+    .sobre-info {
+        width: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 10px;
+    }
+    .sobre-perfil img {
+        border-bottom: 2px solid var(--c5);
+    }
+    .sobre-info {
+        margin: auto;
+    }
+    .sobre-info h1 {
+        font-size: 60px;
+        margin-top: 30px;
+    }
+    .sobre-info h2 {
+        font-size: 16px;
+        width: 100%;
+        padding-left: 80px;
+    }
+    .sobre-info p {
+        font-size: 18px;
+        text-align: justify;
+    }
+}
+
+@media screen and (max-width: 478px) {
+    .sobre-info h1 {
+        font-size: 60px;
+    }
+    .sobre-info h2 {
+        font-size: 14px;
+        padding-left: 110px;
+    }
+    .sobre-info p {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .sobre-info h1 {
+        font-size: 50px;
+    }
+    .sobre-info h2 {
+        font-size: 12px;
+        padding-left: 85px;
+    }
+    .sobre-info p {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .sobre-info h1 {
+        font-size: 35px;
+    }
+    .sobre-info p {
+        font-size: 14px;
+    }
+    .sobre-info h2 {
+        font-size: 10px;
+        padding-left: 35px;
+    }
+}
+
+
+/* Experiências */
+
+.experiencias {
+    width: 100%;
+    text-align: center;
+    background-color: var(--c12);
+}
+
+.experiencias h2 {
+    font-size: 80px;
+    color: var(--c5);
+    font-family: 'Sacramento', cursive;
+}
+
+
+/* Contato */
+
+.contato {
+    text-align: center;
+    background: var(--c6);
+}
+
+.contato h2 {
+    font-size: 80px;
+    color: var(--c3);
+    font-family: 'Sacramento', cursive;
+}
+
+.contato p {
+    opacity: 0.5;
+    font-size: 18px;
+    color: var(--c3);
+    font-weight: 500;
+    font-family: 'Roboto', sans-serif;
+}
+
+.contato div {
+    display: flex;
+}
+
+.contato div img {
+    width: 30%;
+}
+
+.contato div form {
+    width: 50%;
+    display: block;
+    margin-top: 30px;
+}
+
+.contato div form input,
+.contato div form textarea {
+    border: 0;
+    width: 100%;
+    outline: none;
+    max-width: 100%;
+    font-size: 20px;
+    margin-top: 20px;
+    color: var(--c3);
+    font-weight: 300;
+    max-height: 150px;
+    padding: 10px 10px;
+    letter-spacing: 0.1px;
+    box-sizing: border-box;
+    background: transparent;
+    font-family: 'Poppins', cursive;
+    transition: all 0.5s ease-in-out;
+    border-bottom: 2px solid var(--c10);
+}
+
+.contato div form textarea {
+    height: 150px;
+}
+
+.contato div form input::placeholder,
+.contato div form textarea::placeholder {
+    color: var(--c10);
+}
+
+.contato div form div {
+    display: flex;
+    margin-top: 30px;
+    align-content: center;
+    justify-content: space-around;
+}
+
+.contato div form div a {
+    font-size: 18px;
+    color: var(--c3);
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.6s ease;
+}
+
+#limpar {
+    opacity: 0.6;
+    padding: 5px 20px 5px 20px;
+    border: 1px solid var(--c5);
+}
+
+#enviar {
+    color: var(--c3);
+    background: var(--c5);
+    padding: 5px 30px 5px 30px;
+    border: 1px solid var(--c5);
+}
+
+#limpar:hover {
+    opacity: 0.9;
+    color: var(--c1);
+    background: var(--c5);
+}
+
+#enviar:hover {
+    color: var(--c5);
+    background: var(--c12);
+    border: 1px solid var(--c12);
+}
+
+
+/* Rodapé */
+
+.rodape {
+    width: 100%;
+    height: 70px;
+    font-size: 16px;
+    color: var(--c3);
+    font-weight: 400;
+    padding-top: 20px;
+    text-align: center;
+    background: var(--c5);
+    font-family: 'Poppins', sans-serif;
+}
