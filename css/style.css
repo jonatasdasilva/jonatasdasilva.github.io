@@ -162,28 +162,48 @@ html[data-theme="dark"] {
   --c3: #f5f4f6;
   --c4: #d63e3e;
   --c5: #323238;
-  --c6: #745fb5;
+  --c6: #8f79cf;
   --c7: #54595e;
   --c8: #3cf188;
   --c9: #616668;
   --c10: #242429;
-  --c11: #ff6600;
+  --c11: #fc8a3f;
   --c12: #61dafb;
+  --c13: #fd6d64;
+  --c14: #4e355c;
+  --c15: #755884;
+  --c16: #369bad;
+  --c17: #3d9df3;
+  --c18: #90d3fe;
+  --c19: #3fb7b5;
+  --c20: #72dcf6;
+  --c21: #f189aa;
+  --c21: #46d7ac;
+  --c22: #48b7ee;
+  --c23: #687c94;
+  --c24: #0078d4;
 }
 
 html[data-theme="light"] {
   --c1: #04e6b8;
   --c2: #dde3e5;
-  --c3: #323538;
+  --c3: #242627;
   --c4: #d63e3e;
   --c5: #f0f0f0;
-  --c6: #745fb5;
-  --c7: #54595e;
+  --c6: #8f79cf;
+  --c7: #313131;
   --c8: #13aa52;
   --c9: #616668;
-  --c10: #a7a7a7;
+  --c10: #242429;
   --c11: #ff6600;
   --c12: #61dafb;
+  --c13: #fd6d64;
+  --c14: #4e355c;
+  --c15: #755884;
+  --c16: #369bad;
+  --c17: #3d9df3;
+  --c18: #90d3fe;
+  --c24: #0078d4;
 }
 
 * {
@@ -204,7 +224,9 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
+/* Header */
 nav {
+  z-index: 2;
   width: 100%;
   height: 80px;
   margin: auto;
@@ -222,12 +244,12 @@ nav {
       justify-content: space-around;
 }
 
-.sombra {
-  box-shadow: 0px 2px 7px 0px var(--c10);
-  -moz-box-shadow: 0px 2px 7px 0px var(--c10);
-  -webkit-box-shadow: 0px 2px 7px 0px var(--c10);
+/*.sombra {
+    box-shadow: 0px 2px 7px 0px var(--c10);
+    -moz-box-shadow: 0px 2px 7px 0px var(--c10);
+    -webkit-box-shadow: 0px 2px 7px 0px var(--c10);
 }
-
+*/
 /* Butão menu */
 .burger,
 .navegar-menu {
@@ -363,10 +385,11 @@ nav ul li:hover .marcador {
 }
 
 nav ul li a {
-  font-size: 15px;
+  font-size: 13px;
   color: var(--c3);
   font-weight: 400;
   text-decoration: none;
+  letter-spacing: 1.8px;
   -webkit-transition: 0.5s all ease;
   transition: 0.5s all ease;
   font-family: 'Poppins', sans-serif;
@@ -374,7 +397,6 @@ nav ul li a {
 
 nav ul li:hover a {
   color: var(--c1);
-  text-shadow: 4px 3px 2px var(--c5);
 }
 
 #selected {
@@ -406,7 +428,7 @@ nav h2:hover {
 
 input[type="checkbox"] {
   width: 30px;
-  height: 15px;
+  height: 17px;
   outline: none;
   cursor: pointer;
   position: relative;
@@ -415,6 +437,7 @@ input[type="checkbox"] {
   -webkit-transition: 0.8s all ease;
   transition: 0.8s all ease;
   -webkit-appearance: none;
+  border: 2px solid var(--c1);
 }
 
 .tema:hover input[type="checkbox"] {
@@ -426,18 +449,16 @@ input:checked[type="checkbox"] {
 }
 
 input[type="checkbox"]::before {
-  top: 2.4px;
+  top: 2px;
   content: '';
-  width: 10px;
+  width: 9px;
   left: 3px;
-  height: 11px;
+  height: 9px;
   border-radius: 20px;
   position: absolute;
   background: var(--c1);
   -webkit-transition: 0.4s all ease;
   transition: 0.4s all ease;
-  -webkit-box-shadow: 0px 1px 1px 0.3px var(--c7);
-          box-shadow: 0px 1px 1px 0.3px var(--c7);
 }
 
 .tema:hover input[type="checkbox"]::before {
@@ -445,7 +466,7 @@ input[type="checkbox"]::before {
 }
 
 input:checked[type="checkbox"]::before {
-  left: 17px;
+  left: 14px;
   background: var(--c1);
 }
 
@@ -663,7 +684,7 @@ input:checked[type="checkbox"]::before {
 
 .sobre-info h2 {
   font-size: 20px;
-  color: var(--c6);
+  color: var(--c17);
   font-weight: bold;
   text-align: center;
   margin-bottom: 30px;
@@ -674,7 +695,7 @@ input:checked[type="checkbox"]::before {
 .sobre-info p {
   font-size: 18px;
   color: var(--c3);
-  font-weight: 200;
+  font-weight: 300;
   text-align: justify;
   letter-spacing: 0.05em;
   font-family: 'Poppins', sans-serif;
@@ -852,6 +873,170 @@ input:checked[type="checkbox"]::before {
   font-family: 'Sacramento', cursive;
 }
 
+.timeline {
+  position: relative;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+.timeline::after {
+  content: '';
+  top: 29px;
+  bottom: 225px;
+  left: 50%;
+  width: 2px;
+  margin-left: -1px;
+  position: absolute;
+  background-color: var(--c9);
+}
+
+.container {
+  width: 50%;
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+}
+
+.container::after {
+  content: '';
+  top: 20px;
+  z-index: 1;
+  width: 15px;
+  height: 15px;
+  right: -10px;
+  border-radius: 50%;
+  position: absolute;
+  background-color: var(--c18);
+  border: 2px solid var(--c15);
+}
+
+.esquerda {
+  left: 0;
+}
+
+.direita {
+  left: 50.5%;
+}
+
+.esquerda::before {
+  content: " ";
+  width: 0;
+  height: 0;
+  top: 19px;
+  z-index: 1;
+  right: 30px;
+  position: absolute;
+  border: medium solid var(--c5);
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent var(--c5);
+}
+
+.direita::before {
+  content: " ";
+  width: 0;
+  height: 0;
+  top: 19px;
+  z-index: 1;
+  left: 30px;
+  position: absolute;
+  border: medium solid var(--c5);
+  border-width: 10px 10px 10px 0;
+  border-color: transparent var(--c5) transparent transparent;
+}
+
+.direita::after {
+  left: -16px;
+}
+
+.content {
+  padding: 20px 30px;
+  position: relative;
+  background-color: var(--c5);
+}
+
+.content h3 {
+  font-size: 30px;
+  font-weight: 300;
+  color: var(--c11);
+  letter-spacing: 1px;
+  font-family: 'Sacramento', sans-serif;
+}
+
+.content p {
+  font-size: 16px;
+  font-weight: 300;
+  letter-spacing: 1px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.content p strong {
+  font-weight: 700;
+  color: var(--c1);
+}
+
+@media screen and (max-width: 600px) {
+  .timeline::after {
+    left: 31px;
+  }
+  .container {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+  }
+  .container::before {
+    left: 60px;
+    border-width: 10px 10px 10px 0;
+    border: medium solid var(--c15);
+    border-color: transparent var(--c18) transparent transparent;
+  }
+  .esquerda::after,
+  .direita::after {
+    left: 15px;
+  }
+  .direita {
+    left: 0%;
+  }
+}
+
+/* Habilidades */
+.habilidades {
+  width: 100%;
+  text-align: center;
+  background-color: var(--c14);
+}
+
+.habilidades h2 {
+  font-size: 80px;
+  color: var(--c18);
+  font-family: 'Sacramento', cursive;
+}
+
+/* Interesses */
+.interesses {
+  width: 100%;
+  text-align: center;
+  background-color: var(--c18);
+}
+
+.interesses h2 {
+  font-size: 80px;
+  color: var(--c14);
+  font-family: 'Sacramento', cursive;
+}
+
+/* Formação */
+.formacao {
+  width: 100%;
+  text-align: center;
+  background-color: var(--c10);
+}
+
+.formacao h2 {
+  font-size: 80px;
+  color: var(--c24);
+  font-family: 'Sacramento', cursive;
+}
+
 /* Contato */
 .contato {
   text-align: center;
@@ -865,7 +1050,7 @@ input:checked[type="checkbox"]::before {
 }
 
 .contato p {
-  opacity: 0.5;
+  opacity: 0.7;
   font-size: 18px;
   color: var(--c3);
   font-weight: 500;
@@ -974,7 +1159,7 @@ input:checked[type="checkbox"]::before {
 }
 
 #enviar:hover {
-  color: var(--c5);
+  color: var(--c10);
   background: var(--c12);
   border: 1px solid var(--c12);
 }
@@ -984,11 +1169,11 @@ input:checked[type="checkbox"]::before {
   width: 100%;
   height: 70px;
   font-size: 16px;
-  color: var(--c3);
+  color: var(--c1);
   font-weight: 400;
   padding-top: 20px;
   text-align: center;
-  background: var(--c5);
+  background: var(--c10);
   font-family: 'Poppins', sans-serif;
 }
 /*# sourceMappingURL=style.css.map */
