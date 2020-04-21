@@ -44,3 +44,39 @@
     - #9F6B99FF
     - #4F3466FF
     - #301728FF
+
+## Razer
+
+### Cores:
+    - #111
+    - #333
+    - #fff
+    - #2a2a2a
+    - #44d62c
+    - 
+### Confings:
+
+scrollbar-base-color: #44d62c;
+scrollbar-track-color: #2a2a2a;
+
+*, :after, :before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+    height: 30px;
+    background-color: #44d62c;
+    -webkit-border-radius: 6px;
+}
+
+::-webkit-scrollbar-track-piece {
+    background-color: #2a2a2a;
+    border-radius: 6x;
+}
