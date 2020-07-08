@@ -45,6 +45,39 @@
     - #4F3466FF
     - #301728FF
 
+## 2020
+
+    - #d8aaa9
+    - #535257
+    - #68676c
+    - #a29595
+    - #eaede6
+    - #FF4500 -> Lush Lava
+    - #7FFFD4 -> Aqua Menthe (Italia)
+    - #00FF00 -> Índia
+    - #9932CC -> Brazil
+    - #00FA9A -> Korea
+    - #00FFFF -> México
+    - #9400D3 -> África do Sul
+    - #8A2BE2 -> Thailand
+    - #00BFFF -> EUA
+    - #7FFF00 -> UFO Green
+    - #2E1A47 -> 
+    - #1F2A44 ->
+    - #01B1AE ->
+    - #40C1AC -> 
+
+### Site
+
+    - #323232 -> background menu
+    - #fafafa -> Background
+    - #E3E3E3 -> Background destaque
+    - #CFCFCF -> Textos grandes explicativos
+    - #111111 -> Títulos
+    - #333333 -> textos menores
+
+
+
 ## Razer
 
 ### Cores:
