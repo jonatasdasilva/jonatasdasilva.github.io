@@ -1398,50 +1398,36 @@ input:checked[type="checkbox"]::before {
                     color: var(--text-black);
                     font-family: 'Lato', cursive;
                     background: var(--primary-90);
-                    box-shadow: 0 0 5px 0 var(--primary-90);
+                    box-shadow: 0 0 5px 0 var(--primary-50);
                     box-shadow: inset 0 1px 15px var(--primary-90);
                 }
 
                 #c, #html {
                     width: 50%;
-                    //background: var(--alternative);
-                    //box-shadow: 0 0 5px 0 var(--alternative);
                 }
 
                 #java, #js, #mongo {
                     width: 30%;
-                    //background: var(--alternative2);
-                    //box-shadow: 0 0 5px 0 var(--alternative2);
                 }
 
                 #sql {
                     width: 25%;
-                    //background: var(--error);
-                    //box-shadow: 0 0 5px 0 var(--error);
                 }
 
                 #php {
                     width: 15%;
-                    //background: var(--error);
-                    //box-shadow: 0 0 5px 0 var(--error);
                 }
 
                 #css {
                     width: 20%;
-                    //background: var(--error);
-                    //box-shadow: 0 0 5px 0 var(--error);
                 }
 
                 #docker {
                     width: 40%;
-                    //background: var(--secundary);
-                    //box-shadow: 0 0 5px 0 var(--secundary);
                 }
 
                 #python {
                     width: 35%;
-                    //background: var(--secundary);
-                    //box-shadow: 0 0 5px 0 var(--secundary);
                 }
             }
         }

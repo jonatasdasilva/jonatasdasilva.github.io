@@ -1420,8 +1420,8 @@ input:checked[type="checkbox"]::before {
   color: var(--text-black);
   font-family: 'Lato', cursive;
   background: var(--primary-90);
-  -webkit-box-shadow: 0 0 5px 0 var(--primary-90);
-          box-shadow: 0 0 5px 0 var(--primary-90);
+  -webkit-box-shadow: 0 0 5px 0 var(--primary-50);
+          box-shadow: 0 0 5px 0 var(--primary-50);
   -webkit-box-shadow: inset 0 1px 15px var(--primary-90);
           box-shadow: inset 0 1px 15px var(--primary-90);
 }
