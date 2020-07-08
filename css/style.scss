@@ -272,7 +272,7 @@ html[data-theme="dark"] {
     --sucess: #3cf188;
     --primary: #ae88fa;
     --titulos:  #CFCFCF;
-    --secundary: #98f5fd;
+    --secundary: #d40e29;
     --text-white: #ffffff;
     --text-black: #222222;
     --background: #121212;
@@ -304,7 +304,7 @@ html[data-theme="light"] {
     //--primary: #3d437a;
     --primary: #7e42f5;
     --titulos:  #f68906;
-    --secundary: #00c3e1;
+    --secundary: #f1051d;
     --text-white: #ffffff;
     --text-black: #222222;
     --background: #f8f8f8;
@@ -1144,13 +1144,13 @@ input:checked[type="checkbox"]::before {
 
                 em {
                     font-size: 14px;
-                    font-weight: 600;
+                    font-weight: 500;
                     border-radius: 20px;
-                    color: var(--text-black);
+                    color: var(--text-white);
                     padding: 5px 15px 5px 15px;
                     font-family: 'Ubuntu', cursive;
-                    background-color: var(--alternative2);
-                    box-shadow: 0 0 5px 0 var(--alternative2);
+                    background-color: var(--secundary);
+                    box-shadow: 0 0 3px 0 var(--secundary);
                 }
 
                 p {
@@ -1164,7 +1164,7 @@ input:checked[type="checkbox"]::before {
 
                     strong {
                         font-weight: 500;
-                        color: var(--alternative2);
+                        color: var(--secundary);
                         font-family: 'Roboto', cursive;
                     }
                 }
@@ -1369,11 +1369,11 @@ input:checked[type="checkbox"]::before {
             h3 {
                 font-size: 18px;
                 font-weight: 600;
-                color: var(--text-black);
                 margin: 0 0 10px 0;
                 padding: 10px 0 10px 0;
+                color: var(--text-white);
                 font-family: 'Ubuntu', cursive;
-                background: var(--alternative2);
+                background: var(--secundary);
             }
 
             h6 {
@@ -1734,7 +1734,7 @@ input:checked[type="checkbox"]::before {
                     width: 50%;
                     border: none;
                     font-size: 15px;
-                    font-weight: 400;
+                    font-weight: 500;
                     margin: 0 0 0 30%;
                     font-family: 'Poppins', sans-serif;
                 }
