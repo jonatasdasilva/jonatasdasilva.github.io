@@ -1420,57 +1420,36 @@ input:checked[type="checkbox"]::before {
   color: var(--text-black);
   font-family: 'Lato', cursive;
   background: var(--primary-90);
-  -webkit-box-shadow: inset 0 1px 15px var(--focus);
-          box-shadow: inset 0 1px 15px var(--focus);
+  -webkit-box-shadow: inset 0 1px 15px var(--primary-90);
+          box-shadow: inset 0 1px 15px var(--primary-90);
 }
 
 .habilidades article .skills .envoclo #c, .habilidades article .skills .envoclo #html {
   width: 50%;
-  background: var(--alternative);
-  -webkit-box-shadow: 0 0 5px 0 var(--alternative);
-          box-shadow: 0 0 5px 0 var(--alternative);
 }
 
 .habilidades article .skills .envoclo #java, .habilidades article .skills .envoclo #js, .habilidades article .skills .envoclo #mongo {
   width: 30%;
-  background: var(--alternative2);
-  -webkit-box-shadow: 0 0 5px 0 var(--alternative2);
-          box-shadow: 0 0 5px 0 var(--alternative2);
 }
 
 .habilidades article .skills .envoclo #sql {
   width: 25%;
-  background: var(--error);
-  -webkit-box-shadow: 0 0 5px 0 var(--error);
-          box-shadow: 0 0 5px 0 var(--error);
 }
 
 .habilidades article .skills .envoclo #php {
   width: 15%;
-  background: var(--error);
-  -webkit-box-shadow: 0 0 5px 0 var(--error);
-          box-shadow: 0 0 5px 0 var(--error);
 }
 
 .habilidades article .skills .envoclo #css {
   width: 20%;
-  background: var(--error);
-  -webkit-box-shadow: 0 0 5px 0 var(--error);
-          box-shadow: 0 0 5px 0 var(--error);
 }
 
 .habilidades article .skills .envoclo #docker {
   width: 40%;
-  background: var(--secundary);
-  -webkit-box-shadow: 0 0 5px 0 var(--secundary);
-          box-shadow: 0 0 5px 0 var(--secundary);
 }
 
 .habilidades article .skills .envoclo #python {
   width: 35%;
-  background: var(--secundary);
-  -webkit-box-shadow: 0 0 5px 0 var(--secundary);
-          box-shadow: 0 0 5px 0 var(--secundary);
 }
 
 @media (max-width: 768px) {
