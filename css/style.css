@@ -263,13 +263,13 @@
     */
 html[data-theme="dark"] {
   --text: #f5f4f6;
-  --error: #f64a47;
+  --error: #ca384c;
   --focus: #414141;
   --shadow: #272727;
   --sucess: #3cf188;
   --primary: #ae88fa;
   --titulos:  #CFCFCF;
-  --secundary: #d40e29;
+  --secundary: #6c7ef7;
   --text-white: #ffffff;
   --text-black: #222222;
   --background: #121212;
@@ -292,13 +292,13 @@ html[data-theme="light"] {
   /* Legado: #3e1d4c, #dee2e9;*/
   /* Atuais: #E84D35, #FF682E, #F5812C, #FF2E37 [#FA002D], #f2c089, #fb7550, #e24937, #d11506, #e24937 */
   --text: #1b0a22;
-  --error: #da1d24;
+  --error: #f1051d;
   --focus: #bbbbbb;
   --sucess: #3cf188;
   --shadow: #b1b1b1;
   --primary: #7e42f5;
   --titulos:  #f68906;
-  --secundary: #f1051d;
+  --secundary: #0038e4;
   --text-white: #ffffff;
   --text-black: #222222;
   --background: #f8f8f8;
@@ -1131,7 +1131,7 @@ input:checked[type="checkbox"]::before {
 }
 
 .timelime ul li:nth-child(odd):before {
-  top: 30px;
+  top: 35px;
   right: -6px;
   content: '';
   width: 10px;
@@ -1150,7 +1150,7 @@ input:checked[type="checkbox"]::before {
   position: absolute;
   margin: 0 -10px 0 0;
   border-radius: 50px;
-  background: var(--primary-70);
+  background: var(--primary-50);
 }
 
 .timelime ul li:nth-child(even) {
@@ -1160,7 +1160,7 @@ input:checked[type="checkbox"]::before {
 }
 
 .timelime ul li:nth-child(even):before {
-  top: 25px;
+  top: 30px;
   left: -4px;
   content: '';
   width: 10px;
@@ -1179,7 +1179,7 @@ input:checked[type="checkbox"]::before {
   position: absolute;
   margin: 0 10px 0 0;
   border-radius: 50px;
-  background: var(--primary-70);
+  background: var(--primary-50);
 }
 
 .timelime ul li .content {
@@ -1197,12 +1197,12 @@ input:checked[type="checkbox"]::before {
 }
 
 .timelime ul li .content em {
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 500;
   border-radius: 20px;
   color: var(--text-white);
   padding: 5px 15px 5px 15px;
-  font-family: 'Ubuntu', cursive;
+  font-family: 'Lato', cursive;
   background-color: var(--secundary);
   -webkit-box-shadow: 0 0 3px 0 var(--secundary);
           box-shadow: 0 0 3px 0 var(--secundary);
@@ -1226,16 +1226,17 @@ input:checked[type="checkbox"]::before {
 
 .timelime ul li .time {
   border: 2px solid var(--primary-70);
-  -webkit-box-shadow: 0 0 10px 0 var(--primary-50);
-          box-shadow: 0 0 10px 0 var(--primary-50);
+  -webkit-box-shadow: 0 0 10px 0 var(--primary-20);
+          box-shadow: 0 0 10px 0 var(--primary-20);
 }
 
 .timelime ul li .time h4 {
   margin: 0;
   padding: 0;
   font-size: 14px;
-  font-weight: 500;
-  font-family: 'Ubuntu', cursive;
+  font-weight: 300;
+  color: var(--text);
+  font-family: 'Poppins', cursive;
 }
 
 @media (max-width: 1920px) {
@@ -1259,7 +1260,7 @@ input:checked[type="checkbox"]::before {
   }
   .timelime:before {
     left: 20px;
-    height: 72%;
+    height: 71%;
   }
   .timelime ul li {
     width: 100%;
@@ -1270,7 +1271,7 @@ input:checked[type="checkbox"]::before {
   }
   .timelime ul li:nth-child(odd):before {
     left: 16px;
-    top: 11px;
+    top: 15px;
   }
   .timelime ul li:nth-child(odd) .time {
     top: 0px;
@@ -1281,7 +1282,7 @@ input:checked[type="checkbox"]::before {
     text-align: left;
   }
   .timelime ul li:nth-child(even):before {
-    top: 11px;
+    top: 15px;
     left: 16px;
   }
   .timelime ul li:nth-child(even) .time {
@@ -1417,7 +1418,7 @@ input:checked[type="checkbox"]::before {
   text-align: right;
   border-radius: 10px;
   padding: 6px 12px 6px 0;
-  color: var(--text-black);
+  color: var(--text-white);
   font-family: 'Lato', cursive;
   background: var(--primary-90);
   -webkit-box-shadow: 0 0 5px 0 var(--primary-50);
@@ -1735,16 +1736,16 @@ input:checked[type="checkbox"]::before {
 }
 
 .contato .contato-form .comunicacao .form #limpar, .contato .contato-form .comunicacao .form #enviar {
-  width: 50%;
+  width: 100%;
   border: none;
-  font-size: 15px;
-  font-weight: 500;
-  margin: 0 0 0 30%;
-  font-family: 'Poppins', sans-serif;
+  padding: 20px;
+  font-size: 20px;
+  font-weight: 900;
+  font-family: 'Lato', sans-serif;
 }
 
 .contato .contato-form .comunicacao .form #limpar {
-  color: var(--error);
+  color: var(--text);
   background: transparent;
   -webkit-transition: all .6s ease;
   transition: all .6s ease;
@@ -1766,11 +1767,10 @@ input:checked[type="checkbox"]::before {
 
 .contato .contato-form .comunicacao .form #enviar {
   color: var(--text);
-  border-radius: 4px;
   background: transparent;
   -webkit-transition: all .6s ease;
   transition: all .6s ease;
-  border: 1px solid var(--sucess);
+  border-bottom: 1px solid var(--sucess);
 }
 
 .contato .contato-form .comunicacao .form #enviar:hover {
@@ -1834,36 +1834,6 @@ input:checked[type="checkbox"]::before {
   .contato .contato-form .comunicacao {
     width: 100%;
   }
-}
-
-/*
-.contato div .comunicacao form input,
-.contato div .comunicacao form textarea {
-    border: 0;
-    width: 100%;
-    outline: none;
-    max-width: 100%;
-    font-size: 20px;
-    margin-top: 20px;
-    color: var(--text);
-    font-weight: 300;
-    max-height: 150px;
-    padding: 10px 10px;
-    letter-spacing: 0.1px;
-    box-sizing: border-box;
-    background: transparent;
-    font-family: 'Poppins', cursive;
-    transition: all 0.5s ease-in-out;
-    border-bottom: 1px solid var(--text);
-}
-
-.contato div .comunicacao form textarea {
-    height: 150px;
-}
-
-.contato div .comunicacao form input::placeholder,
-.contato div .comunicacao form textarea::placeholder {
-    color: var(--text);
 }
 
 /* Rodapé */
