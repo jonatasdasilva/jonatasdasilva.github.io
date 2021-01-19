@@ -855,12 +855,11 @@ input:checked[type="checkbox"]::before {
   left: 80px;
   padding: 0.5em;
   font-size: 30px;
-  font-weight: 500;
+  font-weight: 700;
   text-align: center;
   color: var(--text);
-  font-style: italic;
   letter-spacing: 0.2em;
-  font-family: 'Ubuntu', sans-serif;
+  font-family: 'Josefin Sans', sans-serif;
   border-bottom: 10px solid var(--alternative);
 }
 
@@ -1747,13 +1746,15 @@ input:checked[type="checkbox"]::before {
 
 .contato .contato-form .comunicacao .form #limpar {
   color: var(--text);
+  border-radius: 50px;
   background: transparent;
   -webkit-transition: all .6s ease;
   transition: all .6s ease;
-  border-bottom: 1px solid var(--error);
+  border: 2px solid var(--error);
 }
 
 .contato .contato-form .comunicacao .form #limpar:hover {
+  border-radius: 0;
   color: var(--text-white);
   background: var(--error);
   -webkit-box-shadow: 0 0 10px 0 var(--error);
@@ -1768,13 +1769,15 @@ input:checked[type="checkbox"]::before {
 
 .contato .contato-form .comunicacao .form #enviar {
   color: var(--text);
+  border-radius: 50px;
   background: transparent;
   -webkit-transition: all .6s ease;
   transition: all .6s ease;
-  border-bottom: 1px solid var(--sucess);
+  border: 2px solid var(--sucess);
 }
 
 .contato .contato-form .comunicacao .form #enviar:hover {
+  border-radius: 0;
   color: var(--text-black);
   background: var(--alternative);
   -webkit-box-shadow: 0 0 10px 0 var(--alternative);

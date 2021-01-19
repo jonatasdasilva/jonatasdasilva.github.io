@@ -795,12 +795,11 @@ input:checked[type="checkbox"]::before {
         left: 80px;
         padding: 0.5em;
         font-size: 30px;
-        font-weight: 500;
+        font-weight: 700;
         text-align: center;
         color: var(--text);
-        font-style: italic;
         letter-spacing: 0.2em;
-        font-family: 'Ubuntu', sans-serif;
+        font-family: 'Josefin Sans', sans-serif;
         border-bottom: 10px solid var(--alternative);
     }
 
@@ -1743,11 +1742,13 @@ input:checked[type="checkbox"]::before {
 
                 #limpar {
                     color: var(--text);
+                    border-radius: 50px;
                     background: transparent;
                     transition: all .6s ease;
-                    border-bottom: 1px solid var(--error);
+                    border: 2px solid var(--error);
 
                     &:hover {
+                        border-radius: 0;
                         color: var(--text-white);
                         background: var(--error);
                         box-shadow: 0 0 10px 0 var(--error);
@@ -1761,11 +1762,13 @@ input:checked[type="checkbox"]::before {
 
                 #enviar {
                     color: var(--text);
+                    border-radius: 50px;
                     background: transparent;
                     transition: all .6s ease;
-                    border-bottom: 1px solid var(--sucess);
+                    border: 2px solid var(--sucess);
 
                     &:hover {
+                        border-radius: 0;
                         color: var(--text-black);
                         background: var(--alternative);
                         box-shadow: 0 0 10px 0 var(--alternative);
