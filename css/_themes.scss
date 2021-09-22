@@ -1,0 +1,12 @@
+html[data-theme="light"]{
+  --top-100: hsl(0, 0%, 100%);
+  --text-roxo-100: hsl(260, 55%, 14%);
+  --primary-100: hsl(261, 55%, 36%);
+  --emphasis-100: hsl(0, 0%, 92%);
+  --secondary: #00db86;
+  --background: hsl(0, 0%, 96%);
+}
+
+body {
+  background: var(--background);
+}
