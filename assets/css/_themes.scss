@@ -1,0 +1,35 @@
+html[data-theme="light"]{
+  --top-100: #f8f8f8;
+  --text-inactive-100: #8c8e97;
+  --text-active-100: #323743;
+  --text-primary-100: #242529;
+  --primary-100: #645394;
+  --emphasis-100: #ebebeb;
+  --secondary-100: #008024;
+  --background: #ffffff;
+  width: 100%;
+  height: 100%;
+}
+
+html[data-theme="dark"]{
+  --top-100: #1d1e20;
+  --text-inactive-100: #7a7a7a;
+  --text-active-100: #f5f5f5;
+  --text-hover-100: #e8e0f6;
+  --text-primary-100: #fafafa;
+  --primary-100: #c6c0d8;
+  --emphasis-100: #ebebeb;
+  --secondary-100: #62f3ab;
+  --background: #242529;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  transition: all 0.2s ease;
+  color: var(--text-active-100);
+  background: var(--background);
+}

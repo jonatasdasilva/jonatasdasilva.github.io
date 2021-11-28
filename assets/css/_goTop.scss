@@ -1,0 +1,19 @@
+.go_top{
+  bottom: 0;
+  left: 89%;
+  z-index: 9;
+  width: 3rem;
+  height: 2rem;
+  display: float;
+  position: fixed;
+  cursor: pointer;
+  margin-bottom: 4.5rem;
+  background: var(--top-100);
+  border-radius: 3rem 3rem 3rem 3rem;
+
+  svg {
+    margin-top: 0.25rem;
+    margin-left: 0.75rem;
+    color: var(--text-active-100);
+  }
+}
