@@ -1,0 +1,38 @@
+#projetos {/*
+  width: 100%;
+  height: 100%;
+  display: flex;
+  padding-top: 6rem;
+  min-height: 100vh;
+  flex-direction: row;
+
+  .foto {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    img {
+      width: 100%;
+      height: 70%;
+      justify-self: center;
+      align-self: flex-start;
+    }
+  }
+  
+  .galeria {
+    width: 50%;
+    height: 100%;
+  }
+
+  h2 {
+    width: 60%;
+    font-weight: 700;
+    font-size: 10rem;
+    align-self: center;
+    
+    text-align: center;
+    justify-self: center;
+    font-family: 'Poiret One', cursive;
+  }*/
+}
