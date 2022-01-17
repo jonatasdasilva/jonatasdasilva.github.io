@@ -1,16 +1,15 @@
 .go_top{
-  left: 97%;
-  bottom: -20%;
-  right: 10%;
+  left: 93%;
+  //right: 10%;
   z-index: 9;
   width: 3rem;
+  bottom: -20%;
   height: 3rem;
   display: float;
   position: fixed;
   cursor: pointer;
-  //margin-bottom: 4.5rem;
-  transition: all 0.8s ease;
-  background-color: var(--top-100);
+  transition: all 0.5s ease;
+  background-color: var(--contraste);
   border-radius: 3rem 3rem 3rem 3rem;
 
   svg {
@@ -30,4 +29,16 @@
 
 .show {
   bottom: 4.5rem;
+}
+
+@media only screen and (max-width: 750px) {
+  .go_top {
+    left: 90%;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .go_top {
+    left: 87%;
+  }
 }

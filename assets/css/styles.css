@@ -1,11 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&family=Red+Hat+Display:ital,wght@0,400;0,500;0,700;0,900;1,400;1,500;1,700;1,900&family=Red+Hat+Text:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Stalemate&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poiret+One&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Jura:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Infant:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Infant:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Rubik+Beastly&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Flow+Block&family=Flow+Circular&family=Flow+Rounded&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Sassy+Frass&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -26,9 +31,11 @@ body::-webkit-scrollbar {
 }
 
 main {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  max-width: 100vw;
   -ms-flex-item-align: center;
       align-self: center;
   -webkit-box-align: center;
@@ -47,7 +54,7 @@ main .limit {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  max-width: 107rem;
+  max-width: 100%;
   -ms-flex-item-align: center;
       align-self: center;
   -webkit-box-align: center;
@@ -60,25 +67,34 @@ main .limit {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  /*#sobremim{
+      
+    }*/
 }
 
 html[data-theme="light"] {
+  --black: #000000;
+  --white: #FFFFFF;
   --top-100: #FAFAFA;
-  --text-hight-100: #130f19;
+  --text-hight-100: #111111;
   --text-inactive-100: #8c8e97;
   --text-active-100: #323743;
   --text-primary-100: #242529;
   --primary-100: #5C4299;
   --emphasis-100: #ebebeb;
-  --secondary-100: #4a8d76;
+  --secondary-100: #385A49;
   --background: #ffffff;
   --contraste: #E3E3E3;
   --white: #FFFFFF;
+  --servico-1: #69F0AE;
+  --servico-2: #FDC45B;
   width: 100%;
   height: 100%;
 }
 
 html[data-theme="dark"] {
+  --black: #000000;
+  --white: #FFFFFF;
   --top-100: #121212;
   --text-hight-100: #fff;
   --text-inactive-100: #7a7a7a;
@@ -87,9 +103,11 @@ html[data-theme="dark"] {
   --text-primary-100: #fafafa;
   --primary-100: #917CBC;
   --emphasis-100: #333333;
-  --secondary-100: #649F81;
+  --secondary-100: #ABCCBB;
   --background: #171717;
   --contraste: #222222;
+  --servico-1: #69F0AE;
+  --servico-2: #FDC45B;
   width: 100%;
   height: 100%;
 }
@@ -650,7 +668,7 @@ body {
 
 .menu_mobile .content-menu .item span {
   font-weight: 700;
-  font-size: 0.625rem;
+  font-size: 0.825rem;
   margin-top: 0.25rem;
   letter-spacing: 0.025rem;
   -webkit-transition: all 0.6s ease;
@@ -753,6 +771,27 @@ body {
   }
 }
 
+@media screen and (max-width: 750px) {
+  h2 {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .header .content-mobile {
+    width: 90%;
+  }
+  .header .content-mobile h2 {
+    font-size: 1.5rem;
+  }
+  .header .content-mobile #nome {
+    display: none;
+  }
+  .header .content-mobile .contraste-mobile span {
+    display: none;
+  }
+}
+
 #sobremim {
   z-index: 1;
   width: 100%;
@@ -760,7 +799,7 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-top: 6rem;
+  margin-top: 5rem;
   -ms-flex-item-align: center;
       align-self: center;
   -webkit-box-align: center;
@@ -776,27 +815,38 @@ body {
           justify-content: center;
 }
 
+#sobremim .triangle-left {
+  width: 100%;
+  height: 12rem;
+  -webkit-clip-path: polygon(0% 60.8%, 100% 100%, 0% 100%);
+          clip-path: polygon(0% 60.8%, 100% 100%, 0% 100%);
+}
+
+#sobremim .triangle-right {
+  width: 100%;
+  height: 12rem;
+  -webkit-clip-path: polygon(100% 0%, 100% 39.5%, 0% 0%);
+          clip-path: polygon(100% 0%, 100% 39.5%, 0% 0%);
+}
+
 #sobremim .apresentacao {
-  gap: 25%;
+  gap: 1%;
   height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  max-width: 90%;
   min-height: 100vh;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 
 #sobremim .apresentacao .bio {
-  width: 40%;
+  width: 54%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -815,9 +865,8 @@ body {
 }
 
 #sobremim .apresentacao .bio h3 {
-  font-weight: 700;
-  font-size: 0.875rem;
-  margin-bottom: 1rem;
+  font-weight: 900;
+  font-size: 1.5rem;
   -ms-flex-item-align: start;
       align-self: flex-start;
   color: var(--primary-100);
@@ -825,17 +874,16 @@ body {
 }
 
 #sobremim .apresentacao .bio h1 {
-  font-weight: 500;
-  font-size: 4.5rem;
+  font-size: 9.5rem;
   text-align: center;
-  color: var(--text-primary-100);
-  font-family: 'Poiret One', cursive;
+  color: var(--text-hight-100);
+  font-family: 'Sassy Frass', cursive;
 }
 
 #sobremim .apresentacao .bio strong {
   margin-top: 1rem;
-  font-weight: 700;
-  font-size: 0.875rem;
+  font-weight: 900;
+  font-size: 1.5rem;
   -ms-flex-item-align: end;
       align-self: flex-end;
   margin-right: 0.5rem;
@@ -844,14 +892,16 @@ body {
 }
 
 #sobremim .apresentacao .bio p {
-  opacity: 0.75;
-  font-weight: 500;
+  opacity: 0.9;
+  font-weight: 400;
+  font-size: 1.25rem;
   margin-top: 1.5rem;
+  text-align: justify;
   color: var(--text-primary-100);
 }
 
 #sobremim .apresentacao .fotos {
-  width: 30%;
+  width: 45%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -869,8 +919,8 @@ body {
 
 #sobremim .apresentacao .fotos #top {
   z-index: -1;
-  width: 100%;
-  height: 100%;
+  width: 60%;
+  height: 60%;
   position: relative;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
@@ -885,8 +935,8 @@ body {
 
 #sobremim .apresentacao .fotos #down {
   z-index: 0;
-  width: 70%;
-  height: 70%;
+  width: 40%;
+  height: 40%;
   position: relative;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
@@ -901,13 +951,28 @@ body {
 #sobremim .experiencias {
   width: 100%;
   height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0 2rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: var(--top-100);
 }
 
 #sobremim .experiencias .content {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  max-width: 90%;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -950,7 +1015,7 @@ body {
 }
 
 #sobremim .experiencias .content .content-card .card img {
-  width: 50%;
+  width: 60%;
   -ms-flex-item-align: start;
       align-self: flex-start;
 }
@@ -974,16 +1039,22 @@ body {
 }
 
 #sobremim .experiencias .content .content-card .card .detalhes h2 {
-  font-size: 3rem;
+  font-size: 2rem;
   font-weight: 600;
   margin-bottom: 3rem;
-  color: var(--text-hight-100);
-  font-family: 'Poiret One', cursive;
+  color: var(--secondary-100);
+  font-family: 'Epilogue', sans-serif;
+}
+
+#sobremim .experiencias .content .content-card .card .detalhes h2 strong {
+  font-weight: 900;
 }
 
 #sobremim .experiencias .content .content-card .card .detalhes p {
+  opacity: 0.8;
   font-weight: 400;
-  line-height: 1.5rem;
+  font-size: 1.05rem;
+  line-height: 1.25rem;
   color: var(--text-hight-100);
 }
 
@@ -1005,43 +1076,44 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-color: var(--primary-100);
+  background-color: var(--contraste);
 }
 
 #sobremim .experiencias .content .content-card .data h3 {
   font-size: 2rem;
   font-weight: 400;
-  color: var(--top-100);
+  color: var(--primary-100);
   font-family: 'Josefin Sans', sans-serif;
 }
 
 #sobremim .experiencias .content .content-card .data h2 {
   font-size: 4rem;
   font-weight: 700;
-  color: var(--background);
+  color: var(--primary-100);
   font-family: 'Jura', sans-serif;
 }
 
 #sobremim .habilidades {
   width: 100%;
   height: 100%;
-  padding-top: 6rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   padding-bottom: 2rem;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 #sobremim .habilidades .content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-item-align: center;
-      align-self: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  justify-self: center;
   -ms-flex-pack: distribute;
       justify-content: space-around;
 }
@@ -1076,21 +1148,23 @@ body {
   display: flex;
   -ms-flex-item-align: center;
       align-self: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   justify-self: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 
 #sobremim .habilidades .content .centro img:first-child {
+  width: 100%;
+  height: 100%;
   margin-right: 1rem;
+}
+
+#sobremim .habilidades .content .centro img:last-child {
+  width: 80%;
+  height: 80%;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -ms-grid-column-align: center;
+      justify-self: center;
 }
 
 #sobremim .habilidades .content .direita {
@@ -1120,6 +1194,17 @@ body {
 #sobremim .interesses {
   width: 100%;
   height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: var(--top-100);
 }
 
 #sobremim .interesses .content {
@@ -1127,8 +1212,12 @@ body {
   row-gap: 2rem;
   display: -ms-grid;
   display: grid;
+  max-width: 90%;
   -webkit-column-gap: 2rem;
           column-gap: 2rem;
+  -ms-grid-row-align: center;
+      align-self: center;
+  padding-bottom: 2rem;
   -ms-grid-rows: 1fr 1fr;
       grid-template-rows: 1fr 1fr;
   -ms-grid-columns: 1fr 1fr 1fr;
@@ -1139,7 +1228,6 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-top: 3.25rem;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -1154,7 +1242,27 @@ body {
 
 #sobremim .interesses .content .card img {
   z-index: 2;
-  margin-bottom: -6.5rem;
+  width: 100%;
+  height: 100%;
+  margin-bottom: -13.5rem;
+}
+
+#sobremim .interesses .content .card .triangle-card-left {
+  width: 100%;
+  height: 4rem;
+  margin-bottom: -1px;
+  background-color: var(--secondary-100);
+  -webkit-clip-path: polygon(0% 0%, 100% 100%, 0% 100%);
+          clip-path: polygon(0% 0%, 100% 100%, 0% 100%);
+}
+
+#sobremim .interesses .content .card .triangle-card-right {
+  width: 100%;
+  height: 4rem;
+  margin-bottom: -1px;
+  background-color: var(--secondary-100);
+  -webkit-clip-path: polygon(100% 0%, 100% 100%, 0% 100%);
+          clip-path: polygon(100% 0%, 100% 100%, 0% 100%);
 }
 
 #sobremim .interesses .content .card .detalhes {
@@ -1169,85 +1277,583 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 6rem 2rem 2rem 2rem;
+  padding: 10rem 2rem 2rem 2rem;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  background-color: var(--primary-100);
+  background-color: var(--secondary-100);
 }
 
 #sobremim .interesses .content .card .detalhes h2 {
-  font-weight: 900;
+  font-weight: 700;
   color: var(--top-100);
   letter-spacing: 0.125rem;
-  font-family: 'Poiret One', cursive;
-}
-
-#sobremim .interesses .content .card .detalhes p {
-  opacity: 0.9;
-  font-weight: 500;
-  margin-top: 1rem;
-  line-height: 1rem;
-  font-size: 0.85rem;
-  color: var(--top-100);
   font-family: 'Josefin Sans', cursive;
 }
 
-@media screen and (max-width: 1250px) {
+#sobremim .interesses .content .card .detalhes p {
+  opacity: 0.75;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-top: 1rem;
+  line-height: 1rem;
+  line-height: 1.2rem;
+  color: var(--top-100);
+}
+
+/* RESPONSIVIDADE */
+@media only screen and (max-width: 1250px) {
   #sobremim .apresentacao {
+    max-width: 95%;
+  }
+  #sobremim .apresentacao .bio {
+    width: 59%;
+  }
+  #sobremim .apresentacao .bio h3 {
+    font-size: 1rem;
+    font-weight: 600;
+  }
+  #sobremim .apresentacao .bio h1 {
+    font-size: 4rem;
+  }
+  #sobremim .apresentacao .bio strong {
+    font-weight: 600;
+    font-size: 0.85rem;
+  }
+  #sobremim .apresentacao .bio p {
+    font-size: 1rem;
+    font-weight: 500;
+    margin-top: 2rem;
+    text-align: justify;
+    margin-bottom: 2rem;
+  }
+  #sobremim .apresentacao .fotos {
+    width: 40%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  #sobremim .apresentacao .fotos #top {
+    width: 70%;
+    height: 70%;
+  }
+  #sobremim .apresentacao .fotos #down {
+    width: 40%;
+    height: 40%;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    -ms-grid-column-align: center;
+        justify-self: center;
+  }
+  #sobremim .experiencias {
+    padding: 0;
+  }
+  #sobremim .experiencias .content .content-card {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #sobremim .experiencias .content .content-card .card {
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #sobremim .experiencias .content .content-card .card img {
+    width: 40%;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    margin-bottom: 2rem;
+  }
+  #sobremim .experiencias .content .content-card .card .detalhes {
+    width: 80%;
+    margin-left: 0;
+  }
+  #sobremim .experiencias .content .content-card .card .detalhes h2 {
+    margin-left: 0;
+    font-weight: 600;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    font-family: 'Epilogue', sans-serif;
+  }
+  #sobremim .experiencias .content .content-card .card .detalhes h2 strong {
+    font-weight: 800;
+  }
+  #sobremim .experiencias .content .content-card .card .detalhes p {
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    margin-bottom: 3rem;
+  }
+  #sobremim .experiencias .content .content-card .data {
+    padding: 2rem;
+    margin-left: 0;
+  }
+  #sobremim .experiencias .content .content-card .data h3 {
+    font-size: 2rem;
+  }
+  #sobremim .experiencias .content .content-card .data h2 {
+    font-size: 4rem;
+  }
+  #sobremim .habilidades .content {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  #sobremim .habilidades .content .esquerda, #sobremim .habilidades .content .direita {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #sobremim .habilidades .content .esquerda svg, #sobremim .habilidades .content .direita svg {
+    width: 50%;
+    height: 50%;
+  }
+  #sobremim .habilidades .content .centro {
+    width: 60%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-item-align: center;
+        align-self: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  #sobremim .habilidades .content .centro img:first-child {
+    width: 60%;
+    height: 60%;
+    margin-right: 0rem;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  #sobremim .habilidades .content .centro img:last-child {
+    width: 40%;
+    height: 40%;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    -ms-grid-column-align: center;
+        justify-self: center;
+  }
+  #sobremim .interesses .content {
+    row-gap: 1rem;
+    -webkit-column-gap: 1rem;
+            column-gap: 1rem;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  #sobremim .apresentacao {
+    max-width: 95%;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
   }
   #sobremim .apresentacao .bio {
-    width: 80%;
+    width: 100%;
+  }
+  #sobremim .apresentacao .bio h3 {
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+  #sobremim .apresentacao .bio h1 {
+    font-size: 7rem;
+    margin-bottom: 2rem;
+  }
+  #sobremim .apresentacao .bio strong {
+    font-weight: 600;
+  }
+  #sobremim .apresentacao .bio p {
+    font-weight: 400;
+    margin-top: 2rem;
+    text-align: justify;
+    margin-bottom: 2rem;
+  }
+  #sobremim .apresentacao .fotos {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  #sobremim .apresentacao .fotos #top {
+    width: 70%;
+    height: 70%;
+  }
+  #sobremim .apresentacao .fotos #down {
+    width: 40%;
+    height: 40%;
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
         align-self: center;
-    padding-left: 8rem;
-    padding-right: 7rem;
-    padding-bottom: 3rem;
+    -ms-grid-column-align: center;
+        justify-self: center;
   }
-  #sobremim .apresentacao .bio h3 {
-    -ms-flex-item-align: start;
-        align-self: flex-start;
-    -ms-grid-column-align: self-start;
-        justify-self: self-start;
+  #sobremim .experiencias {
+    padding: 0;
   }
-  #sobremim .apresentacao .bio strong {
-    padding-right: 0.125rem;
+  #sobremim .experiencias .content .content-card {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
-  #sobremim .apresentacao .fotos {
-    width: 40%;
+  #sobremim .experiencias .content .content-card .card {
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #sobremim .experiencias .content .content-card .card img {
+    width: 85%;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    margin-bottom: 2rem;
+  }
+  #sobremim .experiencias .content .content-card .card .detalhes {
+    width: 100%;
+    margin-left: 0;
+  }
+  #sobremim .experiencias .content .content-card .card .detalhes h2 {
+    margin-left: 0;
+    font-weight: 600;
+    font-size: 1.8rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    font-family: 'Epilogue', sans-serif;
+  }
+  #sobremim .experiencias .content .content-card .card .detalhes h2 strong {
+    font-weight: 800;
+  }
+  #sobremim .experiencias .content .content-card .card .detalhes p {
+    opacity: 0.75;
+    margin-bottom: 3rem;
+  }
+  #sobremim .experiencias .content .content-card .data {
+    padding: 2rem;
+    margin-left: 0;
+  }
+  #sobremim .experiencias .content .content-card .data h3 {
+    font-size: 2rem;
+  }
+  #sobremim .experiencias .content .content-card .data h2 {
+    font-size: 4rem;
+  }
+  #sobremim .habilidades .content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #sobremim .habilidades .content .esquerda, #sobremim .habilidades .content .direita {
+    width: 100%;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  #sobremim .habilidades .content .esquerda svg, #sobremim .habilidades .content .direita svg {
+    width: 10%;
+    height: 10%;
+  }
+  #sobremim .habilidades .content .centro {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-item-align: center;
+        align-self: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #sobremim .habilidades .content .centro img:first-child {
+    width: 100%;
+    height: 100%;
+    margin-right: 0rem;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  #sobremim .habilidades .content .centro img:last-child {
+    width: 80%;
+    height: 80%;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    -ms-grid-column-align: center;
+        justify-self: center;
   }
 }
 
-@media screen and (max-width: 565px) {
+@media only screen and (max-width: 570px) {
+  #sobremim .interesses .content {
+    row-gap: 1rem;
+    -webkit-column-gap: 1rem;
+            column-gap: 1rem;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  }
+  #sobremim .interesses .content .card .detalhes h2 {
+    font-weight: 900;
+    font-size: 1.8rem;
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  #sobremim .triangle-left, #sobremim .triangle-right {
+    height: 10rem;
+  }
+  #sobremim .apresentacao {
+    max-width: 95%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #sobremim .apresentacao .bio {
+    width: 100%;
+  }
+  #sobremim .apresentacao .bio h3 {
+    font-weight: 900;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+  }
   #sobremim .apresentacao .bio h1 {
-    font-size: 4rem;
+    font-size: 4.9rem;
+    margin-bottom: 1rem;
+  }
+  #sobremim .apresentacao .bio strong {
+    font-weight: 900;
+    font-size: 1.1rem;
+  }
+  #sobremim .apresentacao .bio p {
+    opacity: 1;
+    font-size: 1rem;
+    font-weight: 400;
+    margin-top: 2rem;
+    text-align: justify;
+    margin-bottom: 2rem;
   }
   #sobremim .apresentacao .fotos {
-    width: 30%;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  #sobremim .apresentacao .fotos #top {
+    width: 70%;
+    height: 70%;
+  }
+  #sobremim .apresentacao .fotos #down {
+    width: 40%;
+    height: 40%;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    -ms-grid-column-align: center;
+        justify-self: center;
+  }
+  #sobremim .experiencias {
+    padding: 0;
+  }
+  #sobremim .experiencias .content .content-card {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #sobremim .experiencias .content .content-card .card {
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #sobremim .experiencias .content .content-card .card img {
+    width: 98%;
+    margin-bottom: 2rem;
+  }
+  #sobremim .experiencias .content .content-card .card .detalhes {
+    width: 100%;
+    margin-left: 0;
+  }
+  #sobremim .experiencias .content .content-card .card .detalhes h2 {
+    margin-left: 0;
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    font-family: 'Epilogue', sans-serif;
+  }
+  #sobremim .experiencias .content .content-card .card .detalhes h2 strong {
+    font-weight: 800;
+  }
+  #sobremim .experiencias .content .content-card .card .detalhes p {
+    margin-bottom: 3rem;
+  }
+  #sobremim .experiencias .content .content-card .data {
+    padding: 2rem;
+    margin-left: 0;
+  }
+  #sobremim .experiencias .content .content-card .data h3 {
+    font-size: 2rem;
+  }
+  #sobremim .experiencias .content .content-card .data h2 {
+    font-size: 4rem;
+  }
+  #sobremim .habilidades .content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #sobremim .habilidades .content .esquerda, #sobremim .habilidades .content .direita {
+    width: 100%;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  #sobremim .habilidades .content .esquerda svg, #sobremim .habilidades .content .direita svg {
+    width: 10%;
+    height: 10%;
+  }
+  #sobremim .habilidades .content .centro {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-item-align: center;
+        align-self: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #sobremim .habilidades .content .centro img:first-child {
+    width: 100%;
+    height: 100%;
+    margin-right: 0rem;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  #sobremim .habilidades .content .centro img:last-child {
+    width: 80%;
+    height: 80%;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    -ms-grid-column-align: center;
+        justify-self: center;
+  }
+  #sobremim .interesses .content {
+    row-gap: 1rem;
+    -webkit-column-gap: 1rem;
+            column-gap: 1rem;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  }
+  #sobremim .interesses .content .card .detalhes h2 {
+    font-weight: 900;
+    font-size: 1.5rem;
+    text-align: center;
   }
 }
 
 #servicos {
   width: 100%;
   height: 100%;
-  display: -ms-grid;
-  display: grid;
-  row-gap: 1rem;
-  -webkit-column-gap: 11.5rem;
-          column-gap: 11.5rem;
-  padding-top: 6rem;
-  -ms-grid-rows: 1fr 1fr;
-      grid-template-rows: 1fr 1fr;
-  -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 2rem;
+  -ms-flex-item-align: center;
+      align-self: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-self: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-#servicos .servico {
+#servicos .limit {
+  width: 100%;
+  height: 100%;
+  display: -ms-grid;
+  display: grid;
+  row-gap: 2rem;
+  max-width: 95%;
+  -webkit-column-gap: 1rem;
+          column-gap: 1rem;
+  -ms-grid-row-align: center;
+      align-self: center;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+#servicos .limit .servico {
+  width: 100%;
+  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1263,17 +1869,19 @@ body {
           justify-content: space-between;
 }
 
-#servicos .servico svg {
-  width: 75%;
-  height: 75%;
-  padding: 4rem 4rem 1rem 4rem;
+#servicos .limit .servico svg {
+  z-index: 1;
+  width: 80%;
+  height: 80%;
+  margin-bottom: -9rem;
 }
 
-#servicos .servico div {
+#servicos .limit .servico div {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  padding-top: 4rem;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -1284,36 +1892,75 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-color: var(--primary-100);
 }
 
-#servicos .servico h2 {
+#servicos .limit .servico div .ferramentas {
+  display: none;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-bottom: 2rem;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+#servicos .limit .servico div .ferramentas p {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--white);
+  margin-bottom: 1rem;
+  padding: 0.5rem 1rem;
+  font-family: 'Josefin Sans', cursive;
+  background-color: var(--black);
+}
+
+#servicos .limit .servico div.verde {
+  padding-top: 6rem;
+  background-color: var(--servico-1);
+}
+
+#servicos .limit .servico div.amarelo {
+  padding-top: 6rem;
+  background-color: var(--servico-2);
+}
+
+#servicos .limit .servico h2 {
+  font-size: 2rem;
   font-weight: 900;
   padding-top: 2rem;
+  text-align: center;
   margin-bottom: 2rem;
-  letter-spacing: 0.25rem;
-  color: var(--background);
-  font-family: 'Jura', cursive;
+  color: var(--black);
+  font-family: 'Josefin Sans', cursive;
 }
 
-#servicos .servico p {
-  opacity: 1;
-  padding: 0 2rem;
+#servicos .limit .servico p {
+  opacity: 0.8;
+  padding: 0 1rem;
   font-weight: 500;
-  font-size: 0.85rem;
+  font-size: 1rem;
   text-align: center;
-  margin-bottom: 1rem;
-  color: var(--top-100);
+  color: var(--black);
+  margin-bottom: 1.5rem;
   letter-spacing: 0.125rem;
 }
 
-#servicos .servico a {
+#servicos .limit .servico .button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   height: 2.5rem;
-  padding: 1.5rem;
-  margin-bottom: 1rem;
+  margin-right: 2rem;
+  margin-bottom: 2rem;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -1321,36 +1968,95 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  padding: 1.5rem 2rem;
   text-decoration: none;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
+  background-color: var(--top-100);
   border: 0.0625rem solid var(--top-100);
 }
 
-#servicos .servico a span {
-  font-weight: 700;
+#servicos .limit .servico .button span {
+  font-weight: 900;
   letter-spacing: 0.125rem;
-  color: var(--background);
+  color: var(--text-active-100);
   font-family: 'Josefin Sans', cursive;
 }
 
-#servicos .servico a:hover {
+#servicos .limit .servico .button:hover {
   background-color: var(--top-100);
 }
 
-#servicos .servico a:hover span {
-  color: var(--primary-100);
+#servicos .limit .servico .button:hover span {
+  color: var(--text-active-100);
 }
 
-#servicos .servico.disable {
+#servicos .limit .servico.disable {
   opacity: 0.2;
 }
 
-#servicos .servico.disable a {
+#servicos .limit .servico.disable a {
   cursor: none;
+}
+
+/* RESPONSIVIDADE */
+@media only screen and (max-width: 1250px) {
+  #servicos .limit {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+  }
+  #servicos .limit .servico {
+    width: 98%;
+  }
+  #servicos .limit .servico .ferramentas {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  #servicos .limit {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+  }
+  #servicos .limit .servico {
+    width: 98%;
+  }
+  #servicos .limit .servico .ferramentas {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  #servicos .limit {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+  }
+  #servicos .limit .servico {
+    width: 98%;
+  }
+  #servicos .limit .servico .ferramentas {
+    width: 100%;
+  }
 }
 
 #projetos {
@@ -1399,8 +2105,9 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  max-width: 95%;
   min-height: 100vh;
-  padding-top: 1rem;
+  padding-top: 4rem;
   -ms-flex-item-align: center;
       align-self: center;
   -webkit-box-align: center;
@@ -1410,6 +2117,7 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  margin-bottom: 2rem;
   justify-self: center;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
@@ -1435,6 +2143,7 @@ body {
 }
 
 #contato .esquerda img {
+  width: 70%;
   -ms-flex-item-align: start;
       align-self: flex-start;
 }
@@ -1521,8 +2230,10 @@ body {
 #contato .direita h2 {
   font-size: 3rem;
   font-weight: 500;
+  text-align: center;
   margin-bottom: 2rem;
-  font-family: 'Poiret One', cursive;
+  color: var(--secondary-100);
+  font-family: 'Josefin Sans', cursive;
 }
 
 #contato .direita .email {
@@ -1574,6 +2285,8 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  padding-left: 6rem;
+  padding-right: 6rem;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -1593,6 +2306,135 @@ body {
 #contato .direita .email .buttons input:hover {
   color: var(--background);
   background-color: var(--primary-100);
+}
+
+/* RESPONSIVIDADE */
+@media only screen and (max-width: 1250px) {
+  #contato {
+    width: 100vw;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  #contato .esquerda {
+    width: 45%;
+  }
+  #contato .esquerda img {
+    width: 100%;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    margin-bottom: 2rem;
+    -ms-grid-column-align: center;
+        justify-self: center;
+  }
+  #contato .esquerda .sociais {
+    width: 100%;
+    margin-top: 0;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    margin-bottom: 2rem;
+  }
+  #contato .esquerda .sociais a {
+    font-size: 0.7rem;
+  }
+  #contato .esquerda .sociais a svg {
+    width: 100%;
+    height: 100%;
+  }
+  #contato .direita {
+    width: 50%;
+  }
+  #contato .direita h2 {
+    font-size: 2rem;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  #contato {
+    width: 100vw;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #contato .esquerda {
+    width: 100%;
+  }
+  #contato .esquerda img {
+    width: 90%;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    margin-bottom: 2rem;
+  }
+  #contato .esquerda .sociais {
+    width: 100%;
+    margin-top: 0;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    margin-bottom: 2rem;
+  }
+  #contato .esquerda .sociais a {
+    font-size: 0.7rem;
+  }
+  #contato .esquerda .sociais a svg {
+    width: 100%;
+    height: 100%;
+  }
+  #contato .direita {
+    width: 100%;
+  }
+  #contato .direita h2 {
+    font-size: 2rem;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  #contato {
+    width: 100vw;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #contato .esquerda {
+    width: 100%;
+  }
+  #contato .esquerda img {
+    width: 90%;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    margin-bottom: 2rem;
+  }
+  #contato .esquerda .sociais {
+    width: 100%;
+    margin-top: 0;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    margin-bottom: 2rem;
+  }
+  #contato .esquerda .sociais a {
+    font-size: 0.7rem;
+  }
+  #contato .esquerda .sociais a svg {
+    width: 100%;
+    height: 100%;
+  }
+  #contato .esquerda .sociais a span {
+    display: none;
+  }
+  #contato .direita {
+    width: 100%;
+  }
+  #contato .direita h2 {
+    font-size: 2rem;
+  }
 }
 
 #footer {
@@ -1625,18 +2467,17 @@ body {
 
 /* Go TOP */
 .go_top {
-  left: 97%;
-  bottom: -20%;
-  right: 10%;
+  left: 93%;
   z-index: 9;
   width: 3rem;
+  bottom: -20%;
   height: 3rem;
   display: float;
   position: fixed;
   cursor: pointer;
-  -webkit-transition: all 0.8s ease;
-  transition: all 0.8s ease;
-  background-color: var(--top-100);
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  background-color: var(--contraste);
   border-radius: 3rem 3rem 3rem 3rem;
 }
 
@@ -1656,5 +2497,17 @@ body {
 
 .show {
   bottom: 4.5rem;
+}
+
+@media only screen and (max-width: 750px) {
+  .go_top {
+    left: 90%;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .go_top {
+    left: 87%;
+  }
 }
 /*# sourceMappingURL=styles.css.map */
