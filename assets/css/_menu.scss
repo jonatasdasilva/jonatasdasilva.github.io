@@ -418,7 +418,7 @@
 
       span {
         font-weight: 700;
-        font-size: 0.625rem;
+        font-size: 0.825rem;
         margin-top: 0.25rem;
         letter-spacing: 0.025rem;
         transition: all 0.6s ease;
@@ -507,6 +507,34 @@
 
     .content-mobile {
       display: flex;
+    }
+  }
+}
+
+@media screen and (max-width: 750px) {
+  h2 {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .header {
+    .content-mobile {
+      width: 90%;
+
+      h2 {
+        font-size: 1.5rem;
+      }
+
+      #nome {
+        display: none;
+      }
+
+      .contraste-mobile {
+        span {
+          display: none;
+        }
+      }      
     }
   }
 }

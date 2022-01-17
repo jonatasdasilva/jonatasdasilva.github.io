@@ -2,11 +2,13 @@
   width: 100%;
   height: 100%;
   display: flex;
+  max-width: 95%;
   min-height: 100vh;
-  padding-top: 1rem;
+  padding-top: 4rem;
   align-self: center;
   align-items: center;
   flex-direction: row;
+  margin-bottom: 2rem;
   justify-self: center;
   justify-content: space-between;
 
@@ -20,6 +22,7 @@
     justify-content: space-around;
 
     img {
+      width: 70%;
       align-self: flex-start;
     }
 
@@ -78,8 +81,10 @@
     h2 {
       font-size: 3rem;
       font-weight: 500;
+      text-align: center;
       margin-bottom: 2rem;
-      font-family: 'Poiret One', cursive;
+      color: var(--secondary-100);
+      font-family: 'Josefin Sans', cursive;
     }
 
     .email {
@@ -114,6 +119,8 @@
         display: flex;
         align-items: center;
         flex-direction: row;
+        padding-left: 6rem;
+        padding-right: 6rem;
         justify-content: space-between;
 
         input {
@@ -130,6 +137,136 @@
             background-color: var(--primary-100);
           }
         }
+      }
+    }
+  }
+}
+
+/* RESPONSIVIDADE */
+
+@media only screen and (max-width: 1250px) {
+  #contato {
+    width: 100vw;
+    flex-direction: row;
+
+    .esquerda {
+      width: 45%;
+
+      img {
+        width: 100%;
+        align-self: center;
+        margin-bottom: 2rem;
+        justify-self: center;
+      }
+
+      .sociais {
+        width: 100%;
+        margin-top: 0;
+        align-self: center;
+        margin-bottom: 2rem;
+
+        a {
+          font-size: 0.7rem;
+
+          svg {
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+    }
+
+    .direita {
+      width: 50%;
+
+      h2 {
+        font-size: 2rem;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  #contato {
+    width: 100vw;
+    flex-direction: column;
+
+    .esquerda {
+      width: 100%;
+
+      img {
+        width: 90%;
+        align-self: center;
+        margin-bottom: 2rem;
+      }
+
+      .sociais {
+        width: 100%;
+        margin-top: 0;
+        align-self: center;
+        margin-bottom: 2rem;
+
+        a {
+          font-size: 0.7rem;
+
+          svg {
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+    }
+
+    .direita {
+      width: 100%;
+
+      h2 {
+        font-size: 2rem;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  #contato {
+    width: 100vw;
+    flex-direction: column;
+
+    .esquerda {
+      width: 100%;
+
+      img {
+        width: 90%;
+        align-self: center;
+        margin-bottom: 2rem;
+      }
+
+      .sociais {
+        width: 100%;
+        margin-top: 0;
+        align-self: center;
+        margin-bottom: 2rem;
+
+        a {
+          font-size: 0.7rem;
+
+          svg {
+            width: 100%;
+            height: 100%;
+          }
+
+          span {
+            display: none;
+          }
+        }
+      }
+    }
+
+    .direita {
+      width: 100%;
+
+      h2 {
+        font-size: 2rem;
       }
     }
   }
