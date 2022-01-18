@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&family=Red+Hat+Display:ital,wght@0,400;0,500;0,700;0,900;1,400;1,500;1,700;1,900&family=Red+Hat+Text:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap");
@@ -75,7 +76,7 @@ main .limit {
 html[data-theme="light"] {
   --black: #000000;
   --white: #FFFFFF;
-  --top-100: #FAFAFA;
+  --top-100: #f3f3f3;
   --text-hight-100: #111111;
   --text-inactive-100: #8c8e97;
   --text-active-100: #323743;
@@ -84,8 +85,7 @@ html[data-theme="light"] {
   --emphasis-100: #ebebeb;
   --secondary-100: #385A49;
   --background: #ffffff;
-  --contraste: #E3E3E3;
-  --white: #FFFFFF;
+  --contraste: #dddddd;
   --servico-1: #69F0AE;
   --servico-2: #FDC45B;
   width: 100%;
@@ -101,7 +101,7 @@ html[data-theme="dark"] {
   --text-active-100: #f5f5f5;
   --text-hover-100: #e8e0f6;
   --text-primary-100: #fafafa;
-  --primary-100: #917CBC;
+  --primary-100: #a88fd8;
   --emphasis-100: #333333;
   --secondary-100: #ABCCBB;
   --background: #171717;
@@ -128,10 +128,10 @@ body {
 .header {
   z-index: 10;
   width: 100%;
+  height: 5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 5.5rem;
   position: fixed;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
@@ -326,12 +326,12 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   background: transparent;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
 }
 
 .header .content-desktop .contraste input[type="checkbox"] {
-  width: 1.5rem;
+  width: 1.8rem;
   outline: none;
   height: 1.5rem;
   cursor: pointer;
@@ -339,31 +339,30 @@ body {
   position: relative;
   border-radius: 0.1875rem;
   -webkit-appearance: none;
-  background: var(--contraste);
+  background: var(--primary-100);
 }
 
 .header .content-desktop .contraste input[type="checkbox"]::before {
   left: 23%;
   content: '';
-  top: 0.1875rem;
+  top: 0.25rem;
   width: 0.25rem;
-  height: 1.125rem;
+  height: 1rem;
   position: absolute;
-  border-radius: 0.25rem;
+  border-radius: 0.125rem;
   -webkit-transition: 0.3s all ease;
   transition: 0.3s all ease;
   background: var(--top-100);
 }
 
 .header .content-desktop .contraste input[type="checkbox"]:checked::before {
-  left: 65%;
+  left: 68%;
 }
 
 .header .content-desktop .contraste span {
-  font-weight: 700;
-  font-size: 0.6rem;
-  border-radius: 0.25rem;
-  letter-spacing: 0.05rem;
+  font-weight: 400;
+  font-size: 0.7rem;
+  letter-spacing: 0.06rem;
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
   text-transform: uppercase;
@@ -390,15 +389,11 @@ body {
 }
 
 .header .content-desktop .contraste.dark input[type="checkbox"].dark::before {
-  background: var(--background);
+  background: var(--top-100);
 }
 
 .header .content-desktop .contraste.dark span {
   color: var(--text-active-100);
-}
-
-.header .content-desktop .contraste.dark span.active {
-  background: var(--text-active-100);
 }
 
 .header .content-desktop.hide {
@@ -530,8 +525,8 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   background: transparent;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
 }
 
 .header .content-mobile .buttons .contraste-mobile input[type="checkbox"] {
@@ -543,9 +538,9 @@ body {
   position: relative;
   border-radius: 0.1875rem;
   -webkit-appearance: none;
-  -webkit-transition: 0.3s all ease;
-  transition: 0.3s all ease;
-  background: var(--text-inactive-100);
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  background: var(--primary-100);
 }
 
 .header .content-mobile .buttons .contraste-mobile input[type="checkbox"]::before {
@@ -556,8 +551,8 @@ body {
   height: 1.125rem;
   position: absolute;
   border-radius: 0.25rem;
-  -webkit-transition: 0.3s all ease;
-  transition: 0.3s all ease;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
   background: var(--top-100);
 }
 
@@ -571,8 +566,8 @@ body {
   padding: 0.5rem 0.5rem 0.3rem 0.5rem;
   border-radius: 0.25rem;
   letter-spacing: 0.05rem;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
   text-transform: uppercase;
   color: var(--text-primary-100);
   font-family: 'Josefin Sans', sans-serif;
@@ -634,9 +629,8 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 .menu_mobile .content-menu .item {
@@ -954,7 +948,7 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 0 2rem;
+  padding: 0 3rem;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -1015,7 +1009,7 @@ body {
 }
 
 #sobremim .experiencias .content .content-card .card img {
-  width: 60%;
+  width: 40%;
   -ms-flex-item-align: start;
       align-self: flex-start;
 }
@@ -1040,10 +1034,10 @@ body {
 
 #sobremim .experiencias .content .content-card .card .detalhes h2 {
   font-size: 2rem;
-  font-weight: 600;
-  margin-bottom: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
   color: var(--secondary-100);
-  font-family: 'Epilogue', sans-serif;
+  font-family: 'Josefin Sans', sans-serif;
 }
 
 #sobremim .experiencias .content .content-card .card .detalhes h2 strong {
@@ -1052,10 +1046,38 @@ body {
 
 #sobremim .experiencias .content .content-card .card .detalhes p {
   opacity: 0.8;
-  font-weight: 400;
-  font-size: 1.05rem;
+  font-weight: 500;
+  font-size: 1.1rem;
   line-height: 1.25rem;
   color: var(--text-hight-100);
+}
+
+#sobremim .experiencias .content .content-card .card .detalhes ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-weight: 500;
+  list-style: none;
+  padding: 0.5rem 2rem;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+#sobremim .experiencias .content .content-card .card .detalhes ul li {
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.5rem;
+}
+
+#sobremim .experiencias .content .content-card .card .detalhes ul li:before {
+  content: '✓  ';
+  font-weight: 900;
+  color: var(--primary-100);
 }
 
 #sobremim .experiencias .content .content-card .data {
@@ -1081,7 +1103,7 @@ body {
 
 #sobremim .experiencias .content .content-card .data h3 {
   font-size: 2rem;
-  font-weight: 400;
+  font-weight: 600;
   color: var(--primary-100);
   font-family: 'Josefin Sans', sans-serif;
 }
@@ -1297,6 +1319,7 @@ body {
   font-weight: 500;
   margin-top: 1rem;
   line-height: 1rem;
+  text-align: justify;
   line-height: 1.2rem;
   color: var(--top-100);
 }
@@ -1314,7 +1337,7 @@ body {
     font-weight: 600;
   }
   #sobremim .apresentacao .bio h1 {
-    font-size: 4rem;
+    font-size: 6.5rem;
   }
   #sobremim .apresentacao .bio strong {
     font-weight: 600;
@@ -1389,7 +1412,6 @@ body {
     font-size: 2.5rem;
     text-align: center;
     margin-bottom: 1rem;
-    font-family: 'Epilogue', sans-serif;
   }
   #sobremim .experiencias .content .content-card .card .detalhes h2 strong {
     font-weight: 800;
@@ -1397,11 +1419,12 @@ body {
   #sobremim .experiencias .content .content-card .card .detalhes p {
     font-size: 1.2rem;
     line-height: 1.5rem;
-    margin-bottom: 3rem;
+    margin-bottom: 1rem;
   }
   #sobremim .experiencias .content .content-card .data {
     padding: 2rem;
     margin-left: 0;
+    margin-top: 3rem;
   }
   #sobremim .experiencias .content .content-card .data h3 {
     font-size: 2rem;
@@ -1555,18 +1578,18 @@ body {
     font-size: 1.8rem;
     text-align: center;
     margin-bottom: 1rem;
-    font-family: 'Epilogue', sans-serif;
   }
   #sobremim .experiencias .content .content-card .card .detalhes h2 strong {
     font-weight: 800;
   }
   #sobremim .experiencias .content .content-card .card .detalhes p {
     opacity: 0.75;
-    margin-bottom: 3rem;
+    margin-bottom: 1rem;
   }
   #sobremim .experiencias .content .content-card .data {
     padding: 2rem;
     margin-left: 0;
+    margin-top: 2rem;
   }
   #sobremim .experiencias .content .content-card .data h3 {
     font-size: 2rem;
@@ -1731,7 +1754,6 @@ body {
     font-weight: 600;
     font-size: 1.5rem;
     margin-bottom: 1rem;
-    font-family: 'Epilogue', sans-serif;
   }
   #sobremim .experiencias .content .content-card .card .detalhes h2 strong {
     font-weight: 800;
@@ -1742,6 +1764,7 @@ body {
   #sobremim .experiencias .content .content-card .data {
     padding: 2rem;
     margin-left: 0;
+    margin-top: 2rem;
   }
   #sobremim .experiencias .content .content-card .data h3 {
     font-size: 2rem;
@@ -1873,7 +1896,7 @@ body {
   z-index: 1;
   width: 80%;
   height: 80%;
-  margin-bottom: -9rem;
+  margin-bottom: -8rem;
 }
 
 #servicos .limit .servico div {
@@ -1925,12 +1948,12 @@ body {
 
 #servicos .limit .servico div.verde {
   padding-top: 6rem;
-  background-color: var(--servico-1);
+  background-color: var(--secondary-100);
 }
 
 #servicos .limit .servico div.amarelo {
   padding-top: 6rem;
-  background-color: var(--servico-2);
+  background-color: var(--primary-100);
 }
 
 #servicos .limit .servico h2 {
@@ -1939,17 +1962,17 @@ body {
   padding-top: 2rem;
   text-align: center;
   margin-bottom: 2rem;
-  color: var(--black);
+  color: var(--top-100);
   font-family: 'Josefin Sans', cursive;
 }
 
 #servicos .limit .servico p {
-  opacity: 0.8;
+  opacity: 0.9;
+  font-size: 1rem;
   padding: 0 1rem;
   font-weight: 500;
-  font-size: 1rem;
   text-align: center;
-  color: var(--black);
+  color: var(--top-100);
   margin-bottom: 1.5rem;
   letter-spacing: 0.125rem;
 }
@@ -2216,6 +2239,7 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin-right: 2rem;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -2467,7 +2491,7 @@ body {
 
 /* Go TOP */
 .go_top {
-  left: 93%;
+  left: 95%;
   z-index: 9;
   width: 3rem;
   bottom: -20%;

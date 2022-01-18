@@ -57,7 +57,7 @@ window.setInterval('showHeaderMobile()', 50);*/
 /*========== Show Scroll UP =========*/
 function showScrollUp() {
   const goTop = document.getElementById('go_top');
-  if (this.scrollY >= 250){
+  if (this.scrollY >= 350){
     goTop.classList.add('show'); 
   } else {
     goTop.classList.remove('show');
@@ -74,12 +74,13 @@ function goTop() {
 /*========== Title Section ==========*/
 function titleSection() {
   const scrollY = window.pageYOffset;
-  const sections = document.querySelectorAll('article[id]');
+  const articles = document.querySelectorAll('article[id]');
+  const sections = document.querySelectorAll('article section[id]');
   
-  sections.forEach(
+  articles.forEach(
     current => {
       const sectionHeight = current.offsetHeight;
-      const sectionTop = current.offsetTop - 420;
+      const sectionTop = current.offsetTop - 100;
 
       sectionId = current.getAttribute('id');
       let titleMenu = document.getElementById("title");
