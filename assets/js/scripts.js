@@ -53,6 +53,12 @@ showHeaderMobile();
 
 window.setInterval('showHeaderMobile()', 50);*/
 
+/*========== Show Experience =========*/
+function open_experiencia(params) {
+  const titles = document.querySelectorAll('.title .icons svg');
+  console.log(titles);
+}
+
 
 /*========== Show Scroll UP =========*/
 function showScrollUp() {
@@ -151,3 +157,59 @@ function menuScrolling() {
 }
 
 window.addEventListener('scroll', menuScrolling);
+
+/*=========== BLUR MENU =========*/
+function blurMenu() {
+  const scrollY = window.pageYOffset
+  const scrollTop = window.top;
+  
+  if ((scrollY + 120)  == scrollY)
+    console.log(scrollY);
+}
+
+window.addEventListener('scroll', blurMenu);
+
+/*=========== SHOW EXPERIENCE ==========*/
+function openExperiencia(exp, icon) {
+  const ul = document.querySelectorAll('.card .dados ul');
+  const paragraph = document.querySelectorAll('.card .dados .resumo');
+  const svg = document.querySelectorAll('.card .dados .title .icons svg');
+  const svgCurrent = document.querySelectorAll(`.card .dados .title .icons svg.${exp}`);
+
+  ul.forEach(u => {
+    if (u.classList.contains(exp) && u.classList.contains("hide")) {
+      u.classList.remove("hide");
+    }
+    else if (u.classList.contains(exp) && (! u.classList.contains("hide"))){
+      u.classList.add("hide");
+    } else {
+      u.classList.add("hide");
+    }
+  });
+  
+  paragraph.forEach(p => {
+    if (p.classList.contains(exp) && p.classList.contains("hide")){
+      p.classList.remove("hide");
+    } else if (p.classList.contains(exp) && (! p.classList.contains("hide"))) {
+      p.classList.add("hide");
+    } else {
+      p.classList.add("hide");
+    }
+  });
+
+  svg.forEach(s => {
+    if (s.classList.contains('mostrar')){
+      s.id = "show";
+    } else {
+      s.id = "hide";
+    }
+  });
+
+  svgCurrent.forEach(s => {
+    if (s.classList.contains(icon)){
+      s.id = "hide";
+    } else {
+      s.id = "show";
+    } 
+  });
+}

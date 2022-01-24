@@ -214,6 +214,11 @@
     }
   }
 
+  .content-desktop.vidro {
+    backdrop-filter: blur(100px);
+    background-color: var(--top-15);
+  }
+
   .content-desktop.hide {
     display: none;
   }

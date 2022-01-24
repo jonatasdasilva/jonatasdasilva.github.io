@@ -12,14 +12,14 @@
 
   .triangle-left {
     width: 100%;
-    height: 12rem;
-    clip-path: polygon(0% 60.8%, 100% 100%, 0% 100%);
+    height: 8rem;
+    clip-path: polygon(0% 0%, 100% 100%, 0% 100%);
   }
 
   .triangle-right {
     width: 100%;
-    height: 12rem;
-    clip-path: polygon(100% 0%, 100% 39.5%, 0% 0%);
+    height: 8rem;
+    clip-path: polygon(100% 0%, 100% 100%, 0% 0%);
   }
 
   .apresentacao {
@@ -78,14 +78,14 @@
     .fotos {
       width: 45%;
       display: flex;
-      flex-direction: column;
       align-items: center;
+      flex-direction: column;
       justify-content: center;
 
       #top {
-        z-index: -1;
         width: 60%;
         height: 60%;
+        z-index: -1;
         position: relative;
         align-self: center;
         visibility: visible;
@@ -121,103 +121,152 @@
       width: 100%;
       display: flex;
       max-width: 90%;
+      padding-top: 2rem;
       flex-direction: column;
 
-      .content-card {
+      .experiencia {
         width: 100%;
         display: flex;
-        flex-direction: row;
-        align-items: center;
-        margin-bottom: 4rem;
-        justify-content: space-between;
+        flex-direction: column;
 
-        .card {
+        .cards-content {
           width: 100%;
+          row-gap: 2.5%;
           display: flex;
-          flex-direction: row;
           align-items: center;
+          flex-direction: row;
           justify-content: space-between;
 
-          img {
-            width: 40%;
-            align-self: flex-start;
-          }
-
-          .detalhes {
-            width: 60%;
+          .cards {
+            width: 57.5%;
             display: flex;
-            margin-left: 2rem;
-            align-items: baseline;
+            align-items: center;
             flex-direction: column;
-            justify-content: center;
+            justify-content: space-between;
 
-            h2 {
-              font-size: 2rem;
-              font-weight: 700;
-              margin-bottom: 1rem;
-              color: var(--secondary-100);
-              font-family: 'Josefin Sans', sans-serif;
+            .card {
+              width: 100%;
+              
+              .dados {
+                width: 100%;
 
-              strong {
-                font-weight: 900;
-              }
-            }
+                .title {
+                  width: 100%;
+                  display: flex;
+                  padding: 0 0.5rem;
+                  flex-direction: row;
+                  align-items: center;
+                  margin-bottom: 1rem;
+                  justify-content: space-between;
+                  border-bottom: 2px solid var(--contraste);
 
-            p {
-              opacity: 0.8;
-              font-weight: 500;
-              font-size: 1.1rem;
-              line-height: 1.25rem;
-              color: var(--text-hight-100);
-            }
+  
+                  h2 {
+                    width: 90%;
+                    font-weight: 700;
+                    font-size: 2.5rem;
+                    font-family: 'Josefin Sans', cursive;
+                  }
+  
+                  div {
+                    width: 18%;
+                    display: flex;
+                    align-items: center;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    
+                    svg {
+                      cursor: pointer;
+                      transition: all 0.5s ease;
+                      stroke: var(--text-primary-100);
+                    }
 
-            ul {
-              display: flex;
-              font-weight: 500;
-              list-style: none;
-              padding: 0.5rem 2rem;
-              flex-direction: column;
-              align-items: flex-start;
+                    svg#hide {
+                      opacity: 0;
+                      display: none;
+                    }
 
-              li {
-                font-size: 1rem;
-                font-weight: 500;
-                line-height: 1.5rem;
-
-                &:before {
-                  content: '✓  ';
-                  font-weight: 900;
-                  color: var(--primary-100);
+                    svg#show {
+                      opacity: 1;
+                      display: block;
+                    }
+  
+                    p {
+                      display: flex;
+                      text-align: center;
+                      flex-direction: column;
+  
+                      .mes {
+                        font-size: 1rem;
+                        font-weight: 700;
+                        font-family: 'Josefin Sans', cursive;
+                      }
+  
+                      .ano {
+                        font-size: 2rem;
+                        font-weight: 900;
+                        font-family: 'Jura', sans-serif;
+                      }
+                    }
+                  }
+                }
+  
+                p {
+                  width: 100%;
+                  display: block;
+                  font-size: 1rem;
+                  font-weight: 500;
+                  text-align: justify;
+                  margin-bottom: 1rem;
+                  transition: all 0.5s ease;
+                }
+  
+                p.hide {
+                  display: none;
+                }
+  
+                ul {
+                  width: 100%;
+                  list-style: none;
+                  transition: all 0.5s ease;
+  
+                  li {
+                    display: flex;
+                    align-items: center;
+                    flex-direction: row;
+                    padding: 0.25rem 1rem;
+  
+                    svg {
+                      font-size: 0.5rem;
+                      margin-right: 0.5rem;
+                    }
+  
+                    span {
+                      font-size: 1rem;
+                      font-weight: 500;
+                      font-family: 'Josefin Sans', cursive;
+                    }
+                  }
+                }
+  
+                ul.hide {
+                  display: none;
                 }
               }
             }
+
+            .card:first-child {
+              margin-bottom: 3rem;
+            }
           }
           
-        }
+          .foto {
+            width: 40%;
 
-        .data {
-          display: flex;
-          padding: 2rem;
-          margin-left: 4rem;
-          align-self: center;
-          align-items: center;
-          //border-radius: 2rem;
-          flex-direction: column;
-          justify-content: center;
-          background-color: var(--contraste);
-
-          h3 {
-            font-size: 2rem;
-            font-weight: 600;
-            color: var(--primary-100);
-            font-family: 'Josefin Sans', sans-serif;
-          }
-
-          h2 {
-            font-size: 4rem;
-            font-weight: 700;
-            color: var(--primary-100);
-            font-family: 'Jura', sans-serif;
+            img {
+              width: 100%;
+              height: 100%;
+            }
           }
         }
       }
@@ -383,7 +432,7 @@
         
         h3 {
           font-size: 1rem;
-          font-weight: 600;
+          font-weight: 700;
         }
 
         h1 {
@@ -391,8 +440,8 @@
         }
 
         strong {
-          font-weight: 600;
-          font-size: 0.85rem;
+          font-weight: 700;
+          font-size: 1.1rem;
         }
 
         p {
@@ -429,54 +478,47 @@
       padding: 0;
       
       .content {
-        .content-card {
-          flex-direction: column;
+        .experiencia {
+          .cards-content {
+            .cards {
+              .card {
+                .dados {
+                  .title {
+                    h2 {
+                      width: 75%;
+                      font-size: 1.15rem;
+                    }
 
-          .card {
-            width: 100%;
-            flex-direction: column;
+                    div {
+                      width: 25%;
+                      p {
+                        .mes {
+                          font-size: 0.8rem;
+                        }
+                        .ano {
+                          font-size: 1.5rem;
+                        }
+                      }
+                    }
+                  }
 
-            img {
-              width: 40%;
-              align-self: center;
-              margin-bottom: 2rem;
-            }
+                  p {
+                    font-size: 0.75rem;
+                  }
 
-            .detalhes {
-              width: 80%;
-              margin-left: 0;
-              
-              h2 {
-                margin-left: 0;
-                font-weight: 600;
-                font-size: 2.5rem;
-                text-align: center;
-                margin-bottom: 1rem;
-
-                strong {
-                  font-weight: 800;
+                  ul {
+                    li {
+                      span {
+                        font-size: 0.75rem;
+                      }
+                    }
+                  }
                 }
               }
 
-              p {
-                font-size: 1.2rem;
-                line-height: 1.5rem;
-                margin-bottom: 1rem;
+              .card:first-child {
+                margin-bottom: 1.5rem;
               }
-            }
-          }
-
-          .data {
-            padding: 2rem;
-            margin-left: 0;
-            margin-top: 3rem;
-            
-            h3 {
-              font-size: 2rem;
-            }
-
-            h2 {
-              font-size: 4rem;
             }
           }
         }
@@ -588,53 +630,60 @@
       padding: 0;
       
       .content {
-        .content-card {
-          flex-direction: column;
-
-          .card {
-            width: 100%;
+        .experiencia {
+          .cards-content {
             flex-direction: column;
 
-            img {
-              width: 85%;
-              align-self: center;
-              margin-bottom: 2rem;
-            }
-
-            .detalhes {
+            .cards {
               width: 100%;
-              margin-left: 0;
-              
-              h2 {
-                margin-left: 0;
-                font-weight: 600;
-                font-size: 1.8rem;
-                text-align: center;
-                margin-bottom: 1rem;
 
-                strong {
-                  font-weight: 800;
+              .card {
+                width: 100%;
+                .dados {
+                  width: 100%;
+                  .title {
+                    width: 100%;
+                    h2 {
+                      width: 75%;
+                      font-size: 1.15rem;
+                    }
+
+                    div {
+                      width: 25%;
+                      p {
+                        .mes {
+                          font-size: 0.8rem;
+                        }
+                        .ano {
+                          font-size: 1.5rem;
+                        }
+                      }
+                    }
+                  }
+
+                  p {
+                    font-size: 0.75rem;
+                  }
+
+                  ul {
+                    margin-bottom: 1rem;
+
+                    li {
+                      span {
+                        font-size: 0.75rem;
+                      }
+                    }
+                  }
                 }
               }
 
-              p {
-                opacity: 0.75;
-                margin-bottom: 1rem;
+              .card:first-child {
+                margin-bottom: 0.5rem;
               }
             }
-          }
 
-          .data {
-            padding: 2rem;
-            margin-left: 0;
-            margin-top: 2rem;
-            
-            h3 {
-              font-size: 2rem;
-            }
-
-            h2 {
-              font-size: 4rem;
+            .foto {
+              width: 70%;
             }
           }
         }
@@ -766,50 +815,43 @@
       padding: 0;
       
       .content {
-        .content-card {
-          flex-direction: column;
+        .experiencia {
+          .cards-content {
+            .cards {
+              .card {
+                .dados {
+                  .title {
+                    h2 {
+                      width: 70%;
+                      font-size: 1rem;
+                    }
 
-          .card {
-            width: 100%;
-            flex-direction: column;
+                    div {
+                      width: 30%;
+                      p {
+                        .mes {
+                          font-size: 0.65rem;
+                        }
+                        .ano {
+                          font-size: 1.25rem;
+                        }
+                      }
+                    }
+                  }
 
-            img {
-              width: 98%;
-              margin-bottom: 2rem;
-            }
+                  p {
+                    font-size: 0.75rem;
+                  }
 
-            .detalhes {
-              width: 100%;
-              margin-left: 0;
-              
-              h2 {
-                margin-left: 0;
-                font-weight: 600;
-                font-size: 1.5rem;
-                margin-bottom: 1rem;
-
-                strong {
-                  font-weight: 800;
+                  ul {
+                    li {
+                      span {
+                        font-size: 0.75rem;
+                      }
+                    }
+                  }
                 }
               }
-
-              p {
-                margin-bottom: 3rem;
-              }
-            }
-          }
-
-          .data {
-            padding: 2rem;
-            margin-left: 0;
-            margin-top: 2rem;
-            
-            h3 {
-              font-size: 2rem;
-            }
-
-            h2 {
-              font-size: 4rem;
             }
           }
         }
