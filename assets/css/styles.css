@@ -1758,9 +1758,6 @@ body {
     -ms-grid-column-align: center;
         justify-self: center;
   }
-  #sobremim .experiencias {
-    padding: 0;
-  }
   #sobremim .experiencias .content .experiencia .cards-content .cards .card .dados .title h2 {
     width: 70%;
     font-size: 1rem;
