@@ -1,16 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&family=Red+Hat+Display:ital,wght@0,400;0,500;0,700;0,900;1,400;1,500;1,700;1,900&family=Red+Hat+Text:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Stalemate&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Poiret+One&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Jura:wght@300;400;500;600;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Cormorant+Infant:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Cormorant+Infant:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Rubik+Beastly&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Flow+Block&family=Flow+Circular&family=Flow+Rounded&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Sassy+Frass&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Jura:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -18,9 +11,10 @@
       -ms-hyphens: auto;
           hyphens: auto;
   font-weight: 400;
+  background: unset;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-family: 'Red Hat Text', sans-serif;
+  font-family: 'DM Sans', sans-serif;
   -moz-osx-font-smoothing: grayscale !important;
   text-rendering: optimizelegibility !important;
   -webkit-font-smoothing: antialiased !important;
@@ -28,6 +22,10 @@
 
 body::-webkit-scrollbar {
   display: none;
+}
+
+html, body {
+  scroll-behavior: smooth;
 }
 
 main {
@@ -69,16 +67,55 @@ main .limit {
           justify-content: center;
 }
 
+/* Break points bootstrap
+
+- breakpoint: xs
+  abbr: ""
+  name: X-Small
+  min-width: 0px
+  container: ""
+
+- breakpoint: sm
+  abbr: -sm
+  name: Small
+  min-width: 576px
+  container: 540px
+
+- breakpoint: md
+  abbr: -md
+  name: Medium
+  min-width: 768px
+  container: 720px
+
+- breakpoint: lg
+  abbr: -lg
+  name: Large
+  min-width: 992px
+  container: 960px
+
+- breakpoint: xl
+  abbr: -xl
+  name: X-Large
+  min-width: 1200px
+  container: 1140px
+
+- breakpoint: xxl
+  abbr: -xxl
+  name: XX-Large
+  min-width: 1400px
+  container: 1320px
+
+*/
 html[data-theme="light"] {
   --black: #000000;
   --white: #ffffff;
   --top-100: #f3f3f3;
-  --top-15: #f3f3f326;
+  --top-15: #24252926;
   --text-hight-100: #111111;
   --text-inactive-100: #8c8e97;
   --text-active-100: #323743;
   --text-primary-100: #242529;
-  --primary-100: #5c4299;
+  --primary-100: #382974;
   --emphasis-100: #ebebeb;
   --secondary-100: #385a49;
   --background: #ffffff;
@@ -93,14 +130,15 @@ html[data-theme="dark"] {
   --black: #000000;
   --white: #ffffff;
   --top-100: #121212;
+  --top-15: #fafafa26;
   --text-hight-100: #fff;
   --text-inactive-100: #7a7a7a;
   --text-active-100: #f5f5f5;
   --text-hover-100: #e8e0f6;
   --text-primary-100: #fafafa;
-  --primary-100: #a88fd8;
+  --primary-100: #b0a2cf;
   --emphasis-100: #333333;
-  --secondary-100: #abccbb;
+  --secondary-100: #9ad4c3;
   --background: #171717;
   --contraste: #222222;
   --servico-1: #69f0ae;
@@ -862,7 +900,7 @@ body {
 }
 
 #sobremim .apresentacao .bio h3 {
-  font-weight: 900;
+  font-weight: 700;
   font-size: 1.5rem;
   -ms-flex-item-align: start;
       align-self: flex-start;
@@ -879,7 +917,7 @@ body {
 
 #sobremim .apresentacao .bio strong {
   margin-top: 1rem;
-  font-weight: 900;
+  font-weight: 700;
   font-size: 1.5rem;
   -ms-flex-item-align: end;
       align-self: flex-end;
@@ -959,44 +997,205 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   background-color: var(--top-100);
+  /*
+    .content {
+      flex: 1;
+      width: 100%;
+      display: flex;
+      max-width: 90%;
+      padding-top: 2rem;
+      flex-direction: column;
+
+      .experiencia {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+        .cards-content {
+          width: 100%;
+          row-gap: 2.5%;
+          display: flex;
+          align-items: center;
+          flex-direction: row;
+          justify-content: space-between;
+
+          .cards {
+            width: 57.5%;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: space-between;
+
+            .card {
+              width: 100%;
+              
+              .dados {
+                width: 100%;
+
+                .title {
+                  width: 100%;
+                  display: flex;
+                  padding: 0 0.5rem;
+                  flex-direction: row;
+                  align-items: center;
+                  margin-bottom: 1rem;
+                  justify-content: space-between;
+                  border-bottom: 2px solid var(--contraste);
+
+  
+                  h2 {
+                    width: 90%;
+                    font-weight: 600;
+                    font-size: 2.5rem;
+                    font-family: 'Source Serif Pro', serif;
+                  }
+  
+                  div {
+                    width: 18%;
+                    display: flex;
+                    align-items: center;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    
+                    svg {
+                      cursor: pointer;
+                      transition: all 0.5s ease;
+                      stroke: var(--text-primary-100);
+                    }
+
+                    svg#hide {
+                      opacity: 0;
+                      display: none;
+                    }
+
+                    svg#show {
+                      opacity: 1;
+                      display: block;
+                    }
+  
+                    p {
+                      display: flex;
+                      text-align: center;
+                      flex-direction: column;
+  
+                      .mes {
+                        font-size: 1rem;
+                        font-weight: 700;
+                        font-family: 'Josefin Sans', cursive;
+                      }
+  
+                      .ano {
+                        font-size: 2rem;
+                        font-weight: 900;
+                        font-family: 'Jura', sans-serif;
+                      }
+                    }
+                  }
+                }
+  
+                p {
+                  z-index: 1;
+                  width: 100%;
+                  height: 100%;
+                  display: block;
+                  font-size: 1rem;
+                  font-weight: 500;
+                  text-align: justify;
+                  margin-bottom: 1rem;
+                  transition: all 0.5s ease;
+                  font-family: 'Josefin Sans', cursive;
+                }
+  
+                p.hide {
+                  height: 0;
+                  z-index: 0;
+                  display: none;
+                  visibility: hidden;
+                  visibility: collapse;
+                  transition: all 0.5s ease;
+                  transform: translateY(-50%);
+                }
+  
+                ul {
+                  z-index: 1;
+                  width: 100%;
+                  height: 100%;
+                  list-style: none;
+                  transition: all 0.5s ease;
+  
+                  li {
+                    display: flex;
+                    align-items: center;
+                    flex-direction: row;
+                    padding: 0.25rem 1rem;
+  
+                    svg {
+                      font-size: 0.5rem;
+                      margin-right: 0.5rem;
+                    }
+  
+                    span {
+                      font-size: 1rem;
+                      font-weight: 500;
+                      font-family: 'Josefin Sans', cursive;
+                    }
+                  }
+                }
+  
+                ul.hide {
+                  height: 0;
+                  z-index: 0;
+                  display: none;
+                  visibility: hidden;
+                  visibility: collapse;
+                  transition: all 0.5s ease;
+                  transform: translateY(-50%);
+                }
+              }
+            }
+
+            .card:first-child {
+              margin-bottom: 3rem;
+            }
+          }
+          
+          .foto {
+            width: 40%;
+
+            img {
+              width: 100%;
+              height: 100%;
+            }
+          }
+        }
+      }
+    }*/
 }
 
-#sobremim .experiencias .content {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+#sobremim .experiencias .cards {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  max-width: 90%;
+  max-width: 95%;
+  padding-top: 3rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 3rem;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#sobremim .experiencias .cards section {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   padding-top: 2rem;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-#sobremim .experiencias .content .experiencia {
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-#sobremim .experiencias .content .experiencia .cards-content {
-  width: 100%;
-  row-gap: 2.5%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -1006,37 +1205,27 @@ body {
           justify-content: space-between;
 }
 
-#sobremim .experiencias .content .experiencia .cards-content .cards {
-  width: 57.5%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+#sobremim .experiencias .cards section .foto {
+  width: 35%;
 }
 
-#sobremim .experiencias .content .experiencia .cards-content .cards .card {
+#sobremim .experiencias .cards section .foto img {
   width: 100%;
+  height: auto;
 }
 
-#sobremim .experiencias .content .experiencia .cards-content .cards .card .dados {
-  width: 100%;
+#sobremim .experiencias .cards section dl {
+  width: 64%;
+  position: static;
 }
 
-#sobremim .experiencias .content .experiencia .cards-content .cards .card .dados .title {
+#sobremim .experiencias .cards section dl dt {
+  z-index: 2;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 0 0.5rem;
+  position: relative;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -1044,139 +1233,166 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-bottom: 1rem;
+  -webkit-transition: .4s ease;
+  transition: .4s ease;
+  vertical-align: baseline;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  border-bottom: 2px solid var(--contraste);
+  border-bottom: 2px solid var(--top-15);
 }
 
-#sobremim .experiencias .content .experiencia .cards-content .cards .card .dados .title h2 {
-  width: 90%;
-  font-weight: 700;
-  font-size: 2.5rem;
-  font-family: 'Josefin Sans', cursive;
+#sobremim .experiencias .cards section dl dt h2 {
+  font: normal normal 700 2.5rem/2.5rem "Montserrat", sans-serif;
 }
 
-#sobremim .experiencias .content .experiencia .cards-content .cards .card .dados .title div {
-  width: 18%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-#sobremim .experiencias .content .experiencia .cards-content .cards .card .dados .title div svg {
-  cursor: pointer;
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
-  stroke: var(--text-primary-100);
-}
-
-#sobremim .experiencias .content .experiencia .cards-content .cards .card .dados .title div svg#hide {
-  opacity: 0;
-  display: none;
-}
-
-#sobremim .experiencias .content .experiencia .cards-content .cards .card .dados .title div svg#show {
-  opacity: 1;
-  display: block;
-}
-
-#sobremim .experiencias .content .experiencia .cards-content .cards .card .dados .title div p {
+#sobremim .experiencias .cards section dl dt .interation {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   text-align: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-#sobremim .experiencias .content .experiencia .cards-content .cards .card .dados .title div p .mes {
-  font-size: 1rem;
-  font-weight: 700;
-  font-family: 'Josefin Sans', cursive;
-}
-
-#sobremim .experiencias .content .experiencia .cards-content .cards .card .dados .title div p .ano {
-  font-size: 2rem;
-  font-weight: 900;
-  font-family: 'Jura', sans-serif;
-}
-
-#sobremim .experiencias .content .experiencia .cards-content .cards .card .dados p {
-  width: 100%;
-  display: block;
-  font-size: 1rem;
-  font-weight: 500;
-  text-align: justify;
-  margin-bottom: 1rem;
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
-}
-
-#sobremim .experiencias .content .experiencia .cards-content .cards .card .dados p.hide {
-  display: none;
-}
-
-#sobremim .experiencias .content .experiencia .cards-content .cards .card .dados ul {
-  width: 100%;
-  list-style: none;
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
-}
-
-#sobremim .experiencias .content .experiencia .cards-content .cards .card .dados ul li {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  padding: 0.25rem 1rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-#sobremim .experiencias .content .experiencia .cards-content .cards .card .dados ul li svg {
-  font-size: 0.5rem;
-  margin-right: 0.5rem;
+#sobremim .experiencias .cards section dl dt .interation .data {
+  text-align: center;
 }
 
-#sobremim .experiencias .content .experiencia .cards-content .cards .card .dados ul li span {
-  font-size: 1rem;
-  font-weight: 500;
-  font-family: 'Josefin Sans', cursive;
+#sobremim .experiencias .cards section dl dt .interation .data h3 {
+  font: normal normal 700 1.5rem "Josefin Sans", sans-serif;
 }
 
-#sobremim .experiencias .content .experiencia .cards-content .cards .card .dados ul.hide {
+#sobremim .experiencias .cards section dl dt .interation .data strong {
+  font: normal normal 700 2.5rem "Jura", sans-serif;
+}
+
+#sobremim .experiencias .cards section dl dt .interation .icons {
+  margin-left: 2rem;
+}
+
+#sobremim .experiencias .cards section dl dt .interation .icons svg {
   display: none;
+  cursor: pointer;
 }
 
-#sobremim .experiencias .content .experiencia .cards-content .cards .card:first-child {
-  margin-bottom: 3rem;
+#sobremim .experiencias .cards section dl dt .interation .icons svg.show {
+  display: block;
 }
 
-#sobremim .experiencias .content .experiencia .cards-content .foto {
-  width: 40%;
+#sobremim .experiencias .cards section dl dt.show {
+  margin-top: 2.63rem;
+  border-bottom: none;
+  padding: 1rem 2rem 0 2rem;
+  background-color: var(--primary-100);
 }
 
-#sobremim .experiencias .content .experiencia .cards-content .foto img {
-  width: 100%;
-  height: 100%;
+#sobremim .experiencias .cards section dl dt.show h2 {
+  color: var(--top-100);
+  font: normal normal 600 2.5rem/2.5rem "Montserrat", sans-serif;
+}
+
+#sobremim .experiencias .cards section dl dt.show .interation .data h3 {
+  color: var(--top-100);
+  font: normal normal 600 1rem "Josefin Sans", sans-serif;
+}
+
+#sobremim .experiencias .cards section dl dt.show .interation .data strong {
+  color: var(--top-100);
+  font: normal normal 700 2.5rem "Jura", sans-serif;
+}
+
+#sobremim .experiencias .cards section dl dt.show .interation .data svg {
+  color: var(--top-100);
+}
+
+#sobremim .experiencias .cards section dl dt.show .interation .icons svg {
+  color: var(--top-100);
+}
+
+#sobremim .experiencias .cards section dl dt:first-child.show {
+  margin-top: 4.5rem;
+}
+
+#sobremim .experiencias .cards section dl dd {
+  z-index: -1;
+  max-height: 0;
+  overflow: hidden;
+  margin-top: -1rem;
+  position: relative;
+  visibility: hidden;
+  -webkit-transition: .4s ease-in;
+  transition: .4s ease-in;
+  padding: 1rem 3rem 2rem 3rem;
+  background-color: var(--primary-100);
+}
+
+#sobremim .experiencias .cards section dl dd p {
+  color: var(--top-100);
+  font: 400 1.125rem/1.5rem "DM Sans", sans-serif;
+}
+
+#sobremim .experiencias .cards section dl dd ul {
+  list-style: none;
+  margin-top: 1rem;
+  margin-left: 1rem;
+}
+
+#sobremim .experiencias .cards section dl dd ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#sobremim .experiencias .cards section dl dd ul li svg {
+  margin-right: 1rem;
+  color: var(--top-100);
+}
+
+#sobremim .experiencias .cards section dl dd ul li span {
+  color: var(--top-100);
+  font: 400 1rem/1.5rem "Josefin Sans", sans-serif;
+}
+
+#sobremim .experiencias .cards section dl dd.show {
+  z-index: 0;
+  padding: 1rem;
+  margin-top: 0;
+  max-height: 100%;
+  visibility: visible;
+  padding: 1rem 3rem 2rem 3rem;
+  background-color: var(--primary-100);
+}
+
+#sobremim .experiencias .cards section dl dd.show p {
+  color: var(--top-100);
+}
+
+#sobremim .experiencias .cards section dl dd.show ul li {
+  color: var(--top-100);
+}
+
+#sobremim .experiencias .cards section dl dd.show ul li svg {
+  color: var(--top-100);
+}
+
+#sobremim .experiencias .cards section dl dd.show ul li span {
+  color: var(--top-100);
 }
 
 #sobremim .habilidades {
@@ -1446,27 +1662,56 @@ body {
   #sobremim .experiencias {
     padding: 0;
   }
-  #sobremim .experiencias .content .experiencia .cards-content .cards .card .dados .title h2 {
-    width: 75%;
-    font-size: 1.15rem;
+  #sobremim .experiencias .cards {
+    max-width: 98%;
   }
-  #sobremim .experiencias .content .experiencia .cards-content .cards .card .dados .title div {
-    width: 25%;
+  #sobremim .experiencias .cards section {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
   }
-  #sobremim .experiencias .content .experiencia .cards-content .cards .card .dados .title div p .mes {
-    font-size: 0.8rem;
+  #sobremim .experiencias .cards section .foto {
+    width: 35%;
+    margin-bottom: 1rem;
   }
-  #sobremim .experiencias .content .experiencia .cards-content .cards .card .dados .title div p .ano {
-    font-size: 1.5rem;
+  #sobremim .experiencias .cards section dl {
+    width: 64%;
   }
-  #sobremim .experiencias .content .experiencia .cards-content .cards .card .dados p {
-    font-size: 0.75rem;
+  #sobremim .experiencias .cards section dl dt h2 {
+    font: normal normal 700 1.5rem/2rem "Montserrat", sans-serif;
   }
-  #sobremim .experiencias .content .experiencia .cards-content .cards .card .dados ul li span {
-    font-size: 0.75rem;
+  #sobremim .experiencias .cards section dl dt .interation .data h3 {
+    font: normal normal 700 0.75rem "Josefin Sans", sans-serif;
   }
-  #sobremim .experiencias .content .experiencia .cards-content .cards .card:first-child {
-    margin-bottom: 1.5rem;
+  #sobremim .experiencias .cards section dl dt .interation .data strong {
+    font: normal normal 700 2rem "Jura", sans-serif;
+  }
+  #sobremim .experiencias .cards section dl dt.show h2 {
+    font: normal normal 600 1.5rem/2rem "Montserrat", sans-serif;
+  }
+  #sobremim .experiencias .cards section dl dt.show .interation .data h3 {
+    font: normal normal 500 0.75rem "Josefin Sans", sans-serif;
+  }
+  #sobremim .experiencias .cards section dl dt.show .interation .data strong {
+    font: normal normal 700 1.75rem "Jura", sans-serif;
+  }
+  #sobremim .experiencias .cards section dl dd {
+    padding: 1rem 0.5rem 2rem 0.5rem;
+  }
+  #sobremim .experiencias .cards section dl dd p {
+    width: 100%;
+    text-align: justify;
+    font: 400 0.875rem/1.25rem "DM Sans", sans-serif;
+  }
+  #sobremim .experiencias .cards section dl dd ul {
+    width: 100%;
+  }
+  #sobremim .experiencias .cards section dl dd ul li span {
+    font: 400 0.75rem/1.125rem "Josefin Sans", sans-serif;
+  }
+  #sobremim .experiencias .cards section dl dd.show {
+    padding: 1rem 1rem 2rem 1rem;
   }
   #sobremim .habilidades .content {
     -webkit-box-orient: horizontal;
@@ -1521,6 +1766,66 @@ body {
         grid-template-columns: 1fr 1fr;
     -ms-grid-rows: 1fr 1fr 1fr;
         grid-template-rows: 1fr 1fr 1fr;
+  }
+}
+
+@media only screen and (max-width: 950px) {
+  #sobremim .experiencias {
+    padding: 0;
+  }
+  #sobremim .experiencias .cards section {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #sobremim .experiencias .cards section .foto {
+    width: 70%;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    margin-bottom: 1rem;
+  }
+  #sobremim .experiencias .cards section dl {
+    width: 100%;
+  }
+  #sobremim .experiencias .cards section dl dt h2 {
+    font: normal normal 700 1.5rem/2rem "Montserrat", sans-serif;
+  }
+  #sobremim .experiencias .cards section dl dt .interation .data {
+    margin-left: 2rem;
+  }
+  #sobremim .experiencias .cards section dl dt .interation .data h3 {
+    font: normal normal 700 0.75rem "Josefin Sans", sans-serif;
+  }
+  #sobremim .experiencias .cards section dl dt .interation .data strong {
+    font: normal normal 700 2rem "Jura", sans-serif;
+  }
+  #sobremim .experiencias .cards section dl dt.show h2 {
+    font: normal normal 600 1.5rem/2rem "Montserrat", sans-serif;
+  }
+  #sobremim .experiencias .cards section dl dt.show .interation .data h3 {
+    font: normal normal 600 0.75rem "Josefin Sans", sans-serif;
+  }
+  #sobremim .experiencias .cards section dl dt.show .interation .data strong {
+    font: normal normal 700 2rem "Jura", sans-serif;
+  }
+  #sobremim .experiencias .cards section dl dd {
+    padding: 1rem 0.5rem 2rem 0.5rem;
+  }
+  #sobremim .experiencias .cards section dl dd p {
+    width: 100%;
+    text-align: justify;
+    font: 400 0.875rem/1.25rem "DM Sans", sans-serif;
+  }
+  #sobremim .experiencias .cards section dl dd ul {
+    width: 100%;
+  }
+  #sobremim .experiencias .cards section dl dd ul li span {
+    font: 400 0.75rem/1.125rem "Josefin Sans", sans-serif;
+  }
+  #sobremim .experiencias .cards section dl dd.show {
+    padding: 1rem 1rem 2rem 1rem;
   }
 }
 
@@ -1584,51 +1889,53 @@ body {
   #sobremim .experiencias {
     padding: 0;
   }
-  #sobremim .experiencias .content .experiencia .cards-content {
+  #sobremim .experiencias .cards section {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  #sobremim .experiencias .content .experiencia .cards-content .cards {
+  #sobremim .experiencias .cards section .foto {
     width: 100%;
-  }
-  #sobremim .experiencias .content .experiencia .cards-content .cards .card {
-    width: 100%;
-  }
-  #sobremim .experiencias .content .experiencia .cards-content .cards .card .dados {
-    width: 100%;
-  }
-  #sobremim .experiencias .content .experiencia .cards-content .cards .card .dados .title {
-    width: 100%;
-  }
-  #sobremim .experiencias .content .experiencia .cards-content .cards .card .dados .title h2 {
-    width: 75%;
-    font-size: 1.15rem;
-  }
-  #sobremim .experiencias .content .experiencia .cards-content .cards .card .dados .title div {
-    width: 25%;
-  }
-  #sobremim .experiencias .content .experiencia .cards-content .cards .card .dados .title div p .mes {
-    font-size: 0.8rem;
-  }
-  #sobremim .experiencias .content .experiencia .cards-content .cards .card .dados .title div p .ano {
-    font-size: 1.5rem;
-  }
-  #sobremim .experiencias .content .experiencia .cards-content .cards .card .dados p {
-    font-size: 0.75rem;
-  }
-  #sobremim .experiencias .content .experiencia .cards-content .cards .card .dados ul {
     margin-bottom: 1rem;
   }
-  #sobremim .experiencias .content .experiencia .cards-content .cards .card .dados ul li span {
-    font-size: 0.75rem;
+  #sobremim .experiencias .cards section dl {
+    width: 100%;
   }
-  #sobremim .experiencias .content .experiencia .cards-content .cards .card:first-child {
-    margin-bottom: 0.5rem;
+  #sobremim .experiencias .cards section dl dt h2 {
+    font: normal normal 700 1.5rem/2rem "Montserrat", sans-serif;
   }
-  #sobremim .experiencias .content .experiencia .cards-content .foto {
-    width: 70%;
+  #sobremim .experiencias .cards section dl dt .interation .data h3 {
+    font: normal normal 700 0.75rem "Josefin Sans", sans-serif;
+  }
+  #sobremim .experiencias .cards section dl dt .interation .data strong {
+    font: normal normal 700 2rem "Jura", sans-serif;
+  }
+  #sobremim .experiencias .cards section dl dt.show h2 {
+    font: normal normal 600 1.5rem/2rem "Montserrat", sans-serif;
+  }
+  #sobremim .experiencias .cards section dl dt.show .interation .data h3 {
+    font: normal normal 600 0.75rem "Josefin Sans", sans-serif;
+  }
+  #sobremim .experiencias .cards section dl dt.show .interation .data strong {
+    font: normal normal 700 2rem "Jura", sans-serif;
+  }
+  #sobremim .experiencias .cards section dl dd {
+    padding: 1rem 0.5rem 2rem 0.5rem;
+  }
+  #sobremim .experiencias .cards section dl dd p {
+    width: 100%;
+    text-align: justify;
+    font: 400 0.875rem/1.25rem "DM Sans", sans-serif;
+  }
+  #sobremim .experiencias .cards section dl dd ul {
+    width: 100%;
+  }
+  #sobremim .experiencias .cards section dl dd ul li span {
+    font: 400 0.75rem/1.125rem "Josefin Sans", sans-serif;
+  }
+  #sobremim .experiencias .cards section dl dd.show {
+    padding: 1rem 1rem 2rem 1rem;
   }
   #sobremim .habilidades .content {
     -webkit-box-orient: vertical;
@@ -1758,24 +2065,61 @@ body {
     -ms-grid-column-align: center;
         justify-self: center;
   }
-  #sobremim .experiencias .content .experiencia .cards-content .cards .card .dados .title h2 {
-    width: 70%;
-    font-size: 1rem;
+  #sobremim .experiencias .cards {
+    padding-top: 0;
   }
-  #sobremim .experiencias .content .experiencia .cards-content .cards .card .dados .title div {
-    width: 30%;
+  #sobremim .experiencias .cards section {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
-  #sobremim .experiencias .content .experiencia .cards-content .cards .card .dados .title div p .mes {
-    font-size: 0.65rem;
+  #sobremim .experiencias .cards section .foto {
+    width: 100%;
   }
-  #sobremim .experiencias .content .experiencia .cards-content .cards .card .dados .title div p .ano {
-    font-size: 1.25rem;
+  #sobremim .experiencias .cards section dl {
+    width: 100%;
   }
-  #sobremim .experiencias .content .experiencia .cards-content .cards .card .dados p {
-    font-size: 0.75rem;
+  #sobremim .experiencias .cards section dl dt {
+    width: 100%;
   }
-  #sobremim .experiencias .content .experiencia .cards-content .cards .card .dados ul li span {
-    font-size: 0.75rem;
+  #sobremim .experiencias .cards section dl dt h2 {
+    font: normal normal 700 1rem/1.25rem "Montserrat", sans-serif;
+  }
+  #sobremim .experiencias .cards section dl dt .interation {
+    margin-left: 0.25rem;
+  }
+  #sobremim .experiencias .cards section dl dt .interation .data h3 {
+    font: normal normal 700 0.75rem "Josefin Sans", sans-serif;
+  }
+  #sobremim .experiencias .cards section dl dt .interation .data strong {
+    font: normal normal 700 1.5rem "Jura", sans-serif;
+  }
+  #sobremim .experiencias .cards section dl dt.show h2 {
+    font: normal normal 600 1rem/1.25rem "Montserrat", sans-serif;
+  }
+  #sobremim .experiencias .cards section dl dt.show .interation .data h3 {
+    font: normal normal 600 0.75rem "Josefin Sans", sans-serif;
+  }
+  #sobremim .experiencias .cards section dl dt.show .interation .data strong {
+    font: normal normal 700 1.5rem "Jura", sans-serif;
+  }
+  #sobremim .experiencias .cards section dl dd {
+    padding: 1rem 0.5rem 2rem 0.5rem;
+  }
+  #sobremim .experiencias .cards section dl dd p {
+    width: 100%;
+    text-align: justify;
+    font: 400 0.875rem/1.25rem "DM Sans", sans-serif;
+  }
+  #sobremim .experiencias .cards section dl dd ul {
+    width: 100%;
+  }
+  #sobremim .experiencias .cards section dl dd ul li span {
+    font: 400 0.75rem/1.125rem "Josefin Sans", sans-serif;
+  }
+  #sobremim .experiencias .cards section dl dd.show {
+    padding: 1rem 1rem 2rem 1rem;
   }
   #sobremim .habilidades .content {
     -webkit-box-orient: vertical;
@@ -2367,7 +2711,7 @@ body {
     margin-bottom: 2rem;
   }
   #contato .esquerda .sociais a {
-    font-size: 0.7rem;
+    font-size: 1rem;
   }
   #contato .esquerda .sociais a svg {
     width: 100%;
@@ -2376,6 +2720,49 @@ body {
   #contato .direita {
     width: 50%;
     margin-right: 0;
+  }
+  #contato .direita h2 {
+    font-size: 2rem;
+  }
+}
+
+@media only screen and (max-width: 950px) {
+  #contato {
+    width: 100vw;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #contato .esquerda {
+    width: 100%;
+  }
+  #contato .esquerda img {
+    width: 90%;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    margin-bottom: 2rem;
+  }
+  #contato .esquerda .sociais {
+    width: 100%;
+    margin-top: 0;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    margin-bottom: 2rem;
+  }
+  #contato .esquerda .sociais a {
+    font-size: 1rem;
+  }
+  #contato .esquerda .sociais a svg {
+    width: 100%;
+    height: 100%;
+  }
+  #contato .direita {
+    width: 100%;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
   }
   #contato .direita h2 {
     font-size: 2rem;
@@ -2469,6 +2856,10 @@ body {
   #contato .direita h2 {
     font-size: 1.5rem;
   }
+  #contato .direita .email .buttons {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
 }
 
 #footer {
@@ -2533,15 +2924,21 @@ body {
   bottom: 4.5rem;
 }
 
+@media only screen and (max-width: 1250px) {
+  .go_top {
+    left: 93.5%;
+  }
+}
+
 @media only screen and (max-width: 750px) {
   .go_top {
-    left: 90%;
+    left: 92%;
   }
 }
 
 @media screen and (max-width: 450px) {
   .go_top {
-    left: 87%;
+    left: 85%;
   }
 }
 /*# sourceMappingURL=styles.css.map */

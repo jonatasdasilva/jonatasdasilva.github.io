@@ -1,7 +1,7 @@
-/*============= SALDAÇÃO ============*/
+/*=== SALDAÇÃO ===*/
 console.log('Olá Dev 👨🏽‍💻, vamos avançar para o nível estelar 🌟! Vamos ampliar nossos conhecimentos 🧠, e manter o coração batendo 🫀. E não se esqueça de parar para respirar!')
 
-/*============= THEME =============*/
+/*=== THEME ===*/
 var checkbox = document.querySelector('input[name="theme"]');
 
 checkbox.addEventListener('change', function() {
@@ -53,14 +53,7 @@ showHeaderMobile();
 
 window.setInterval('showHeaderMobile()', 50);*/
 
-/*========== Show Experience =========*/
-function open_experiencia(params) {
-  const titles = document.querySelectorAll('.title .icons svg');
-  console.log(titles);
-}
-
-
-/*========== Show Scroll UP =========*/
+/*=== Show Scroll UP ===*/
 function showScrollUp() {
   const goTop = document.getElementById('go_top');
   if (this.scrollY >= 350){
@@ -72,16 +65,16 @@ function showScrollUp() {
 
 window.addEventListener('scroll', showScrollUp);
 
-/*============== Go Top =============*/
+/*=== Go Top ===*/
 function goTop() {
   window.scrollTo({top: 0, behavior: 'smooth'});
 }
 
-/*========== Title Section ==========*/
-function titleSection() {
+/*=== Title Articles ===*/
+function titleArticles() {
   const scrollY = window.pageYOffset;
   const articles = document.querySelectorAll('article[id]');
-  const sections = document.querySelectorAll('article section[id]');
+  //const sections = document.querySelectorAll('article section[id]');
   
   articles.forEach(
     current => {
@@ -98,7 +91,7 @@ function titleSection() {
   );
 }
 
-window.addEventListener('scroll', titleSection);
+window.addEventListener('scroll', titleArticles);
 
 function menuScrollingMobile() {
   const scrollY = window.pageYOffset;
@@ -122,7 +115,7 @@ function menuScrollingMobile() {
 
 window.addEventListener('scroll', menuScrollingMobile);
 
-/*============= MENU MOBILE =============*/
+/*=== MENU MOBILE ===*/
 const showMenuMobile = () => {
   const nav_mobile = document.querySelector('.menu_mobile'); //menu mobile
   const button_menu = document.querySelector('.header .content-mobile .drop_menu'); //botão menu mobile
@@ -135,7 +128,7 @@ const showMenuMobile = () => {
 
 showMenuMobile();
 
-/*========== SCROLL MENU ==========*/
+/*=== SCROLL MENU ===*/
 function menuScrolling() {
   const scrollY = window.pageYOffset;
   const sections = document.querySelectorAll('article[id]');
@@ -158,58 +151,66 @@ function menuScrolling() {
 
 window.addEventListener('scroll', menuScrolling);
 
-/*=========== BLUR MENU =========*/
-function blurMenu() {
-  const scrollY = window.pageYOffset
-  const scrollTop = window.top;
+/*=== Title Section ===*/
+function titleSection() {
+  const scrollY = window.pageYOffset;
+  const sections = document.querySelectorAll('section[id]');
   
-  if ((scrollY + 120)  == scrollY)
-    console.log(scrollY);
+  
+  sections.forEach(
+    current => {
+      const sectionHeight = current.offsetHeight;
+      const sectionTop = current.offsetTop - 100;
+
+      sectionId = current.getAttribute('id');
+      let titleMenu = document.getElementById("title");
+
+      if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+        titleMenu.innerHTML = sectionId;
+      }
+    }
+  );
+
+
 }
 
-window.addEventListener('scroll', blurMenu);
+window.addEventListener('scroll', titleSection);
 
-/*=========== SHOW EXPERIENCE ==========*/
-function openExperiencia(exp, icon) {
-  const ul = document.querySelectorAll('.card .dados ul');
-  const paragraph = document.querySelectorAll('.card .dados .resumo');
-  const svg = document.querySelectorAll('.card .dados .title .icons svg');
-  const svgCurrent = document.querySelectorAll(`.card .dados .title .icons svg.${exp}`);
 
-  ul.forEach(u => {
-    if (u.classList.contains(exp) && u.classList.contains("hide")) {
-      u.classList.remove("hide");
-    }
-    else if (u.classList.contains(exp) && (! u.classList.contains("hide"))){
-      u.classList.add("hide");
-    } else {
-      u.classList.add("hide");
-    }
-  });
-  
-  paragraph.forEach(p => {
-    if (p.classList.contains(exp) && p.classList.contains("hide")){
-      p.classList.remove("hide");
-    } else if (p.classList.contains(exp) && (! p.classList.contains("hide"))) {
-      p.classList.add("hide");
-    } else {
-      p.classList.add("hide");
+/*=== Show Experiências ===*/
+
+function showExperiences(exp) {
+  const dt = document.querySelectorAll('dl dt'),  dd = document.querySelectorAll('dl dd'), svg = document.querySelectorAll('dl dt .interation .icons svg'), svgCurrent = document.querySelectorAll(`dl dt.${exp} .interation .icons svg`);
+
+  dt.forEach(t => {
+    if (t.classList.contains(exp)){
+      t.classList.toggle("show");
+    } else if ((! (t.classList.contains(exp))) && (t.classList.contains('show'))){
+      t.classList.toggle('show');
     }
   });
 
-  svg.forEach(s => {
-    if (s.classList.contains('mostrar')){
-      s.id = "show";
-    } else {
-      s.id = "hide";
+  dd.forEach(c => {
+    if (c.classList.contains(exp)){
+      c.classList.toggle("show");
+    } else if ((! (c.classList.contains(exp))) && (c.classList.contains('show'))) {
+      c.classList.toggle('show');
     }
   });
+
+  svg.forEach(svg => {
+    if ((!svg.classList.contains(exp)) && (svg.classList.contains('esconder'))) {
+      svg.classList.remove("show");
+    } else if ((!svg.classList.contains(exp)) && (svg.classList.contains('mostrar'))) {
+      svg.classList.add("show");
+    }
+  });
+
+  console.log(svg)
+
+  console.log(svgCurrent)
 
   svgCurrent.forEach(s => {
-    if (s.classList.contains(icon)){
-      s.id = "hide";
-    } else {
-      s.id = "show";
-    } 
+    s.classList.toggle("show");
   });
 }

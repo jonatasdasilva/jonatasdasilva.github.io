@@ -31,14 +31,20 @@
   bottom: 4.5rem;
 }
 
+@media only screen and (max-width: 1250px) {
+  .go_top {
+    left: 93.5%;
+  }
+}
+
 @media only screen and (max-width: 750px) {
   .go_top {
-    left: 90%;
+    left: 92%;
   }
 }
 
 @media screen and (max-width: 450px) {
   .go_top {
-    left: 87%;
+    left: 85%;
   }
 }

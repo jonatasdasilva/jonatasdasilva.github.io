@@ -1,38 +1,30 @@
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&family=Red+Hat+Display:ital,wght@0,400;0,500;0,700;0,900;1,400;1,500;1,700;1,900&family=Red+Hat+Text:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Stalemate&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Jura:wght@300;400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Infant:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Infant:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Rubik+Beastly&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Flow+Block&family=Flow+Circular&family=Flow+Rounded&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Sassy+Frass&display=swap');
+// font-family: 'Sassy Frass', cursive;
 
-//font-family: 'Inter', sans-serif;
-//font-family: 'Major Mono Display', monospace;
-//font-family: 'Stalemate', cursive;
-//font-family: 'JetBrains Mono', monospace;
-//font-family: 'Poiret One', cursive;
-//font-family: 'Jura', sans-serif;
-//font-family: 'Playfair Display', serif;
-//font-family: 'Cormorant Infant', serif;
-//font-family: 'Flow Block', cursive;
-//font-family: 'Flow Circular', cursive;
-//font-family: 'Flow Rounded', cursive;
-//font-family: 'Epilogue', sans-serif;
-//font-family: 'Sassy Frass', cursive;
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
+// font-family: 'DM Sans', sans-serif;
+
+
+@import url('https://fonts.googleapis.com/css2?family=Jura:wght@300;400;500;600;700&display=swap');
+// font-family: 'Jura', sans-serif;
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;600;700&display=swap');
+// font-family: 'Josefin Sans', sans-serif;
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+// font-family: 'Montserrat', sans-serif;
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+// font-family: 'Playfair Display', serif;
 
 * {
   margin: 0;
   padding: 0;
   hyphens: auto;
   font-weight: 400;
+  background: unset;
   box-sizing: border-box;
-  font-family: 'Red Hat Text', sans-serif;
+  font-family: 'DM Sans', sans-serif;
   -moz-osx-font-smoothing: grayscale !important;
   text-rendering: optimizelegibility !important;
   -webkit-font-smoothing: antialiased !important;
@@ -40,6 +32,10 @@
 
 body::-webkit-scrollbar {
   display: none;
+}
+
+html, body {
+  scroll-behavior: smooth;
 }
 
 main {
@@ -61,15 +57,55 @@ main {
   }
 }
 
+/* Break points bootstrap
+
+- breakpoint: xs
+  abbr: ""
+  name: X-Small
+  min-width: 0px
+  container: ""
+
+- breakpoint: sm
+  abbr: -sm
+  name: Small
+  min-width: 576px
+  container: 540px
+
+- breakpoint: md
+  abbr: -md
+  name: Medium
+  min-width: 768px
+  container: 720px
+
+- breakpoint: lg
+  abbr: -lg
+  name: Large
+  min-width: 992px
+  container: 960px
+
+- breakpoint: xl
+  abbr: -xl
+  name: X-Large
+  min-width: 1200px
+  container: 1140px
+
+- breakpoint: xxl
+  abbr: -xxl
+  name: XX-Large
+  min-width: 1400px
+  container: 1320px
+
+*/
 
 
-@import '_themes';
-@import '_menu';
-@import '_sobremim';
-@import '_servicos';
-@import '_projetos';
-@import '_contato';
-@import '_footer';
+
+@import "themes";
+@import "menu";
+@import "sobremim";
+@import "servicos";
+@import "projetos";
+@import "contato";
+@import "footer";
 
 /* Go TOP */
-@import '_goTop';
+@import "goTop";
