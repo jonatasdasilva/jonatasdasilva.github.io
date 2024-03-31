@@ -8,7 +8,8 @@
 }
 
 html[data-theme="dark"] {
-  --background-color: #25272D;
+  //--background-color: #25272D;
+  --background-color: #141317;
 }
 
 a {
@@ -17,9 +18,13 @@ a {
 }
 
 body {
+  //display: flex;
   color: #fefefe;
+  //align-items: center;
+  //flex-direction: column;
   background-color: var(--background-color);
   font: normal 400 1rem/1.5 "Urbanist", Arial, sans-serif;
 }
 
 @import "menu";
+@import "article";

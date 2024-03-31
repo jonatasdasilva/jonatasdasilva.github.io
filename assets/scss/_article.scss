@@ -1,0 +1,193 @@
+.content {
+  z-index: 1;
+  width: 100%;
+  display: flex;
+  padding-top: 7rem;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  .about {
+    width: 60%;
+    display: flex;
+    row-gap: 1rem;
+    column-gap: 2rem;
+    max-width: 90rem;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 9rem);
+
+    .information {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+
+      .presentation {
+        display: flex;
+        flex-direction: column;
+
+        strong {
+          opacity: 0.5;
+          font-weight: 200;
+          letter-spacing: 1px;
+        }
+
+        h1 {
+          color: #C6FE21;
+          font-size: 2.65vw;
+          font-family: "Exo 2";
+        }
+
+        em {
+          opacity: 0.5;
+          font-weight: 200;
+          letter-spacing: 1px;
+          font-family: "Exo 2";
+          align-self: flex-end;
+        }
+
+        p {
+          padding: 1rem 0;
+          text-align: justify;
+        }
+      }
+
+      .more {
+        width: 100%;
+        display: flex;
+        row-gap: 2rem;
+        flex-wrap: wrap;
+        column-gap: 1rem;
+        align-items: center;
+        flex-direction: row;
+        justify-content: space-between;
+
+        .curriculum {
+          //border-radius: 8px;
+          padding: 1rem 2rem;
+          transition: all 0.5s ease-in-out;
+          border: 0.125rem solid transparent;
+          border-bottom: 0.125rem solid #2B2A30;
+
+          &:hover {
+            background-color: #2B2A30;
+          }
+        }
+
+        .plus {
+          display: flex;
+          column-gap: 1rem;
+          flex-wrap: nowrap;
+          padding: 1rem 2rem;
+          flex-direction: row;
+          align-items: center;
+          background-color: #2B2A30;
+          transition: all 0.5s ease-in-out;
+          border: 0.125rem solid transparent;
+          border-bottom: 0.125rem solid #C6FE21;
+
+          span {
+            font-weight: 600;
+            font-family: "Exo 2";
+          }
+
+          &:hover {
+            color: #2B2A30;
+            background-color: #C6FE21;
+          }
+        }
+      }
+    }
+
+    .logo {
+      width: 50%;
+
+      img {
+        width: 100%;
+        min-width: 19rem;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .content {
+    .about {
+      width: 80%;
+      column-gap: 4rem;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column-reverse;
+
+      .information {
+        width: 100%;
+        flex-direction: column;
+
+        .presentation {
+          h1 {
+            font-size: 2.8rem;
+          }
+        }
+
+        .more {
+          justify-content: center;
+        }
+      }
+
+      .logo {
+        width: 100%;
+        display: flex;
+        min-width: 19rem;
+        justify-content: center;
+
+        img {
+          width: 100%;
+          min-width: 19rem;
+          max-width: 32rem;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 220px) and (max-width: 420px) {
+  .content {
+    padding-top: 9rem;
+
+    .about {
+      width: 98%;
+      padding: 0 2em 0;
+      min-height: 100vh;
+
+
+      .information {
+        .presentation {
+          h1 {
+            font-size: 2rem;
+          }
+        }
+
+        .more {
+          .plus, .curriculum {
+            padding: 0.5rem 1rem;
+
+            span {
+              font-size: 0.875rem;
+            }
+          }
+        }
+      }
+
+      .logo {
+        width: 100%;
+        max-width: 19rem;
+
+        img {
+          width: 100%;
+          max-width: 19rem;
+        }
+      }
+    }
+  }
+}
