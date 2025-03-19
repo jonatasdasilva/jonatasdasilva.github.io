@@ -5,7 +5,7 @@ console.log('Olá Dev 👨🏽‍💻, vamos avançar para o nível estelar 🌟
 var checkbox = document.querySelector('input[name="theme"]');
 
 checkbox.addEventListener('change', function() {
-    if (this.checked) {
+    if (!this.checked) {
         document.documentElement.setAttribute('data-theme', 'dark');
         document.getElementById('contraste').classList.add("dark");
         document.getElementById('theme').classList.add("dark");

@@ -13,9 +13,9 @@
   .esquerda {
     width: 50%;
     display: flex;
+    align-self: center;
     align-items: center;
     flex-direction: column;
-    align-self: center;
 
     justify-content: space-around;
 
@@ -103,7 +103,7 @@
         font-size: 1rem;
         font-weight: 500;
         color: var(--text-primary-100);
-        background-color: var(--background);
+        background-color: var(--top-100);
 
         &:focus {
           outline: auto;
@@ -130,7 +130,7 @@
           font-weight: 500;
           transition: all 0.7s ease;
           color: var(--primary-100);
-          background-color: var(--background);
+          background-color: var(--top-100);
 
           &:hover {
             color: var(--top-100);
