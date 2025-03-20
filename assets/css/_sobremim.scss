@@ -377,13 +377,13 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: var(--top-100);
+    background-color: var(--background);
     
-    .content {
+    .content-interesses {
       width: 100%;
       row-gap: 2rem;
       display: grid;
-      max-width: 90%;
+      max-width: 75%;
       column-gap: 2rem;
       align-self: center;
       padding-bottom: 2rem;
